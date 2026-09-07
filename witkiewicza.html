@@ -21,6 +21,14 @@ body{
     background:#fffafd;
 }
 
+section{
+    scroll-margin-top:90px;
+}
+
+/* =========================
+   MENU
+========================= */
+
 nav{
     position:sticky;
     top:0;
@@ -50,6 +58,7 @@ nav{
     height:64px;
     object-fit:cover;
     border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
 .logo-name{
@@ -65,6 +74,7 @@ nav{
 .logo-name span{
     color:#756d83;
     font-size:12px;
+    margin-top:2px;
 }
 
 .links{
@@ -90,8 +100,12 @@ nav{
     border-radius:30px;
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    min-height:560px;
+    min-height:650px;
     padding:70px 25px;
     display:flex;
     align-items:center;
@@ -99,8 +113,9 @@ nav{
     text-align:center;
 
     background:
-        radial-gradient(circle at 12% 20%, #ffe976 0 30px, transparent 32px),
-        radial-gradient(circle at 90% 15%, #f7a7d8 0 65px, transparent 67px),
+        radial-gradient(circle at 10% 20%, #ffeb70 0 25px, transparent 27px),
+        radial-gradient(circle at 90% 15%, #f79cda 0 65px, transparent 67px),
+        radial-gradient(circle at 15% 85%, #c6a4ff 0 70px, transparent 72px),
         linear-gradient(135deg,#29c5df,#55cbdc);
 }
 
@@ -109,8 +124,8 @@ nav{
 }
 
 .hero-logo{
-    width:170px;
-    height:170px;
+    width:180px;
+    height:180px;
     object-fit:cover;
     border-radius:35px;
     border:5px solid white;
@@ -120,44 +135,131 @@ nav{
 .hero h1{
     margin:25px 0 10px;
     color:white;
-    font-size:58px;
+    font-size:60px;
+    line-height:1;
     text-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .hero h2{
+    margin:18px 0 10px;
     color:#fff59a;
-    font-size:26px;
+    font-size:27px;
 }
 
 .hero p{
-    max-width:720px;
-    margin:20px auto 0;
+    max-width:730px;
+    margin:20px auto 30px;
     color:white;
     font-size:19px;
     line-height:1.7;
 }
 
+.button{
+    display:inline-block;
+    padding:15px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.button-pink{
+    background:#ef1591;
+    color:white;
+    box-shadow:0 10px 25px rgba(239,21,145,0.28);
+}
+
+.button-white{
+    background:white;
+    color:#6655c7;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   SEKCJE
+========================= */
+
 .content{
     max-width:1200px;
     margin:auto;
-    padding:80px 25px;
+    padding:85px 25px;
 }
 
 .section-title{
+    margin:0 0 15px;
     text-align:center;
     color:#e84d9b;
-    font-size:40px;
-    margin:0 0 15px;
+    font-size:42px;
 }
 
 .section-subtitle{
-    text-align:center;
     max-width:760px;
-    margin:0 auto 40px;
+    margin:0 auto 45px;
+    text-align:center;
+    color:#706979;
     font-size:18px;
     line-height:1.7;
-    color:#706979;
 }
+
+/* =========================
+   O MIEJSCU
+========================= */
+
+.about{
+    padding:45px;
+    background:white;
+    border-radius:35px;
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* =========================
+   GALERIA GŁÓWNA
+========================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:22px;
+}
+
+.gallery-main{
+    min-height:520px;
+}
+
+.gallery-side{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    gap:22px;
+}
+
+.gallery-photo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(70,60,90,.12);
+    display:block;
+    transition:0.25s;
+}
+
+.gallery-photo:hover{
+    transform:scale(1.015);
+}
+
+.gallery-side .gallery-photo{
+    min-height:249px;
+}
+
+/* =========================
+   KAFELKI
+========================= */
 
 .cards{
     display:grid;
@@ -171,6 +273,11 @@ nav{
     border-radius:28px;
     text-align:center;
     box-shadow:0 10px 30px rgba(70,60,90,.10);
+    transition:0.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
 }
 
 .card-icon{
@@ -180,21 +287,17 @@ nav{
 .card h3{
     color:#725ed6;
     font-size:22px;
+    margin:15px 0 10px;
 }
 
 .card p{
     line-height:1.7;
+    color:#615a69;
 }
 
-.about{
-    background:white;
-    padding:45px;
-    border-radius:35px;
-    box-shadow:0 10px 35px rgba(80,60,100,.08);
-    text-align:center;
-    font-size:18px;
-    line-height:1.8;
-}
+/* =========================
+   DZIEŃ W ZUZU
+========================= */
 
 .day{
     background:#fff1b5;
@@ -203,7 +306,7 @@ nav{
 .day-inner{
     max-width:1200px;
     margin:auto;
-    padding:80px 25px;
+    padding:85px 25px;
 }
 
 .steps{
@@ -227,37 +330,110 @@ nav{
     margin:10px 0;
 }
 
-.contact{
+.step span{
+    line-height:1.6;
+}
+
+/* =========================
+   PRACE DZIECI
+========================= */
+
+.art-section{
     background:linear-gradient(135deg,#ffe4f1,#e6f7ff);
+}
+
+.art-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 25px;
+}
+
+.art-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.art-card{
+    background:white;
+    padding:18px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+}
+
+.art-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:22px;
+    display:block;
+}
+
+.art-card h3{
+    text-align:center;
+    color:#725ed6;
+    font-size:22px;
+    margin:18px 0 8px;
+}
+
+.art-card p{
+    text-align:center;
+    line-height:1.6;
+    margin:0 10px 15px;
+    color:#615a69;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.magic-box{
+    padding:50px 30px;
+    text-align:center;
+    background:linear-gradient(135deg,#ffe3f2,#e4f8ff);
     border-radius:35px;
-    padding:50px 25px;
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+}
+
+.magic-icons{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact{
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+    border-radius:35px;
+    padding:55px 25px;
     text-align:center;
 }
 
-.phone{
-    font-size:28px;
-    font-weight:bold;
-    color:#ef1591;
-    margin:20px 0;
+.contact p{
+    font-size:18px;
+    line-height:1.7;
 }
 
-.button{
-    display:inline-block;
-    padding:15px 28px;
-    background:#ef1591;
-    color:white;
-    text-decoration:none;
+.phone{
+    font-size:30px;
     font-weight:bold;
-    border-radius:30px;
+    color:#ef1591;
+    margin:24px 0;
 }
 
 .back{
     display:inline-block;
-    margin-top:20px;
+    margin-top:25px;
     text-decoration:none;
     color:#6655c7;
     font-weight:bold;
 }
+
+/* =========================
+   STOPKA
+========================= */
 
 footer{
     background:#5b4bae;
@@ -266,29 +442,72 @@ footer{
     padding:35px 20px;
 }
 
+/* =========================
+   TELEFON
+========================= */
+
 @media(max-width:850px){
 
     .links{
         display:none;
     }
 
+    .logo-name strong{
+        font-size:20px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
     .hero h1{
-        font-size:42px;
+        font-size:43px;
+    }
+
+    .hero h2{
+        font-size:23px;
     }
 
     .hero-logo{
-        width:140px;
-        height:140px;
+        width:145px;
+        height:145px;
     }
 
-    .cards,
-    .steps{
+    .gallery-grid{
         grid-template-columns:1fr;
     }
 
-    .section-title{
-        font-size:33px;
+    .gallery-main{
+        min-height:auto;
     }
+
+    .gallery-main .gallery-photo{
+        height:330px;
+    }
+
+    .gallery-side{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+    }
+
+    .gallery-side .gallery-photo{
+        height:330px;
+    }
+
+    .cards,
+    .steps,
+    .art-grid{
+        grid-template-columns:1fr;
+    }
+
+    .art-card img{
+        height:330px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
 }
 
 </style>
@@ -296,47 +515,73 @@ footer{
 
 <body>
 
+<!-- MENU -->
+
 <nav>
+
 <div class="menu">
 
     <div class="logo">
+
         <img src="Logo-zuzu.jpg" alt="Logo Akademii ZUZU">
 
         <div class="logo-name">
             <strong>AKADEMIA ZUZU</strong>
             <span>Witkiewicza</span>
         </div>
+
     </div>
 
     <div class="links">
+
         <a href="#onas">O miejscu</a>
+        <a href="#galeria">Galeria</a>
         <a href="#codziennosc">Codzienność</a>
+        <a href="#prace">Nasze prace</a>
         <a href="#kontakt">Kontakt</a>
         <a href="index.html" class="home">Strona główna</a>
+
     </div>
 
 </div>
+
 </nav>
+
+
+<!-- HERO -->
 
 <header class="hero">
 
 <div class="hero-content">
 
-    <img src="Logo-zuzu.jpg" class="hero-logo" alt="Logo ZUZU">
+    <img
+        src="Logo-zuzu.jpg"
+        class="hero-logo"
+        alt="Logo ZUZU"
+    >
 
     <h1>ZUZU Witkiewicza</h1>
 
-    <h2>Nasza główna ZUZU-owa baza ☁️</h2>
+    <h2>
+        Tu dzieją się małe-wielkie przygody ☁️
+    </h2>
 
     <p>
-        Ciepła przestrzeń dla najmłodszych,
-        w której każdy dzień wypełniają zabawa,
-        bliskość, odkrywanie świata i dziecięcy śmiech.
+        Kolorowa przestrzeń pełna ruchu, zabawy,
+        dziecięcej ciekawości i codziennych odkryć.
+        Tak wygląda ZUZU na Witkiewicza.
     </p>
+
+    <a href="#galeria" class="button button-white">
+        Zobacz nasze ZUZU
+    </a>
 
 </div>
 
 </header>
+
+
+<!-- O MIEJSCU -->
 
 <section id="onas" class="content">
 
@@ -345,98 +590,230 @@ footer{
 </h2>
 
 <p class="section-subtitle">
-    Miejsce stworzone dla dzieci i z myślą o ich codziennym komforcie.
+    Kolorowo, wesoło i po dziecięcemu.
 </p>
 
 <div class="about">
 
-    ZUZU Witkiewicza to nasza główna lokalizacja.
-    Tworzymy tu przyjazne środowisko, w którym dzieci
-    mogą bawić się, odpoczywać, rozwijać i poznawać świat
-    w swoim własnym tempie.
+    ZUZU Witkiewicza to miejsce stworzone z myślą
+    o najmłodszych i ich codziennych potrzebach.
 
     <br><br>
 
-    Zależy nam na kameralnej atmosferze,
-    bliskim kontakcie z dziećmi
-    i codzienności pełnej małych przygód.
+    Jest tu przestrzeń na ruch, zabawę,
+    wspólne odkrywanie świata,
+    kreatywne zajęcia i spokojniejsze chwile.
+
+    <br><br>
+
+    Najważniejsze są dla nas dzieci,
+    ich poczucie bezpieczeństwa,
+    ciekawość świata i dobra codzienność.
 
 </div>
 
 </section>
+
+
+<!-- GALERIA -->
+
+<section id="galeria" class="content">
+
+<h2 class="section-title">
+    Tak wygląda nasze ZUZU 📸
+</h2>
+
+<p class="section-subtitle">
+    Trochę kolorów, trochę bałaganu,
+    dużo śmiechu i jeszcze więcej dziecięcej energii.
+</p>
+
+<div class="gallery-grid">
+
+    <div class="gallery-main">
+
+        <img
+            src="foto-witkiewicza5.jpg"
+            class="gallery-photo"
+            alt="Zabawa dzieci w ZUZU Witkiewicza"
+        >
+
+    </div>
+
+    <div class="gallery-side">
+
+        <img
+            src="foto-witkiewicza3.jpg"
+            class="gallery-photo"
+            alt="Zajęcia w ZUZU Witkiewicza"
+        >
+
+        <img
+            src="foto-witkiewicza4.jpg"
+            class="gallery-photo"
+            alt="Ogródek ZUZU Witkiewicza"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CO U NAS -->
 
 <section class="content">
 
 <h2 class="section-title">
-    Co znajdziecie na Witkiewicza?
+    Co czeka na małych ZUZOludków?
 </h2>
+
+<p class="section-subtitle">
+    Każdy dzień może wyglądać trochę inaczej.
+    I właśnie to lubimy najbardziej. ✨
+</p>
 
 <div class="cards">
 
     <div class="card">
-        <div class="card-icon">🧸</div>
-        <h3>Ciepła opieka</h3>
+
+        <div class="card-icon">
+            🧸
+        </div>
+
+        <h3>
+            Bliskość
+        </h3>
+
         <p>
-            Dużo bliskości, troski i indywidualnego podejścia.
+            Ciepła opieka, dużo uwagi
+            i przestrzeń na dziecięce emocje.
         </p>
+
     </div>
 
     <div class="card">
-        <div class="card-icon">🎨</div>
-        <h3>Kreatywna zabawa</h3>
+
+        <div class="card-icon">
+            🎨
+        </div>
+
+        <h3>
+            Twórcza zabawa
+        </h3>
+
         <p>
-            Zajęcia sensoryczne, plastyczne i mnóstwo swobodnej zabawy.
+            Farby, sensoryka, muzyka,
+            ruch i małe dzieła wielkich artystów.
         </p>
+
     </div>
 
     <div class="card">
-        <div class="card-icon">🌈</div>
-        <h3>Codzienne przygody</h3>
+
+        <div class="card-icon">
+            🌿
+        </div>
+
+        <h3>
+            Zabawa na dworze
+        </h3>
+
         <p>
-            Ruch, poznawanie świata, wspólne odkrycia i dziecięca ciekawość.
+            Gdy pogoda pozwala,
+            korzystamy także z naszej przestrzeni na zewnątrz.
         </p>
+
     </div>
 
 </div>
 
 </section>
+
+
+<!-- DZIEŃ W ZUZU -->
 
 <div id="codziennosc" class="day">
 
 <div class="day-inner">
 
 <h2 class="section-title">
-    Jak wygląda dzień w ZUZU?
+    Zwykły dzień? U nas nie ma takich 😄
 </h2>
 
 <p class="section-subtitle">
-    Bez wyścigu. Bez presji. Z rytmem dopasowanym do małych ludzi.
+    Jest za to rytm dnia dopasowany do małych ludzi
+    i mnóstwo miejsca na spontaniczną zabawę.
 </p>
 
 <div class="steps">
 
     <div class="step">
-        <div class="card-icon">☀️</div>
-        <strong>Dzień dobry!</strong>
-        <span>Powitanie i spokojny początek dnia.</span>
+
+        <div class="card-icon">
+            ☀️
+        </div>
+
+        <strong>
+            Dzień dobry!
+        </strong>
+
+        <span>
+            Witamy się i spokojnie zaczynamy dzień.
+        </span>
+
     </div>
 
     <div class="step">
-        <div class="card-icon">🎨</div>
-        <strong>Zabawa</strong>
-        <span>Aktywności, sensoryka i kreatywne odkrywanie.</span>
+
+        <div class="card-icon">
+            🎶
+        </div>
+
+        <strong>
+            Zabawa i zajęcia
+        </strong>
+
+        <span>
+            Ruch, muzyka, sensoryka,
+            plastyka i dziecięce pomysły.
+        </span>
+
     </div>
 
     <div class="step">
-        <div class="card-icon">🍲</div>
-        <strong>Posiłki</strong>
-        <span>Czas na wspólne jedzenie i odpoczynek.</span>
+
+        <div class="card-icon">
+            🍲
+        </div>
+
+        <strong>
+            Pyszne przerwy
+        </strong>
+
+        <span>
+            Czas na posiłki,
+            picie i małe chwile odpoczynku.
+        </span>
+
     </div>
 
     <div class="step">
-        <div class="card-icon">🌙</div>
-        <strong>Odpoczynek</strong>
-        <span>Spokojne chwile dostosowane do potrzeb dzieci.</span>
+
+        <div class="card-icon">
+            🌙
+        </div>
+
+        <strong>
+            Odpoczynek
+        </strong>
+
+        <span>
+            Spokojniejsze chwile zgodnie
+            z potrzebami dzieci.
+        </span>
+
     </div>
 
 </div>
@@ -444,36 +821,134 @@ footer{
 </div>
 
 </div>
+
+
+<!-- PRACE DZIECI -->
+
+<div id="prace" class="art-section">
+
+<div class="art-inner">
+
+<h2 class="section-title">
+    Małe rączki, wielkie dzieła 🎨
+</h2>
+
+<p class="section-subtitle">
+    W ZUZU nie chodzi o idealne prace.
+    Chodzi o frajdę z tworzenia.
+</p>
+
+<div class="art-grid">
+
+    <div class="art-card">
+
+        <img
+            src="foto-witkiewicza2.jpg"
+            alt="Prace dzieci z ZUZU"
+        >
+
+        <h3>
+            Nasze prace
+        </h3>
+
+        <p>
+            Kolorujemy, wyklejamy,
+            malujemy i tworzymy po swojemu.
+        </p>
+
+    </div>
+
+    <div class="art-card">
+
+        <img
+            src="foto-witkiewicza1.jpg"
+            alt="Praca plastyczna dzieci z ZUZU"
+        >
+
+        <h3>
+            Dziecięca wyobraźnia
+        </h3>
+
+        <p>
+            Czasem wystarczy trochę farby,
+            małe dłonie i wielki pomysł.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CTA -->
+
+<section class="content">
+
+<div class="magic-box">
+
+    <div class="magic-icons">
+        ☁️ 🌈 ⭐ 🧸 ⭐ 🌈 ☁️
+    </div>
+
+    <h2 class="section-title">
+        Tu naprawdę dzieje się dzieciństwo
+    </h2>
+
+    <p class="section-subtitle">
+        Śmiech, zabawa, brudne rączki,
+        pierwsze przyjaźnie i setki małych odkryć.
+        Właśnie za to kochamy ZUZU.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
 
 <section id="kontakt" class="content">
 
 <div class="contact">
 
     <h2 class="section-title">
-        ZUZU Witkiewicza
+        Dołączcie do ZUZU Witkiewicza ♡
     </h2>
 
     <p>
-        Chcesz poznać nas bliżej albo zapisać dziecko?
+        Chcesz dowiedzieć się więcej
+        albo zapytać o miejsce dla dziecka?
     </p>
 
     <div class="phone">
         📞 798 150 723
     </div>
 
-    <a href="tel:+48798150723" class="button">
-        Zadzwoń
+    <a
+        href="tel:+48798150723"
+        class="button button-pink"
+    >
+        Zadzwoń do ZUZU
     </a>
 
     <br>
 
-    <a href="index.html" class="back">
-        ← Wróć na stronę główną ZUZU
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← Wróć na stronę główną
     </a>
 
 </div>
 
 </section>
+
+
+<!-- STOPKA -->
 
 <footer>
     ☁️ Akademia ZUZU · Witkiewicza · Szczecin · © 2026
