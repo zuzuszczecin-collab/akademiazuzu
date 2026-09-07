@@ -25,6 +25,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     color:#4e4659;
     background:#fffafd;
+    overflow-x:hidden;
 }
 
 a{
@@ -73,6 +74,11 @@ nav{
     border-radius:16px;
     object-fit:cover;
     box-shadow:0 4px 15px rgba(0,0,0,.13);
+    transition:.25s;
+}
+
+.logo:hover img{
+    transform:rotate(-4deg) scale(1.06);
 }
 
 .logo-text{
@@ -100,6 +106,7 @@ nav{
     color:#514a5a;
     font-size:14px;
     font-weight:bold;
+    transition:.2s;
 }
 
 .menu-links a:hover{
@@ -161,7 +168,6 @@ nav{
     z-index:2;
 
     max-width:800px;
-
     padding:35px 45px;
 
     border-radius:35px;
@@ -171,13 +177,13 @@ nav{
     backdrop-filter:blur(3px);
 
     box-shadow:0 15px 45px rgba(0,0,0,.25);
+
+    animation:heroAppear .9s ease both;
 }
 
 .hero h1{
     margin:0;
-
     color:white;
-
     font-size:58px;
 
     text-shadow:
@@ -187,23 +193,56 @@ nav{
 
 .hero h2{
     margin:15px 0;
-
     color:#ffe74d;
-
     font-size:27px;
 }
 
 .hero p{
     margin:15px auto 0;
-
     max-width:680px;
-
     color:white;
-
     font-size:18px;
     line-height:1.7;
-
     text-shadow:0 2px 7px rgba(0,0,0,.5);
+}
+
+
+/* MAGICZNE GWIAZDKI */
+
+.magic-star{
+    position:absolute;
+    z-index:1;
+    color:#ffe75a;
+    pointer-events:none;
+
+    animation:twinkle 2.5s ease-in-out infinite;
+}
+
+.star-one{
+    top:18%;
+    left:8%;
+    font-size:30px;
+}
+
+.star-two{
+    top:32%;
+    right:9%;
+    font-size:23px;
+    animation-delay:.8s;
+}
+
+.star-three{
+    bottom:16%;
+    left:17%;
+    font-size:20px;
+    animation-delay:1.3s;
+}
+
+.star-four{
+    bottom:20%;
+    right:18%;
+    font-size:31px;
+    animation-delay:.4s;
 }
 
 
@@ -219,53 +258,40 @@ nav{
 
 .section-title{
     margin:0 0 12px;
-
     text-align:center;
-
     color:#e84d9b;
-
     font-size:40px;
 }
 
 .section-subtitle{
     margin:0 auto 45px;
-
     max-width:750px;
-
     text-align:center;
-
     line-height:1.7;
-
     color:#696170;
 }
 
 .button{
     display:inline-block;
-
     padding:15px 26px;
-
     border-radius:30px;
-
     font-weight:bold;
-
-    transition:.2s;
+    transition:.25s;
 }
 
 .button:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px) scale(1.02);
 }
 
 .button-pink{
     background:#ef1591;
     color:white;
-
     box-shadow:0 10px 25px rgba(239,21,145,.28);
 }
 
 .button-purple{
     background:#6956d6;
     color:white;
-
     box-shadow:0 10px 25px rgba(105,86,214,.25);
 }
 
@@ -282,52 +308,42 @@ nav{
     display:grid;
     grid-template-columns:.85fr 1.15fr;
     gap:45px;
-
     align-items:center;
 }
 
-
-/* LEWA KARTA */
-
 .standard-card{
     padding:40px;
-
     border-radius:32px;
-
     background:#f7efff;
-
     box-shadow:0 12px 35px rgba(80,50,110,.10);
+    transition:.3s;
+}
+
+.standard-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(80,50,110,.16);
 }
 
 .badge{
     display:inline-block;
-
     margin-bottom:15px;
-
     padding:9px 18px;
-
     border-radius:25px;
-
     background:#ef1591;
     color:white;
-
     font-size:13px;
     font-weight:bold;
 }
 
 .standard-card h3{
     margin:0 0 10px;
-
     color:#6c5ad3;
-
     font-size:34px;
 }
 
 .price{
     margin:10px 0 15px;
-
     color:#ef1591;
-
     font-size:43px;
     font-weight:bold;
 }
@@ -338,12 +354,8 @@ nav{
 
 .standard-list{
     margin:22px 0;
-
     line-height:2;
 }
-
-
-/* PRAWA GRAFIKA */
 
 .standard-poster{
     text-align:center;
@@ -351,23 +363,20 @@ nav{
 
 .standard-poster img{
     display:block;
-
     width:100%;
     max-width:530px;
-
     margin:auto;
-
     border-radius:30px;
 
     box-shadow:
         0 18px 45px rgba(46,24,100,.22),
         0 0 28px rgba(239,21,145,.12);
 
-    transition:.25s;
+    transition:.35s;
 }
 
 .standard-poster img:hover{
-    transform:scale(1.015);
+    transform:translateY(-6px) scale(1.015);
 }
 
 
@@ -387,26 +396,129 @@ nav{
 
 .benefit{
     padding:30px 18px;
-
     text-align:center;
-
     background:white;
-
     border-radius:25px;
-
     box-shadow:0 8px 25px rgba(80,60,100,.08);
+    transition:.3s;
+}
+
+.benefit:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(105,86,214,.15);
 }
 
 .benefit-icon{
     font-size:38px;
+    transition:.3s;
+}
+
+.benefit:hover .benefit-icon{
+    transform:scale(1.15);
 }
 
 .benefit strong{
     display:block;
-
     margin-top:12px;
-
     color:#6956d6;
+}
+
+
+/* =========================
+   PIERWSZY DZIEŃ W ZUZU
+========================= */
+
+.first-day{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 10% 20%,rgba(255,222,91,.22),transparent 18%),
+        radial-gradient(circle at 90% 80%,rgba(105,86,214,.12),transparent 20%),
+        linear-gradient(135deg,#fff7fc,#f5efff);
+}
+
+.first-day-box{
+    position:relative;
+    padding:55px 45px;
+    border-radius:38px;
+    background:white;
+    box-shadow:0 15px 45px rgba(80,60,100,.10);
+}
+
+.first-day-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.first-day-title .backpack{
+    display:block;
+    font-size:58px;
+    margin-bottom:10px;
+    animation:floatIcon 3s ease-in-out infinite;
+}
+
+.first-day-title h2{
+    margin:0 0 12px;
+    color:#ef1591;
+    font-size:40px;
+}
+
+.first-day-title p{
+    max-width:720px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.first-day-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.first-card{
+    position:relative;
+    padding:30px 24px;
+    border-radius:26px;
+    background:#faf6ff;
+    text-align:center;
+    transition:.3s;
+}
+
+.first-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 12px 30px rgba(105,86,214,.12);
+}
+
+.first-card-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.first-card h3{
+    margin:0 0 10px;
+    color:#6956d6;
+    font-size:19px;
+}
+
+.first-card p{
+    margin:0;
+    line-height:1.65;
+    font-size:14px;
+}
+
+.first-day-tip{
+    max-width:850px;
+    margin:30px auto 0;
+    padding:24px 30px;
+    border-radius:24px;
+    background:linear-gradient(135deg,#fff2b8,#ffe6f3);
+    text-align:center;
+    line-height:1.7;
+}
+
+.first-day-tip strong{
+    color:#ef1591;
 }
 
 
@@ -415,130 +527,102 @@ nav{
 ========================= */
 
 .extended{
-    background:
-        linear-gradient(
-            135deg,
-            #fff0ae,
-            #ffe5ef
-        );
+    background:linear-gradient(
+        135deg,
+        #fff0ae,
+        #ffe5ef
+    );
 }
 
 .extended-box{
     padding:55px;
-
     background:white;
-
     border-radius:38px;
-
     box-shadow:0 15px 45px rgba(80,60,100,.12);
-
     text-align:center;
 }
 
 .extended-badge{
     display:inline-block;
-
     padding:10px 20px;
-
     border-radius:25px;
-
     background:#6956d6;
     color:white;
-
     font-weight:bold;
     font-size:14px;
 }
 
 .extended-box h2{
     margin:25px 0 10px;
-
     color:#ef1591;
-
     font-size:42px;
 }
 
 .extended-hours{
     margin:15px 0;
-
     color:#6956d6;
-
     font-size:30px;
     font-weight:bold;
 }
 
 .extended-description{
     max-width:800px;
-
     margin:15px auto;
-
     line-height:1.7;
 }
 
 .extended-price{
     margin:20px 0 5px;
-
     color:#ef1591;
-
     font-size:45px;
     font-weight:bold;
 }
-
-
-/* 3 KAFELKI */
 
 .extended-features{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
-
     margin:35px 0;
 }
 
 .extended-feature{
     padding:25px 15px;
-
     background:#faf5ff;
-
     border-radius:24px;
-
     color:#6956d6;
-
     font-weight:bold;
+    transition:.3s;
+}
+
+.extended-feature:hover{
+    transform:translateY(-7px);
 }
 
 .extended-feature span{
     display:block;
-
     margin-bottom:10px;
-
     font-size:35px;
 }
 
-
-/* GRAFIKA PAKIETU */
-
 .extended-poster{
     max-width:680px;
-
     margin:40px auto;
 }
 
 .extended-poster img{
     display:block;
-
     width:100%;
-
     border-radius:30px;
 
     box-shadow:
         0 18px 45px rgba(46,24,100,.25),
         0 0 30px rgba(239,21,145,.15);
 
-    transition:.25s;
+    transition:.35s;
 }
 
 .extended-poster img:hover{
-    transform:scale(1.01);
+    transform:translateY(-6px) scale(1.01);
 }
 
 
@@ -552,7 +636,6 @@ nav{
 
 .contact-box{
     padding:55px 30px;
-
     border-radius:38px;
 
     background:linear-gradient(
@@ -562,38 +645,30 @@ nav{
     );
 
     text-align:center;
-
     box-shadow:0 10px 35px rgba(80,60,100,.08);
 }
 
 .contact-box h2{
     margin:0 0 15px;
-
     color:#ef1591;
-
     font-size:39px;
 }
 
 .contact-box p{
     max-width:700px;
-
     margin:0 auto 25px;
-
     line-height:1.7;
 }
 
 .phone{
     margin:20px 0 8px;
-
     color:#ef1591;
-
     font-size:30px;
     font-weight:bold;
 }
 
 .email{
     margin-bottom:28px;
-
     font-size:19px;
     font-weight:bold;
 }
@@ -611,18 +686,160 @@ nav{
 
 
 /* =========================
-   FOOTER
+   PŁYWAJĄCY WHATSAPP
+========================= */
+
+.floating-whatsapp{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:3000;
+
+    width:68px;
+    height:68px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#25D366;
+    color:white;
+
+    font-size:34px;
+
+    box-shadow:
+        0 10px 30px rgba(37,211,102,.40),
+        0 0 0 0 rgba(37,211,102,.35);
+
+    animation:whatsappPulse 2.5s infinite;
+
+    transition:.25s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.12);
+}
+
+.whatsapp-label{
+    position:absolute;
+    right:78px;
+
+    width:max-content;
+
+    padding:10px 14px;
+
+    border-radius:15px;
+
+    background:white;
+
+    color:#4e4659;
+
+    font-size:13px;
+    font-weight:bold;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.13);
+
+    opacity:0;
+    transform:translateX(8px);
+
+    pointer-events:none;
+
+    transition:.25s;
+}
+
+.floating-whatsapp:hover .whatsapp-label{
+    opacity:1;
+    transform:translateX(0);
+}
+
+
+/* =========================
+   ANIMACJE
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+        opacity .75s ease,
+        transform .75s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes heroAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.45;
+        transform:scale(.8) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.25) rotate(15deg);
+    }
+}
+
+@keyframes floatIcon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+@keyframes whatsappPulse{
+
+    0%{
+        box-shadow:
+            0 10px 30px rgba(37,211,102,.40),
+            0 0 0 0 rgba(37,211,102,.35);
+    }
+
+    70%{
+        box-shadow:
+            0 10px 30px rgba(37,211,102,.40),
+            0 0 0 14px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:
+            0 10px 30px rgba(37,211,102,.40),
+            0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+
+/* =========================
+   STOPKA
 ========================= */
 
 footer{
     padding:40px 20px;
-
     background:#382083;
-
     color:white;
-
     text-align:center;
-
     line-height:1.8;
 }
 
@@ -633,7 +850,7 @@ footer a{
 
 
 /* =========================
-   RESPONSYWNOŚĆ
+   TELEFON / TABLET
 ========================= */
 
 @media(max-width:900px){
@@ -667,10 +884,13 @@ footer a{
         grid-template-columns:1fr 1fr;
     }
 
+    .first-day-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
     .extended-features{
         grid-template-columns:1fr;
     }
-
 }
 
 
@@ -716,6 +936,18 @@ footer a{
         grid-template-columns:1fr;
     }
 
+    .first-day-box{
+        padding:38px 18px;
+    }
+
+    .first-day-title h2{
+        font-size:31px;
+    }
+
+    .first-day-grid{
+        grid-template-columns:1fr;
+    }
+
     .extended-box{
         padding:35px 18px;
     }
@@ -737,6 +969,38 @@ footer a{
         border-radius:20px;
     }
 
+    .floating-whatsapp{
+        right:16px;
+        bottom:16px;
+
+        width:60px;
+        height:60px;
+
+        font-size:30px;
+    }
+
+    .whatsapp-label{
+        display:none;
+    }
+}
+
+
+/* OGRANICZENIE ANIMACJI DLA OSÓB,
+   KTÓRE MAJĄ JE WYŁĄCZONE W SYSTEMIE */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+
+    html{
+        scroll-behavior:auto;
+    }
 }
 
 </style>
@@ -756,7 +1020,7 @@ footer a{
 
 <div class="menu">
 
-    <a href="index.html" class="logo">
+    <a href="#top" class="logo">
 
         <img
             src="Logo-zuzu.jpg"
@@ -765,13 +1029,9 @@ footer a{
 
         <div class="logo-text">
 
-            <strong>
-                AKADEMIA ZUZU
-            </strong>
+            <strong>AKADEMIA ZUZU</strong>
 
-            <span>
-                Opieka stała
-            </span>
+            <span>Opieka stała</span>
 
         </div>
 
@@ -782,6 +1042,10 @@ footer a{
 
         <a href="#standard">
             Opieka standardowa
+        </a>
+
+        <a href="#pierwszy-dzien">
+            Pierwszy dzień
         </a>
 
         <a href="#rozszerzony">
@@ -812,6 +1076,11 @@ footer a{
 
 <header class="hero">
 
+<span class="magic-star star-one">★</span>
+<span class="magic-star star-two">✦</span>
+<span class="magic-star star-three">★</span>
+<span class="magic-star star-four">✦</span>
+
 <div class="hero-content">
 
     <h1>
@@ -823,10 +1092,8 @@ footer a{
     </h2>
 
     <p>
-        Codzienna opieka,
-        bliskość,
-        bezpieczeństwo,
-        zabawa i rozwój
+        Codzienna opieka, bliskość,
+        bezpieczeństwo, zabawa i rozwój
         w magicznym świecie Akademii ZUZU.
     </p>
 
@@ -844,7 +1111,7 @@ footer a{
     class="standard-section"
 >
 
-<div class="content">
+<div class="content reveal">
 
     <h2 class="section-title">
         Standardowa opieka 🧸
@@ -857,9 +1124,6 @@ footer a{
 
 
     <div class="standard-grid">
-
-
-        <!-- LEWA STRONA -->
 
         <div class="standard-card">
 
@@ -882,7 +1146,6 @@ footer a{
                 <strong>„Aktywnie w żłobku”</strong>.
             </p>
 
-
             <div class="standard-list">
 
                 ⭐ Codzienna opieka<br>
@@ -896,11 +1159,9 @@ footer a{
                 📝 Wpisowe –
                 400 zł<br>
 
-                🌈 Zajęcia
-                i codzienna zabawa
+                🌈 Zajęcia i codzienna zabawa
 
             </div>
-
 
             <a
                 href="https://wa.me/48798150723?text=Dzień%20dobry%2C%20chcę%20zapytać%20o%20miejsce%20w%20Akademii%20ZUZU%20w%20ramach%20opieki%20stałej."
@@ -913,8 +1174,6 @@ footer a{
         </div>
 
 
-        <!-- PRAWA STRONA - GRAFIKA -->
-
         <div class="standard-poster">
 
             <img
@@ -923,7 +1182,6 @@ footer a{
             >
 
         </div>
-
 
     </div>
 
@@ -938,64 +1196,205 @@ footer a{
 
 <section class="benefits">
 
-<div class="content">
+<div class="content reveal">
 
     <div class="benefit-grid">
 
+        <div class="benefit">
+            <div class="benefit-icon">🥣</div>
+            <strong>Własna kuchnia</strong>
+        </div>
 
         <div class="benefit">
+            <div class="benefit-icon">🎵</div>
+            <strong>Zajęcia muzyczne</strong>
+        </div>
 
-            <div class="benefit-icon">
-                🥣
+        <div class="benefit">
+            <div class="benefit-icon">💬</div>
+            <strong>Zajęcia językowe</strong>
+        </div>
+
+        <div class="benefit">
+            <div class="benefit-icon">🐾</div>
+            <strong>Zooterapia</strong>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PIERWSZY DZIEŃ W ZUZU
+========================= -->
+
+<section
+    id="pierwszy-dzien"
+    class="first-day"
+>
+
+<div class="content reveal">
+
+<div class="first-day-box">
+
+    <div class="first-day-title">
+
+        <span class="backpack">
+            🎒
+        </span>
+
+        <h2>
+            Pierwszy dzień w ZUZU
+        </h2>
+
+        <p>
+            Pierwszy dzień to wielka przygoda!
+            Kilka drobiazgów pomoże nam zadbać
+            o komfort malucha i sprawi,
+            że wszystko będzie pod ręką. 💗
+        </p>
+
+    </div>
+
+
+    <div class="first-day-grid">
+
+
+        <div class="first-card">
+
+            <div class="first-card-icon">
+                👕
             </div>
 
-            <strong>
-                Własna kuchnia
-            </strong>
+            <h3>
+                Ubranka na zmianę
+            </h3>
+
+            <p>
+                Przygotuj wygodny komplet ubrań
+                na zmianę odpowiedni do pogody
+                i codziennych ZUZU-owych przygód.
+            </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="first-card">
 
-            <div class="benefit-icon">
-                🎵
+            <div class="first-card-icon">
+                🏷️
             </div>
 
-            <strong>
-                Zajęcia muzyczne
-            </strong>
+            <h3>
+                Podpisz rzeczy
+            </h3>
+
+            <p>
+                Warto podpisać ubrania,
+                buciki i inne rzeczy dziecka
+                imieniem lub inicjałami.
+            </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="first-card">
 
-            <div class="benefit-icon">
-                💬
+            <div class="first-card-icon">
+                🥿
             </div>
 
-            <strong>
-                Zajęcia językowe
-            </strong>
+            <h3>
+                Wygodne buciki
+            </h3>
+
+            <p>
+                Zabierz wygodne obuwie
+                na zmianę, w którym maluch
+                może swobodnie się bawić.
+            </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="first-card">
 
-            <div class="benefit-icon">
-                🐾
+            <div class="first-card-icon">
+                🧸
             </div>
 
-            <strong>
-                Zooterapia
-            </strong>
+            <h3>
+                Coś znajomego
+            </h3>
+
+            <p>
+                Jeśli dziecko ma ulubioną
+                przytulankę lub przedmiot,
+                który daje mu poczucie komfortu,
+                może zabrać go ze sobą.
+            </p>
+
+        </div>
+
+
+        <div class="first-card">
+
+            <div class="first-card-icon">
+                😴
+            </div>
+
+            <h3>
+                Rzeczy do odpoczynku
+            </h3>
+
+            <p>
+                Jeśli maluch korzysta
+                ze smoczka lub innych rzeczy
+                potrzebnych podczas odpoczynku,
+                przygotuj je na pierwszy dzień.
+            </p>
+
+        </div>
+
+
+        <div class="first-card">
+
+            <div class="first-card-icon">
+                💗
+            </div>
+
+            <h3>
+                Informacje dla Cioci ZUZU
+            </h3>
+
+            <p>
+                Powiedz nam o ważnych
+                przyzwyczajeniach dziecka
+                i wszystkim, co pomoże nam
+                lepiej zadbać o jego komfort.
+            </p>
 
         </div>
 
 
     </div>
+
+
+    <div class="first-day-tip">
+
+        ✨ <strong>Mała podpowiedź:</strong>
+        nie musisz przygotowywać połowy domu. 😂
+        Najważniejsze są wygodne rzeczy,
+        kilka rzeczy na zmianę
+        i informacje, które pomogą Ciociom ZUZU
+        poznać małego człowieka.
+
+    </div>
+
+</div>
 
 </div>
 
@@ -1011,25 +1410,21 @@ footer a{
     class="extended"
 >
 
-<div class="content">
+<div class="content reveal">
 
 <div class="extended-box">
-
 
     <span class="extended-badge">
         ⭐ PAKIET ROZSZERZONY ⭐
     </span>
 
-
     <h2>
         Potrzebujesz większej elastyczności?
     </h2>
 
-
     <div class="extended-hours">
         🌙 5:30 – 19:30 ☀️
     </div>
-
 
     <p class="extended-description">
 
@@ -1043,11 +1438,9 @@ footer a{
 
     </p>
 
-
     <div class="extended-price">
         499 zł
     </div>
-
 
     <p>
         miesięcznie z programem
@@ -1057,44 +1450,23 @@ footer a{
 
     <div class="extended-features">
 
-
         <div class="extended-feature">
-
-            <span>
-                🌙
-            </span>
-
+            <span>🌙</span>
             Wcześniejsza opieka
-
         </div>
 
-
         <div class="extended-feature">
-
-            <span>
-                ☀️
-            </span>
-
+            <span>☀️</span>
             Późniejsza opieka
-
         </div>
-
 
         <div class="extended-feature">
-
-            <span>
-                🗓️
-            </span>
-
+            <span>🗓️</span>
             Większa elastyczność
-
         </div>
-
 
     </div>
 
-
-    <!-- GRAFIKA PAKIETU ROZSZERZONEGO -->
 
     <div class="extended-poster">
 
@@ -1114,7 +1486,6 @@ footer a{
         💬 Zapytaj o Pakiet Rozszerzony
     </a>
 
-
 </div>
 
 </div>
@@ -1128,15 +1499,13 @@ footer a{
 
 <section class="contact-section">
 
-<div class="content">
+<div class="content reveal">
 
 <div class="contact-box">
-
 
     <h2>
         Zapytaj nas o miejsce ♡
     </h2>
-
 
     <p>
         Chcesz zapisać dziecko
@@ -1146,11 +1515,9 @@ footer a{
         i odpowiedni wariant opieki.
     </p>
 
-
     <div class="phone">
         📞 798 150 723
     </div>
-
 
     <div class="email">
 
@@ -1172,7 +1539,6 @@ footer a{
             ☎️ Zadzwoń
         </a>
 
-
         <a
             href="https://wa.me/48798150723"
             target="_blank"
@@ -1180,7 +1546,6 @@ footer a{
         >
             💬 WhatsApp
         </a>
-
 
         <a
             href="index.html#zapisy"
@@ -1190,7 +1555,6 @@ footer a{
         </a>
 
     </div>
-
 
 </div>
 
@@ -1228,6 +1592,68 @@ footer a{
     </a>
 
 </footer>
+
+
+<!-- =========================
+     PŁYWAJĄCY WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/48798150723?text=Dzień%20dobry%2C%20mam%20pytanie%20dotyczące%20Akademii%20ZUZU."
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Napisz do Akademii ZUZU na WhatsApp"
+>
+
+    💬
+
+    <span class="whatsapp-label">
+        Napisz do Cioci ZUZU 💗
+    </span>
+
+</a>
+
+
+<!-- =========================
+     SKRYPT ANIMACJI
+========================= -->
+
+<script>
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+const revealObserver =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("visible");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold:0.12
+        }
+    );
+
+revealElements.forEach((element) => {
+
+    revealObserver.observe(element);
+
+});
+
+</script>
 
 
 </body>
