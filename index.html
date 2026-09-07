@@ -15,6 +15,10 @@
 
 <style>
 
+/* =========================
+   PODSTAWY
+========================= */
+
 *{
     box-sizing:border-box;
     scroll-behavior:smooth;
@@ -44,15 +48,19 @@ nav{
     position:sticky;
     top:0;
     z-index:1000;
+
     background:rgba(255,255,255,.97);
+
     box-shadow:0 4px 20px rgba(0,0,0,.07);
 }
 
 .menu{
     max-width:1200px;
     min-height:82px;
+
     margin:auto;
     padding:8px 25px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -67,8 +75,11 @@ nav{
 .logo img{
     width:64px;
     height:64px;
+
     object-fit:cover;
+
     border-radius:18px;
+
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
@@ -107,65 +118,143 @@ nav{
 .links .zapisy{
     background:#ef1591;
     color:white;
+
     padding:13px 22px;
+
     border-radius:30px;
 }
 
 
 /* =========================
-   HERO
+   MAGICZNY HERO
 ========================= */
 
 .hero{
-    min-height:700px;
+    min-height:720px;
+
     padding:75px 25px;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
 
+    position:relative;
+    overflow:hidden;
+
     background:
-        radial-gradient(circle at 10% 20%, #ffeb70 0 25px, transparent 27px),
-        radial-gradient(circle at 90% 15%, #f79cda 0 65px, transparent 67px),
-        radial-gradient(circle at 15% 85%, #c6a4ff 0 70px, transparent 72px),
-        radial-gradient(circle at 87% 82%, #fff59a 0 35px, transparent 37px),
-        linear-gradient(135deg,#29c5df,#55cbdc);
+        linear-gradient(
+            rgba(20,10,70,.20),
+            rgba(20,10,70,.20)
+        ),
+        url("hero-magiczne-zuzu.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255,0,170,.18),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(120,70,255,.18),
+            transparent 30%
+        );
+
+    pointer-events:none;
 }
 
 .hero-content{
     max-width:900px;
+
+    position:relative;
+    z-index:2;
+
+    padding:34px;
+
+    border-radius:38px;
+
+    background:rgba(20,10,70,.20);
+
+    backdrop-filter:blur(3px);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,.20);
 }
 
 .hero-logo{
-    width:220px;
-    height:220px;
+    width:190px;
+    height:190px;
+
     object-fit:cover;
-    border-radius:40px;
-    border:6px solid rgba(255,255,255,.95);
-    box-shadow:0 18px 45px rgba(55,35,100,.25);
+
+    border-radius:36px;
+
+    border:5px solid rgba(255,255,255,.95);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.6),
+        0 18px 45px rgba(55,35,100,.30);
 }
 
 .hero h1{
     margin:25px 0 0;
+
     color:white;
+
     font-size:68px;
+
     line-height:1;
-    text-shadow:0 5px 15px rgba(0,0,0,.16);
+
+    text-shadow:
+        0 0 12px #ff4dc4,
+        0 0 25px rgba(255,77,196,.70),
+        0 5px 15px rgba(0,0,0,.35);
 }
 
 .hero h2{
     margin:20px 0 10px;
-    color:#fff59a;
+
+    color:#ffe75a;
+
     font-size:29px;
+
+    text-shadow:
+        0 0 10px rgba(255,231,90,.75);
 }
 
 .hero p{
     max-width:750px;
+
     margin:20px auto 30px;
+
     color:white;
+
     font-size:20px;
+
     line-height:1.7;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.60);
 }
 
 
@@ -182,13 +271,20 @@ nav{
 
 .button{
     display:inline-block;
+
     padding:16px 30px;
+
     border-radius:35px;
+
     text-decoration:none;
     font-weight:bold;
+
     border:none;
+
     cursor:pointer;
+
     font-size:16px;
+
     transition:.2s;
 }
 
@@ -199,30 +295,35 @@ nav{
 .button-pink{
     background:#ef1591;
     color:white;
+
     box-shadow:0 10px 25px rgba(239,21,145,.3);
 }
 
 .button-white{
     background:white;
     color:#6655c7;
+
     box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .button-purple{
     background:#6956c8;
     color:white;
+
     box-shadow:0 10px 25px rgba(105,86,200,.22);
 }
 
 .button-green{
     background:#25D366;
     color:white;
+
     box-shadow:0 10px 25px rgba(37,211,102,.25);
 }
 
 .button-facebook{
     background:#1877f2;
     color:white;
+
     box-shadow:0 10px 25px rgba(24,119,242,.22);
 }
 
@@ -233,8 +334,11 @@ nav{
 
 .quick-info{
     max-width:1100px;
+
     margin:-55px auto 0;
+
     padding:0 25px;
+
     position:relative;
     z-index:5;
 }
@@ -242,9 +346,13 @@ nav{
 .quick-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
+
     background:white;
+
     border-radius:30px;
+
     box-shadow:0 15px 45px rgba(70,60,90,.15);
+
     overflow:hidden;
 }
 
@@ -264,7 +372,9 @@ nav{
 .quick-card strong{
     display:block;
     margin:10px 0 7px;
+
     color:#725ed6;
+
     font-size:19px;
 }
 
@@ -307,10 +417,15 @@ nav{
 
 .about{
     padding:48px;
+
     background:white;
+
     border-radius:35px;
+
     box-shadow:0 10px 35px rgba(80,60,100,.09);
+
     text-align:center;
+
     font-size:18px;
     line-height:1.85;
 }
@@ -338,9 +453,13 @@ nav{
 
 .location-card{
     overflow:hidden;
+
     background:white;
+
     border-radius:32px;
+
     box-shadow:0 10px 35px rgba(70,60,90,.10);
+
     transition:.25s;
 }
 
@@ -404,10 +523,15 @@ nav{
 
 .oferta-kafelek{
     display:block;
+
     overflow:hidden;
+
     border-radius:30px;
+
     background:white;
+
     box-shadow:0 12px 30px rgba(80,50,120,.15);
+
     text-decoration:none;
 
     transition:
@@ -417,13 +541,17 @@ nav{
 
 .oferta-kafelek img{
     display:block;
+
     width:100%;
+
     aspect-ratio:1 / 1;
+
     object-fit:cover;
 }
 
 .oferta-kafelek:hover{
     transform:translateY(-8px) scale(1.02);
+
     box-shadow:0 18px 40px rgba(108,67,180,.25);
 }
 
@@ -444,25 +572,35 @@ nav{
 
 .extended-box{
     padding:55px;
+
     background:white;
+
     border-radius:38px;
+
     box-shadow:0 12px 40px rgba(80,60,100,.10);
+
     text-align:center;
 }
 
 .extended-badge{
     display:inline-block;
+
     padding:9px 18px;
+
     background:#6956c8;
     color:white;
+
     border-radius:25px;
+
     font-size:14px;
     font-weight:bold;
 }
 
 .extended-box h2{
     margin:20px 0 15px;
+
     color:#ef1591;
+
     font-size:40px;
 }
 
@@ -490,8 +628,11 @@ nav{
 
 .form-box{
     background:white;
+
     border-radius:38px;
+
     padding:50px;
+
     box-shadow:0 12px 40px rgba(70,60,90,.12);
 }
 
@@ -520,14 +661,23 @@ nav{
 .form-group select,
 .form-group textarea{
     width:100%;
+
     padding:15px 16px;
+
     border:2px solid #eee5f1;
+
     border-radius:18px;
+
     font-size:16px;
+
     font-family:Arial, Helvetica, sans-serif;
+
     background:white;
+
     color:#4d4657;
+
     outline:none;
+
     transition:.2s;
 }
 
@@ -535,6 +685,7 @@ nav{
 .form-group select:focus,
 .form-group textarea:focus{
     border-color:#ef1591;
+
     box-shadow:0 0 0 4px rgba(239,21,145,.08);
 }
 
@@ -545,11 +696,17 @@ nav{
 
 .form-note{
     margin:20px 0;
+
     padding:15px 18px;
+
     border-radius:18px;
+
     background:#fff7cf;
+
     color:#665d70;
+
     line-height:1.6;
+
     font-size:14px;
 }
 
@@ -571,9 +728,13 @@ nav{
 
 .social-box{
     padding:55px 30px;
+
     border-radius:38px;
+
     text-align:center;
+
     background:linear-gradient(135deg,#e9f3ff,#ffe7f4);
+
     box-shadow:0 10px 35px rgba(80,60,100,.08);
 }
 
@@ -584,7 +745,9 @@ nav{
 
 .social-box h2{
     margin:0 0 15px;
+
     color:#725ed6;
+
     font-size:38px;
 }
 
@@ -607,8 +770,11 @@ nav{
 
 .magic-box{
     padding:55px 30px;
+
     background:linear-gradient(135deg,#ffe3f2,#e4f8ff);
+
     border-radius:38px;
+
     box-shadow:0 10px 35px rgba(80,60,100,.08);
 }
 
@@ -624,8 +790,11 @@ nav{
 
 .contact{
     padding:60px 25px;
+
     background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+
     border-radius:38px;
+
     text-align:center;
 }
 
@@ -650,9 +819,13 @@ nav{
 
 footer{
     padding:45px 20px;
+
     background:#5b4bae;
+
     color:white;
+
     text-align:center;
+
     line-height:1.7;
 }
 
@@ -698,11 +871,16 @@ footer a{
 
     .hero{
         min-height:620px;
+        background-position:center;
+    }
+
+    .hero-content{
+        padding:26px 20px;
     }
 
     .hero-logo{
-        width:170px;
-        height:170px;
+        width:150px;
+        height:150px;
     }
 
     .hero h1{
@@ -779,11 +957,12 @@ footer a{
 
 </head>
 
-
 <body>
 
 
-<!-- MENU -->
+<!-- =========================
+     MENU
+========================= -->
 
 <nav>
 
@@ -810,7 +989,6 @@ footer a{
 
     </div>
 
-
     <div class="links">
 
         <a href="#onas">O nas</a>
@@ -833,7 +1011,9 @@ footer a{
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     MAGICZNY HERO
+========================= -->
 
 <header class="hero">
 
@@ -860,7 +1040,6 @@ footer a{
         kreatywności i codziennego dziecięcego śmiechu.
     </p>
 
-
     <div class="buttons">
 
         <a
@@ -884,7 +1063,9 @@ footer a{
 </header>
 
 
-<!-- QUICK INFO -->
+<!-- =========================
+     QUICK INFO
+========================= -->
 
 <div class="quick-info">
 
@@ -949,7 +1130,9 @@ footer a{
 </div>
 
 
-<!-- O NAS -->
+<!-- =========================
+     O NAS
+========================= -->
 
 <section
     id="onas"
@@ -963,7 +1146,6 @@ footer a{
 <p class="section-subtitle">
     Tu mały człowiek może być po prostu małym człowiekiem.
 </p>
-
 
 <div class="about">
 
@@ -992,7 +1174,9 @@ footer a{
 </section>
 
 
-<!-- LOKALIZACJE -->
+<!-- =========================
+     LOKALIZACJE
+========================= -->
 
 <div
     id="lokalizacje"
@@ -1009,7 +1193,6 @@ footer a{
     Trzy lokalizacje w Szczecinie.
     Jedna ZUZU-owa filozofia.
 </p>
-
 
 <div class="location-cards">
 
@@ -1132,7 +1315,6 @@ footer a{
 
     </div>
 
-
 </div>
 
 </div>
@@ -1158,16 +1340,12 @@ footer a{
     i zobacz szczegóły.
 </p>
 
-
 <div class="oferta-kafelki">
 
-
-    <!-- ZAJĘCIA DODATKOWE -->
 
     <a
         href="zajecia-dodatkowe.html"
         class="oferta-kafelek"
-        aria-label="Zajęcia dodatkowe"
     >
 
         <img
@@ -1178,12 +1356,9 @@ footer a{
     </a>
 
 
-    <!-- OPIEKA WEEKENDOWA -->
-
     <a
         href="opieka-weekendowa.html"
         class="oferta-kafelek"
-        aria-label="Opieka weekendowa"
     >
 
         <img
@@ -1194,12 +1369,9 @@ footer a{
     </a>
 
 
-    <!-- OPIEKA NA GODZINY -->
-
     <a
         href="opieka-na-godziny.html"
         class="oferta-kafelek"
-        aria-label="Opieka na godziny"
     >
 
         <img
@@ -1210,12 +1382,9 @@ footer a{
     </a>
 
 
-    <!-- OPIEKA STAŁA -->
-
     <a
         href="opieka-stala.html"
         class="oferta-kafelek"
-        aria-label="Opieka stała"
     >
 
         <img
@@ -1231,7 +1400,9 @@ footer a{
 </section>
 
 
-<!-- PAKIET ROZSZERZONY -->
+<!-- =========================
+     PAKIET ROZSZERZONY
+========================= -->
 
 <div
     id="pakiet"
@@ -1278,7 +1449,9 @@ footer a{
 </div>
 
 
-<!-- FORMULARZ -->
+<!-- =========================
+     FORMULARZ
+========================= -->
 
 <div
     id="zapisy"
@@ -1296,7 +1469,6 @@ footer a{
     a przygotujemy gotową wiadomość
     do wysłania przez WhatsApp.
 </p>
-
 
 <div class="form-box">
 
@@ -1359,7 +1531,10 @@ footer a{
             Lokalizacja
         </label>
 
-        <select id="location" required>
+        <select
+            id="location"
+            required
+        >
 
             <option value="">
                 Wybierz lokalizację
@@ -1392,7 +1567,10 @@ footer a{
             Rodzaj oferty
         </label>
 
-        <select id="offerType" required>
+        <select
+            id="offerType"
+            required
+        >
 
             <option value="">
                 Wybierz ofertę
@@ -1447,9 +1625,7 @@ footer a{
 
     </div>
 
-
 </div>
-
 
 <div class="form-note">
 
@@ -1459,7 +1635,6 @@ footer a{
     z przygotowaną wiadomością.
 
 </div>
-
 
 <div class="form-submit">
 
@@ -1481,7 +1656,9 @@ footer a{
 </div>
 
 
-<!-- SOCIAL -->
+<!-- =========================
+     SOCIAL
+========================= -->
 
 <div class="social-section">
 
@@ -1500,7 +1677,6 @@ footer a{
         i zobacz więcej
         z codziennego życia Akademii ZUZU.
     </p>
-
 
     <div class="buttons">
 
@@ -1529,7 +1705,9 @@ footer a{
 </div>
 
 
-<!-- MAGIC -->
+<!-- =========================
+     MAGIC
+========================= -->
 
 <section class="content magic">
 
@@ -1560,7 +1738,9 @@ footer a{
 </section>
 
 
-<!-- KONTAKT -->
+<!-- =========================
+     KONTAKT
+========================= -->
 
 <section
     id="kontakt"
@@ -1582,11 +1762,9 @@ footer a{
         Napisz lub zadzwoń.
     </p>
 
-
     <div class="phone">
         📞 798 150 723
     </div>
-
 
     <div class="buttons">
 
@@ -1622,7 +1800,9 @@ footer a{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1666,6 +1846,10 @@ footer a{
 
 </footer>
 
+
+<!-- =========================
+     WHATSAPP
+========================= -->
 
 <script>
 
@@ -1737,7 +1921,10 @@ Proszę o kontakt. ♡`;
             "?text=" +
             encodeURIComponent(message);
 
-        window.open(url, "_blank");
+        window.open(
+            url,
+            "_blank"
+        );
 
     }
 );
