@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pl">
 
 <head>
@@ -8,471 +9,395 @@
 
 <style>
 
-/* =========================
-   PODSTAWY
-========================= */
-
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #4d4657;
-    background: #fffafd;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#4d4657;
+    background:#fffafd;
 }
 
-section {
-    scroll-margin-top: 90px;
+section{
+    scroll-margin-top:90px;
 }
 
-/* =========================
-   MENU
-========================= */
+/* MENU */
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.96);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.96);
+    box-shadow:0 4px 20px rgba(0,0,0,0.07);
 }
 
-.menu {
-    max-width: 1200px;
-    min-height: 82px;
-    margin: auto;
-    padding: 8px 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu{
+    max-width:1200px;
+    min-height:82px;
+    margin:auto;
+    padding:8px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo img {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+.logo img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
-.logo-name {
-    display: flex;
-    flex-direction: column;
+.logo-name{
+    display:flex;
+    flex-direction:column;
 }
 
-.logo-name strong {
-    color: #ef1591;
-    font-size: 24px;
+.logo-name strong{
+    color:#ef1591;
+    font-size:24px;
 }
 
-.logo-name span {
-    color: #756d83;
-    font-size: 12px;
-    margin-top: 2px;
+.logo-name span{
+    color:#756d83;
+    font-size:12px;
+    margin-top:2px;
 }
 
-.links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.links{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-.links a {
-    color: #5d5667;
-    text-decoration: none;
-    font-weight: bold;
+.links a{
+    color:#5d5667;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.links a:hover {
-    color: #ef1591;
+.links a:hover{
+    color:#ef1591;
 }
 
-.links .zapisy {
-    background: #ef1591;
-    color: white;
-    padding: 13px 22px;
-    border-radius: 30px;
+.links .zapisy{
+    background:#ef1591;
+    color:white;
+    padding:13px 22px;
+    border-radius:30px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
-.hero {
-    min-height: 680px;
-    padding: 70px 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
+.hero{
+    min-height:680px;
+    padding:70px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
     background:
         radial-gradient(circle at 10% 20%, #ffeb70 0 25px, transparent 27px),
         radial-gradient(circle at 90% 15%, #f79cda 0 65px, transparent 67px),
         radial-gradient(circle at 15% 85%, #c6a4ff 0 70px, transparent 72px),
-        linear-gradient(135deg, #29c5df, #55cbdc);
+        linear-gradient(135deg,#29c5df,#55cbdc);
 }
 
-.hero-content {
-    max-width: 850px;
+.hero-content{
+    max-width:850px;
 }
 
-.hero-logo {
-    width: 230px;
-    height: 230px;
-    object-fit: cover;
-
-    border-radius: 38px;
-    border: 6px solid rgba(255,255,255,0.9);
-
-    box-shadow: 0 18px 45px rgba(55,35,100,0.25);
+.hero-logo{
+    width:230px;
+    height:230px;
+    object-fit:cover;
+    border-radius:38px;
+    border:6px solid rgba(255,255,255,0.9);
+    box-shadow:0 18px 45px rgba(55,35,100,0.25);
 }
 
-.hero h1 {
-    margin: 25px 0 0;
-    color: white;
-    font-size: 66px;
-    line-height: 1;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.16);
+.hero h1{
+    margin:25px 0 0;
+    color:white;
+    font-size:66px;
+    line-height:1;
+    text-shadow:0 5px 15px rgba(0,0,0,0.16);
 }
 
-.hero h2 {
-    margin: 20px 0 10px;
-    color: #fff59a;
-    font-size: 29px;
+.hero h2{
+    margin:20px 0 10px;
+    color:#fff59a;
+    font-size:29px;
 }
 
-.hero p {
-    max-width: 720px;
-    margin: 20px auto 30px;
-
-    color: white;
-    font-size: 20px;
-    line-height: 1.7;
+.hero p{
+    max-width:720px;
+    margin:20px auto 30px;
+    color:white;
+    font-size:20px;
+    line-height:1.7;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.button {
-    display: inline-block;
-    padding: 16px 30px;
-
-    border-radius: 35px;
-
-    text-decoration: none;
-    font-weight: bold;
-
-    transition: 0.2s;
+.button{
+    display:inline-block;
+    padding:16px 30px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.2s;
 }
 
-.button:hover {
-    transform: translateY(-3px);
+.button:hover{
+    transform:translateY(-3px);
 }
 
-.button-pink {
-    background: #ef1591;
-    color: white;
-    box-shadow: 0 10px 25px rgba(239,21,145,0.3);
+.button-pink{
+    background:#ef1591;
+    color:white;
+    box-shadow:0 10px 25px rgba(239,21,145,0.3);
 }
 
-.button-white {
-    background: white;
-    color: #6655c7;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+.button-white{
+    background:white;
+    color:#6655c7;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* =========================
-   SEKCJE
-========================= */
+/* SEKCJE */
 
-.content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 85px 25px;
+.content{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 25px;
 }
 
-.section-title {
-    margin: 0 0 15px;
-
-    text-align: center;
-
-    color: #e84d9b;
-    font-size: 42px;
+.section-title{
+    margin:0 0 15px;
+    text-align:center;
+    color:#e84d9b;
+    font-size:42px;
 }
 
-.section-subtitle {
-    max-width: 750px;
-    margin: 0 auto 45px;
-
-    text-align: center;
-
-    color: #706979;
-    font-size: 18px;
-    line-height: 1.7;
+.section-subtitle{
+    max-width:750px;
+    margin:0 auto 45px;
+    text-align:center;
+    color:#706979;
+    font-size:18px;
+    line-height:1.7;
 }
 
-/* =========================
-   O NAS
-========================= */
+/* O NAS */
 
-.about {
-    padding: 45px;
-
-    background: white;
-
-    border-radius: 35px;
-
-    box-shadow: 0 10px 35px rgba(80,60,100,0.09);
-
-    text-align: center;
-
-    font-size: 18px;
-    line-height: 1.8;
+.about{
+    padding:45px;
+    background:white;
+    border-radius:35px;
+    box-shadow:0 10px 35px rgba(80,60,100,0.09);
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
 }
 
-/* =========================
-   LOKALIZACJE
-========================= */
+/* KARTY */
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.card {
-    padding: 35px 25px;
-
-    background: white;
-
-    border-radius: 30px;
-
-    box-shadow: 0 10px 30px rgba(70,60,90,0.10);
-
-    text-align: center;
-
-    transition: 0.25s;
+.card{
+    padding:35px 25px;
+    background:white;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(70,60,90,0.10);
+    text-align:center;
+    transition:0.25s;
 }
 
-.card:hover {
-    transform: translateY(-7px);
+.card:hover{
+    transform:translateY(-7px);
 }
 
-.card-icon {
-    font-size: 50px;
+.card-icon{
+    font-size:50px;
 }
 
-.card h3 {
-    margin: 15px 0 10px;
-
-    color: #725ed6;
-    font-size: 23px;
+.card h3{
+    margin:15px 0 10px;
+    color:#725ed6;
+    font-size:23px;
 }
 
-.card p {
-    color: #615a69;
-    line-height: 1.6;
+.card p{
+    color:#615a69;
+    line-height:1.6;
+    min-height:82px;
 }
 
-/* =========================
-   DLACZEGO ZUZU
-========================= */
-
-.why {
-    background: #fff1b5;
+.card .button{
+    margin-top:10px;
 }
 
-.why-inner {
-    max-width: 1200px;
-    margin: auto;
-    padding: 85px 25px;
+/* DLACZEGO ZUZU */
+
+.why{
+    background:#fff1b5;
 }
 
-.why .section-title {
-    color: #6956c8;
+.why-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 25px;
 }
 
-/* =========================
-   DODATKOWA SEKCJA
-========================= */
-
-.magic {
-    text-align: center;
+.why .section-title{
+    color:#6956c8;
 }
 
-.magic-box {
-    padding: 45px 30px;
+/* MAGIC */
 
-    background: linear-gradient(135deg,#ffe3f2,#e4f8ff);
-
-    border-radius: 35px;
-
-    box-shadow: 0 10px 35px rgba(80,60,100,0.08);
+.magic{
+    text-align:center;
 }
 
-.magic-icons {
-    margin-bottom: 15px;
-    font-size: 45px;
+.magic-box{
+    padding:45px 30px;
+    background:linear-gradient(135deg,#ffe3f2,#e4f8ff);
+    border-radius:35px;
+    box-shadow:0 10px 35px rgba(80,60,100,0.08);
 }
 
-/* =========================
-   KONTAKT
-========================= */
-
-.contact {
-    padding: 55px 25px;
-
-    background: linear-gradient(135deg,#fce2f0,#e4f7ff);
-
-    border-radius: 35px;
-
-    text-align: center;
+.magic-icons{
+    margin-bottom:15px;
+    font-size:45px;
 }
 
-.phone {
-    margin: 25px 0;
+/* KONTAKT */
 
-    color: #ef1591;
-
-    font-size: 30px;
-    font-weight: bold;
+.contact{
+    padding:55px 25px;
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+    border-radius:35px;
+    text-align:center;
 }
 
-/* =========================
-   STOPKA
-========================= */
-
-footer {
-    padding: 35px 20px;
-
-    background: #5b4bae;
-
-    color: white;
-
-    text-align: center;
+.phone{
+    margin:25px 0;
+    color:#ef1591;
+    font-size:30px;
+    font-weight:bold;
 }
 
-/* =========================
-   TELEFONY
-========================= */
+/* STOPKA */
 
-@media (max-width: 850px) {
+footer{
+    padding:35px 20px;
+    background:#5b4bae;
+    color:white;
+    text-align:center;
+}
 
-    .links {
-        display: none;
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .links{
+        display:none;
     }
 
-    .logo-name strong {
-        font-size: 20px;
+    .logo-name strong{
+        font-size:20px;
     }
 
-    .hero {
-        min-height: 600px;
+    .hero{
+        min-height:600px;
     }
 
-    .hero-logo {
-        width: 175px;
-        height: 175px;
+    .hero-logo{
+        width:175px;
+        height:175px;
     }
 
-    .hero h1 {
-        font-size: 46px;
+    .hero h1{
+        font-size:46px;
     }
 
-    .hero h2 {
-        font-size: 23px;
+    .hero h2{
+        font-size:23px;
     }
 
-    .hero p {
-        font-size: 17px;
+    .hero p{
+        font-size:17px;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
+    .cards{
+        grid-template-columns:1fr;
     }
 
-    .section-title {
-        font-size: 34px;
+    .section-title{
+        font-size:34px;
     }
 
+    .card p{
+        min-height:auto;
+    }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     MENU
-========================= -->
-
 <nav>
-
 <div class="menu">
 
     <div class="logo">
-
         <img src="Logo-zuzu.jpg" alt="Logo Akademii ZUZU">
 
         <div class="logo-name">
             <strong>AKADEMIA ZUZU</strong>
             <span>Szczecin</span>
         </div>
-
     </div>
 
-
     <div class="links">
-
         <a href="#onas">O nas</a>
-
         <a href="#lokalizacje">Lokalizacje</a>
-
         <a href="#oferta">Oferta</a>
-
         <a href="#kontakt">Kontakt</a>
-
         <a href="#kontakt" class="zapisy">Zapisy</a>
-
     </div>
 
 </div>
-
 </nav>
 
-
-<!-- =========================
-     GÓRA STRONY
-========================= -->
 
 <header class="hero">
 
 <div class="hero-content">
 
-    <img
-        src="Logo-zuzu.jpg"
-        class="hero-logo"
-        alt="Logo ZUZU"
-    >
+    <img src="Logo-zuzu.jpg" class="hero-logo" alt="Logo ZUZU">
 
     <h1>Akademia ZUZU</h1>
 
@@ -484,21 +409,13 @@ footer {
         i codziennego odkrywania świata.
     </p>
 
-
     <div class="buttons">
 
-        <a
-            href="#kontakt"
-            class="button button-pink"
-        >
+        <a href="#kontakt" class="button button-pink">
             Zapisz dziecko ♡
         </a>
 
-
-        <a
-            href="#onas"
-            class="button button-white"
-        >
+        <a href="#onas" class="button button-white">
             Poznaj ZUZU
         </a>
 
@@ -509,14 +426,7 @@ footer {
 </header>
 
 
-<!-- =========================
-     O NAS
-========================= -->
-
-<section
-    id="onas"
-    class="content"
->
+<section id="onas" class="content">
 
 <h2 class="section-title">
     Cześć, tu ZUZU! ☁️
@@ -526,7 +436,6 @@ footer {
     Miejsce stworzone z myślą o małych ludziach
     i ich wielkich przygodach.
 </p>
-
 
 <div class="about">
 
@@ -544,26 +453,17 @@ footer {
 </section>
 
 
-<!-- =========================
-     LOKALIZACJE
-========================= -->
-
-<section
-    id="lokalizacje"
-    class="content"
->
+<section id="lokalizacje" class="content">
 
 <h2 class="section-title">
     Nasze ZUZU w Szczecinie
 </h2>
 
 <p class="section-subtitle">
-    Trzy miejsca. Jedna ZUZU-owa magia. ✨
+    Wybierz lokalizację najwygodniejszą dla Was. ☁️
 </p>
 
-
 <div class="cards">
-
 
     <div class="card">
 
@@ -576,10 +476,14 @@ footer {
         </h3>
 
         <p>
-            Przyjazna przestrzeń dla najmłodszych,
-            pełna codziennych zabaw,
-            uśmiechu i odkrywania świata.
+            Nasza główna lokalizacja.
+            Ciepła atmosfera, codzienna opieka
+            i mnóstwo dziecięcych przygód.
         </p>
+
+        <a href="witkiewicza.html" class="button button-pink">
+            Zobacz lokalizację
+        </a>
 
     </div>
 
@@ -595,10 +499,13 @@ footer {
         </h3>
 
         <p>
-            Kameralne miejsce z ciepłą,
-            domową atmosferą i mnóstwem
-            dziecięcej energii.
+            Kameralne ZUZU z domową atmosferą
+            i spokojną przestrzenią dla najmłodszych.
         </p>
+
+        <a href="pocztowa.html" class="button button-pink">
+            Zobacz lokalizację
+        </a>
 
     </div>
 
@@ -614,27 +521,22 @@ footer {
         </h3>
 
         <p>
-            Kolorowa przestrzeń pełna zabawy,
-            rozwoju i wspólnych przygód
-            każdego dnia.
+            Kolorowe miejsce pełne energii,
+            zabawy i codziennego odkrywania świata.
         </p>
 
-    </div>
+        <a href="wojciecha.html" class="button button-pink">
+            Zobacz lokalizację
+        </a>
 
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     DLACZEGO ZUZU
-========================= -->
-
-<div
-    id="oferta"
-    class="why"
->
+<div id="oferta" class="why">
 
 <div class="why-inner">
 
@@ -646,9 +548,7 @@ footer {
     Bo mały człowiek zasługuje na wielką troskę. ♡
 </p>
 
-
 <div class="cards">
-
 
     <div class="card">
 
@@ -706,17 +606,12 @@ footer {
 
     </div>
 
-
 </div>
 
 </div>
 
 </div>
 
-
-<!-- =========================
-     ZUZU MAGIA
-========================= -->
 
 <section class="content magic">
 
@@ -743,14 +638,7 @@ footer {
 </section>
 
 
-<!-- =========================
-     KONTAKT
-========================= -->
-
-<section
-    id="kontakt"
-    class="content"
->
+<section id="kontakt" class="content">
 
 <div class="contact">
 
@@ -764,3 +652,23 @@ footer {
         Zadzwoń do nas.
     </p>
 
+    <div class="phone">
+        📞 798 150 723
+    </div>
+
+    <a href="tel:+48798150723" class="button button-pink">
+        Zadzwoń do ZUZU
+    </a>
+
+</div>
+
+</section>
+
+
+<footer>
+    ☁️ Akademia ZUZU · Szczecin · © 2026
+</footer>
+
+</body>
+
+</html>
