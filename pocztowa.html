@@ -1,1 +1,1446 @@
+<!DOCTYPE html>
+<html lang="pl">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZUZU Pocztowa | Akademia ZUZU Szczecin</title>
+
+<meta
+    name="description"
+    content="Akademia ZUZU Pocztowa w Szczecinie. Kameralna opieka nad najmłodszymi, kreatywna zabawa, zajęcia i codzienne dziecięce przygody."
+>
+
+<style>
+
+/* =========================
+   PODSTAWY
+========================= */
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#4d4657;
+    background:#fffafd;
+}
+
+section{
+    scroll-margin-top:95px;
+}
+
+a{
+    transition:0.2s;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.97);
+    box-shadow:0 4px 20px rgba(0,0,0,0.07);
+}
+
+.menu{
+    max-width:1200px;
+    min-height:82px;
+    margin:auto;
+    padding:8px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.logo-name{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-name strong{
+    color:#ef1591;
+    font-size:24px;
+}
+
+.logo-name span{
+    color:#756d83;
+    font-size:12px;
+    margin-top:2px;
+}
+
+.links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.links a{
+    text-decoration:none;
+    color:#5d5667;
+    font-weight:bold;
+}
+
+.links a:hover{
+    color:#ef1591;
+}
+
+.home{
+    background:#ef1591;
+    color:white !important;
+
+    padding:12px 20px;
+    border-radius:30px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    padding:70px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 12% 20%, #ffe976 0 28px, transparent 30px),
+        radial-gradient(circle at 90% 16%, #f7a7d8 0 65px, transparent 67px),
+        radial-gradient(circle at 14% 85%, #c8adff 0 65px, transparent 67px),
+        linear-gradient(135deg,#6ac9dd,#42bfd6);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-logo{
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:35px;
+    border:5px solid white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+}
+
+.hero h1{
+    margin:25px 0 10px;
+
+    color:white;
+
+    font-size:60px;
+    line-height:1;
+
+    text-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.hero h2{
+    margin:18px 0 10px;
+
+    color:#fff59a;
+
+    font-size:27px;
+}
+
+.hero p{
+    max-width:730px;
+
+    margin:20px auto 30px;
+
+    color:white;
+
+    font-size:19px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   PRZYCISKI
+========================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:14px;
+}
+
+.button{
+    display:inline-block;
+
+    padding:15px 28px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+    font-weight:bold;
+
+    transition:0.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.button-pink{
+    background:#ef1591;
+    color:white;
+
+    box-shadow:0 10px 25px rgba(239,21,145,0.28);
+}
+
+.button-white{
+    background:white;
+    color:#6655c7;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+
+/* =========================
+   SZYBKIE INFORMACJE
+========================= */
+
+.quick-info{
+    max-width:1100px;
+
+    margin:-55px auto 0;
+
+    padding:0 25px;
+
+    position:relative;
+    z-index:5;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 45px rgba(70,60,90,.15);
+
+    overflow:hidden;
+}
+
+.quick-card{
+    padding:30px 20px;
+
+    text-align:center;
+}
+
+.quick-card + .quick-card{
+    border-left:1px solid #eee7f1;
+}
+
+.quick-icon{
+    font-size:35px;
+}
+
+.quick-card strong{
+    display:block;
+
+    margin:10px 0 7px;
+
+    color:#725ed6;
+
+    font-size:19px;
+}
+
+.quick-card span{
+    color:#696171;
+    line-height:1.6;
+}
+
+
+/* =========================
+   SEKCJE
+========================= */
+
+.content{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:85px 25px;
+}
+
+.section-title{
+    margin:0 0 15px;
+
+    text-align:center;
+
+    color:#e84d9b;
+
+    font-size:42px;
+}
+
+.section-subtitle{
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    color:#706979;
+
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   O NAS
+========================= */
+
+.about{
+    padding:45px;
+
+    background:white;
+
+    border-radius:35px;
+
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+
+    text-align:center;
+
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+
+    gap:22px;
+}
+
+.gallery-main img{
+    width:100%;
+    height:560px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.12);
+
+    display:block;
+
+    transition:0.25s;
+}
+
+.gallery-side{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+
+    gap:22px;
+}
+
+.gallery-side img{
+    width:100%;
+    height:269px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.12);
+
+    display:block;
+
+    transition:0.25s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.015);
+}
+
+
+/* =========================
+   KARTY
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+}
+
+.card{
+    background:white;
+
+    padding:32px 25px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+
+    transition:0.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card-icon{
+    font-size:46px;
+}
+
+.card h3{
+    margin:15px 0 10px;
+
+    color:#725ed6;
+
+    font-size:22px;
+}
+
+.card p{
+    color:#615a69;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   DZIEŃ
+========================= */
+
+.day{
+    background:#fff1b5;
+}
+
+.day-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:85px 25px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+}
+
+.step{
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px 18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.step strong{
+    display:block;
+
+    margin:10px 0;
+
+    color:#ef1591;
+
+    font-size:18px;
+}
+
+.step span{
+    line-height:1.6;
+}
+
+
+/* =========================
+   DOGOTERAPIA
+========================= */
+
+.special{
+    max-width:1050px;
+    margin:auto;
+
+    padding:50px;
+
+    background:linear-gradient(135deg,#fff0f7,#eefaff);
+
+    border-radius:35px;
+
+    box-shadow:0 10px 35px rgba(80,60,100,.09);
+
+    text-align:center;
+}
+
+.special-icon{
+    font-size:55px;
+}
+
+.special h2{
+    margin:15px 0 15px;
+
+    color:#ef1591;
+
+    font-size:35px;
+}
+
+.special p{
+    max-width:800px;
+    margin:0 auto;
+
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+/* =========================
+   LOKALIZACJA
+========================= */
+
+.location-section{
+    background:#f7f0ff;
+}
+
+.location-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:85px 25px;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.4fr;
+
+    gap:28px;
+
+    align-items:stretch;
+}
+
+.address-box{
+    background:white;
+
+    border-radius:30px;
+
+    padding:38px 30px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+}
+
+.address-icon{
+    font-size:45px;
+}
+
+.address-box h3{
+    margin:15px 0;
+
+    color:#725ed6;
+
+    font-size:26px;
+}
+
+.address{
+    color:#4d4657;
+
+    font-size:20px;
+    line-height:1.6;
+
+    font-weight:bold;
+}
+
+.hours-title{
+    margin-top:30px;
+
+    color:#ef1591;
+
+    font-weight:bold;
+}
+
+.hours{
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.address-box .button{
+    margin-top:20px;
+}
+
+.map{
+    min-height:450px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.12);
+}
+
+.map iframe{
+    width:100%;
+    height:100%;
+
+    min-height:450px;
+
+    border:0;
+
+    display:block;
+}
+
+
+/* =========================
+   MAGIC
+========================= */
+
+.magic-box{
+    padding:50px 30px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#ffe3f2,#e4f8ff);
+
+    border-radius:35px;
+
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+}
+
+.magic-icons{
+    margin-bottom:15px;
+
+    font-size:45px;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact{
+    padding:55px 25px;
+
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+
+    border-radius:35px;
+
+    text-align:center;
+}
+
+.contact p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+.phone{
+    margin:24px 0;
+
+    color:#ef1591;
+
+    font-size:30px;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+
+    margin-top:25px;
+
+    text-decoration:none;
+
+    color:#6655c7;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   STOPKA
+========================= */
+
+footer{
+    padding:35px 20px;
+
+    background:#5b4bae;
+
+    color:white;
+
+    text-align:center;
+}
+
+
+/* =========================
+   TELEFON
+========================= */
+
+@media(max-width:850px){
+
+    .links{
+        display:none;
+    }
+
+    .logo-name strong{
+        font-size:20px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .hero-logo{
+        width:145px;
+        height:145px;
+    }
+
+    .quick-info{
+        margin-top:-35px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-card + .quick-card{
+        border-left:0;
+        border-top:1px solid #eee7f1;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-main img{
+        height:330px;
+    }
+
+    .gallery-side{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+    }
+
+    .gallery-side img{
+        height:330px;
+    }
+
+    .cards,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .location-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+    .special{
+        padding:35px 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- MENU -->
+
+<nav>
+
+<div class="menu">
+
+    <div class="logo">
+
+        <img
+            src="Logo-zuzu.jpg"
+            alt="Logo Akademii ZUZU"
+        >
+
+        <div class="logo-name">
+
+            <strong>
+                AKADEMIA ZUZU
+            </strong>
+
+            <span>
+                Pocztowa
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="links">
+
+        <a href="#onas">
+            O miejscu
+        </a>
+
+        <a href="#galeria">
+            Galeria
+        </a>
+
+        <a href="#codziennosc">
+            Codzienność
+        </a>
+
+        <a href="#lokalizacja">
+            Lokalizacja
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
+
+        <a
+            href="index.html"
+            class="home"
+        >
+            Strona główna
+        </a>
+
+    </div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+    <img
+        src="Logo-zuzu.jpg"
+        class="hero-logo"
+        alt="Logo ZUZU"
+    >
+
+    <h1>
+        ZUZU Pocztowa
+    </h1>
+
+    <h2>
+        Kameralnie, ciepło i bardzo ZUZU ☁️
+    </h2>
+
+    <p>
+        Miejsce, w którym dzieci mogą spokojnie
+        poznawać świat, bawić się, rozwijać
+        i każdego dnia przeżywać nowe małe przygody.
+    </p>
+
+    <div class="buttons">
+
+        <a
+            href="#galeria"
+            class="button button-white"
+        >
+            Zobacz nasze ZUZU
+        </a>
+
+        <a
+            href="#kontakt"
+            class="button button-pink"
+        >
+            Zapytaj o miejsce ♡
+        </a>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<!-- SZYBKIE INFORMACJE -->
+
+<div class="quick-info">
+
+<div class="quick-grid">
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            📍
+        </div>
+
+        <strong>
+            Szczecin
+        </strong>
+
+        <span>
+            Pocztowa 12/U1<br>
+            70-360 Szczecin
+        </span>
+
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🕡
+        </div>
+
+        <strong>
+            Godziny
+        </strong>
+
+        <span>
+            6:30–17:00
+        </span>
+
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🌸
+        </div>
+
+        <strong>
+            Kameralna atmosfera
+        </strong>
+
+        <span>
+            Dużo bliskości,
+            zabawy i codziennego kontaktu.
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- O NAS -->
+
+<section
+    id="onas"
+    class="content"
+>
+
+<h2 class="section-title">
+    Witajcie na Pocztowej ♡
+</h2>
+
+<p class="section-subtitle">
+    Kameralne miejsce dla małych ludzi
+    i ich wielkich emocji.
+</p>
+
+
+<div class="about">
+
+    ZUZU Pocztowa to ciepła,
+    przyjazna przestrzeń dla najmłodszych.
+
+    <br><br>
+
+    Dbamy o codzienny rytm,
+    poczucie bezpieczeństwa,
+    swobodną zabawę
+    i rozwój poprzez doświadczenie.
+
+    <br><br>
+
+    Jest tu czas na ruch,
+    kreatywność, wspólne zajęcia,
+    odpoczynek i zwykłe dziecięce bycie razem.
+
+</div>
+
+</section>
+
+
+<!-- GALERIA -->
+
+<section
+    id="galeria"
+    class="content"
+>
+
+<h2 class="section-title">
+    Pocztowa w kilku kadrach 📸
+</h2>
+
+<p class="section-subtitle">
+    Zabawa, zajęcia, wspólne chwile
+    i dużo dziecięcej ciekawości.
+</p>
+
+
+<div class="gallery-grid">
+
+    <div class="gallery-main">
+
+        <img
+            src="foto-pocztowa3.jpg"
+            alt="Zajęcia dzieci w ZUZU Pocztowa"
+        >
+
+    </div>
+
+
+    <div class="gallery-side">
+
+        <img
+            src="foto-pocztowa1.jpg"
+            alt="Dzieci w ZUZU Pocztowa"
+        >
+
+        <img
+            src="foto-pocztowa2.jpg"
+            alt="Spotkanie dzieci z psem w ZUZU Pocztowa"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CO CZEKA -->
+
+<section class="content">
+
+<h2 class="section-title">
+    Co czeka na ZUZOludków?
+</h2>
+
+<p class="section-subtitle">
+    Mnóstwo przestrzeni na rozwój,
+    relacje i dziecięcą ciekawość. ✨
+</p>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <div class="card-icon">
+            🧸
+        </div>
+
+        <h3>
+            Bliskość
+        </h3>
+
+        <p>
+            Ciepła opieka,
+            uważność i codzienny kontakt
+            z potrzebami dziecka.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🎨
+        </div>
+
+        <h3>
+            Kreatywność
+        </h3>
+
+        <p>
+            Plastyka, sensoryka,
+            wspólne projekty
+            i dużo swobodnej zabawy.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🤝
+        </div>
+
+        <h3>
+            Relacje
+        </h3>
+
+        <p>
+            Pierwsze przyjaźnie,
+            wspólne zabawy
+            i nauka bycia razem.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- DZIEŃ -->
+
+<div
+    id="codziennosc"
+    class="day"
+>
+
+<div class="day-inner">
+
+<h2 class="section-title">
+    Jak wygląda dzień na Pocztowej?
+</h2>
+
+<p class="section-subtitle">
+    Jest rytm dnia, ale jest też miejsce
+    na spontaniczne dziecięce pomysły.
+</p>
+
+
+<div class="steps">
+
+    <div class="step">
+
+        <div class="card-icon">
+            ☀️
+        </div>
+
+        <strong>
+            Dzień dobry!
+        </strong>
+
+        <span>
+            Spokojne przywitanie
+            i dobry początek dnia.
+        </span>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="card-icon">
+            🎨
+        </div>
+
+        <strong>
+            Zabawa i zajęcia
+        </strong>
+
+        <span>
+            Ruch, muzyka,
+            plastyka, sensoryka
+            i wspólne odkrywanie.
+        </span>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="card-icon">
+            🍲
+        </div>
+
+        <strong>
+            Posiłki
+        </strong>
+
+        <span>
+            Czas na jedzenie,
+            picie i spokojniejsze chwile.
+        </span>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="card-icon">
+            🌙
+        </div>
+
+        <strong>
+            Odpoczynek
+        </strong>
+
+        <span>
+            Regeneracja
+            zgodnie z potrzebami dzieci.
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ZWIERZAKI / ATRAKCJE -->
+
+<section class="content">
+
+<div class="special">
+
+    <div class="special-icon">
+        🐾
+    </div>
+
+    <h2>
+        Czasem odwiedzają nas wyjątkowi goście
+    </h2>
+
+    <p>
+        ZUZU to nie tylko codzienna zabawa.
+        Lubimy też zajęcia i spotkania,
+        które pozwalają dzieciom poznawać świat
+        poprzez nowe doświadczenia,
+        emocje i bezpośredni kontakt.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- LOKALIZACJA -->
+
+<div
+    id="lokalizacja"
+    class="location-section"
+>
+
+<div class="location-inner">
+
+<h2 class="section-title">
+    Gdzie nas znajdziesz? 📍
+</h2>
+
+<p class="section-subtitle">
+    ZUZU Pocztowa czeka na Was w Szczecinie.
+</p>
+
+
+<div class="location-grid">
+
+    <div class="address-box">
+
+        <div class="address-icon">
+            🏡
+        </div>
+
+        <h3>
+            ZUZU Pocztowa
+        </h3>
+
+        <div class="address">
+            Pocztowa 12/U1<br>
+            70-360 Szczecin
+        </div>
+
+
+        <div class="hours-title">
+            🕡 Godziny otwarcia
+        </div>
+
+        <div class="hours">
+            6:30–17:00
+        </div>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Pocztowa+12%2FU1%2C+70-360+Szczecin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-pink"
+        >
+            📍 Wyznacz trasę
+        </a>
+
+    </div>
+
+
+    <div class="map">
+
+        <iframe
+            src="https://www.google.com/maps?q=Pocztowa+12%2FU1%2C+70-360+Szczecin&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa ZUZU Pocztowa"
+        >
+        </iframe>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAGIC -->
+
+<section class="content">
+
+<div class="magic-box">
+
+    <div class="magic-icons">
+        ☁️ 🌸 ⭐ 🧸 ⭐ 🌸 ☁️
+    </div>
+
+    <h2 class="section-title">
+        Małe miejsce. Wielkie dzieciństwo.
+    </h2>
+
+    <p class="section-subtitle">
+        Wspólna zabawa,
+        dziecięce rozmowy,
+        pierwsze przyjaźnie,
+        nowe doświadczenia
+        i codziennie coś trochę innego.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section
+    id="kontakt"
+    class="content"
+>
+
+<div class="contact">
+
+    <h2 class="section-title">
+        Dołączcie do ZUZU Pocztowa ♡
+    </h2>
+
+    <p>
+        Chcesz dowiedzieć się więcej
+        albo zapytać o miejsce dla dziecka?
+    </p>
+
+
+    <div class="phone">
+        📞 798 150 723
+    </div>
+
+
+    <div class="buttons">
+
+        <a
+            href="tel:+48798150723"
+            class="button button-pink"
+        >
+            Zadzwoń do ZUZU
+        </a>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Pocztowa+12%2FU1%2C+70-360+Szczecin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-white"
+        >
+            📍 Nawiguj
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← Wróć na stronę główną
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- STOPKA -->
+
+<footer>
+
+    ☁️ Akademia ZUZU · Pocztowa 12/U1 · Szczecin · © 2026
+
+</footer>
+
+
+</body>
+
+</html>
