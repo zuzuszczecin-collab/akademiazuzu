@@ -1,21 +1,171 @@
-<title>Akademia ZUZU</title>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akademia ZUZU</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffafc;
+      color: #444;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffdff0, #e6f6ff);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 52px;
+      margin: 0;
+      color: #d85c9d;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 28px;
+      background: #d85c9d;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d85c9d;
+      font-size: 34px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #7c6bd6;
+    }
+
+    .highlight {
+      background: #fff1b8;
+      border-radius: 25px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    footer {
+      background: #d85c9d;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
+
+<header>
   <h1>Akademia ZUZU</h1>
-
   <p>
-    Wyjątkowe miejsce dla najmłodszych w Szczecinie.
+    Kolorowe, ciepłe i bezpieczne miejsce dla najmłodszych w Szczecinie.
+    Dużo bliskości, zabawy, rozwoju i codziennych małych przygód.
   </p>
+  <a href="#kontakt" class="button">Zapisz dziecko</a>
+</header>
 
+<section>
   <h2>Nasze lokalizacje</h2>
 
-  <p>Witkiewicza</p>
-  <p>Pocztowa</p>
-  <p>Wojciecha</p>
+  <div class="cards">
+    <div class="card">
+      <h3>ZUZU Witkiewicza</h3>
+      <p>Przyjazna przestrzeń dla najmłodszych.</p>
+    </div>
 
-  <h2>Kontakt</h2>
+    <div class="card">
+      <h3>ZUZU Pocztowa</h3>
+      <p>Kameralne miejsce pełne dobrej energii.</p>
+    </div>
 
-  <p>Zapisy i informacje już wkrótce.</p>
+    <div class="card">
+      <h3>ZUZU Wojciecha</h3>
+      <p>Codzienna opieka, rozwój i mnóstwo zabawy.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="highlight">
+    <h2>Dlaczego ZUZU?</h2>
+    <p>
+      Tworzymy miejsce, w którym dziecko może czuć się swobodnie,
+      bezpiecznie i po prostu dobrze.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Co u nas znajdziesz?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Codzienna opieka</h3>
+      <p>Ciepła atmosfera i troska o potrzeby dzieci.</p>
+    </div>
+
+    <div class="card">
+      <h3>Zajęcia rozwojowe</h3>
+      <p>Zabawy sensoryczne, plastyczne i ruchowe.</p>
+    </div>
+
+    <div class="card">
+      <h3>Domowa atmosfera</h3>
+      <p>Bez sztywności i wielkiej instytucji.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt i zapisy</h2>
+
+  <div class="card">
+    <p><strong>Akademia ZUZU</strong></p>
+    <p>Szczecin</p>
+    <p>Zapisy oraz szczegółowe informacje telefonicznie lub przez wiadomość.</p>
+    <a href="tel:+48798150723" class="button">Zadzwoń: 798 150 723</a>
+  </div>
+</section>
+
+<footer>
+  Akademia ZUZU © 2026
+</footer>
+
 </body>
 </html>
