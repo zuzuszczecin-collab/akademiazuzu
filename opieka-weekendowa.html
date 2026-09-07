@@ -1,1 +1,711 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Opieka weekendowa | Akademia ZUZU Szczecin</title>
+
+<meta
+    name="description"
+    content="Weekendowa opieka nad dziećmi w Akademii ZUZU w Szczecinie. Opieka w weekendy od 6:30 do 20:00 dla dzieci od 1 do 6 lat."
+>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#4d4657;
+    background:#fffafd;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* MENU */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.menu{
+    max-width:1200px;
+    min-height:82px;
+    margin:auto;
+    padding:8px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    color:#ef1591;
+    font-size:23px;
+}
+
+.logo-text span{
+    color:#756d83;
+    font-size:12px;
+}
+
+.back{
+    padding:12px 22px;
+    border-radius:30px;
+    background:#ef1591;
+    color:white;
+    font-weight:bold;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:500px;
+    padding:70px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffeb70 0 24px, transparent 26px),
+        radial-gradient(circle at 90% 15%, #f79cda 0 60px, transparent 62px),
+        radial-gradient(circle at 15% 85%, #a986ff 0 65px, transparent 67px),
+        linear-gradient(135deg,#24116f,#5523a5,#1c0c61);
+}
+
+.hero-inner{
+    max-width:850px;
+}
+
+.hero h1{
+    margin:0;
+    color:white;
+    font-size:64px;
+    text-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.hero h2{
+    color:#ffe75a;
+    font-size:28px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:18px auto 28px;
+    color:white;
+    font-size:19px;
+    line-height:1.7;
+}
+
+
+/* BUTTONS */
+
+.button{
+    display:inline-block;
+    padding:16px 28px;
+    border-radius:35px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.button-pink{
+    background:#ef1591;
+    color:white;
+}
+
+.button-green{
+    background:#25D366;
+    color:white;
+}
+
+.button-purple{
+    background:#6956c8;
+    color:white;
+}
+
+
+/* CONTENT */
+
+.content{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.section-title{
+    margin:0 0 15px;
+    text-align:center;
+    color:#e84d9b;
+    font-size:42px;
+}
+
+.section-subtitle{
+    max-width:750px;
+    margin:0 auto 40px;
+    text-align:center;
+    color:#706979;
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* GRAFIKA */
+
+.offer-box{
+    max-width:650px;
+    margin:auto;
+
+    padding:20px;
+
+    background:white;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 45px rgba(70,50,100,.16);
+}
+
+.offer-box img{
+    display:block;
+    width:100%;
+    border-radius:25px;
+}
+
+
+/* INFO */
+
+.info-section{
+    background:#f6f0ff;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.info-card{
+    padding:32px 22px;
+
+    background:white;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.09);
+}
+
+.info-icon{
+    font-size:44px;
+}
+
+.info-card h3{
+    margin:12px 0;
+    color:#725ed6;
+    font-size:22px;
+}
+
+.info-card p{
+    margin:0;
+    line-height:1.7;
+}
+
+
+/* ZNIŻKA */
+
+.discount{
+    max-width:900px;
+    margin:45px auto 0;
+
+    padding:35px 25px;
+
+    background:linear-gradient(135deg,#fff2a9,#ffe2f2);
+
+    border-radius:32px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.09);
+}
+
+.discount span{
+    font-size:42px;
+}
+
+.discount h2{
+    margin:10px 0;
+    color:#ef1591;
+    font-size:32px;
+}
+
+.discount strong{
+    color:#725ed6;
+}
+
+
+/* CTA */
+
+.cta{
+    max-width:1000px;
+    margin:auto;
+
+    padding:60px 30px;
+
+    border-radius:38px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#e5f9ff,#ffe5f4);
+
+    box-shadow:0 12px 35px rgba(70,50,100,.10);
+}
+
+.cta h2{
+    margin-top:0;
+    color:#ef1591;
+    font-size:40px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.phone{
+    margin:20px 0;
+    color:#725ed6;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:45px 20px;
+
+    background:#5744aa;
+
+    color:white;
+
+    text-align:center;
+
+    line-height:1.7;
+}
+
+footer strong{
+    font-size:20px;
+}
+
+footer a{
+    color:white;
+    font-weight:bold;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+}
+
+@media(max-width:550px){
+
+    .logo-text strong{
+        font-size:18px;
+    }
+
+    .back{
+        padding:10px 15px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .offer-box{
+        padding:10px;
+        border-radius:25px;
+    }
+
+    .offer-box img{
+        border-radius:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- MENU -->
+
+<nav>
+
+<div class="menu">
+
+    <div class="logo">
+
+        <img
+            src="Logo-zuzu.jpg"
+            alt="Logo Akademii ZUZU"
+        >
+
+        <div class="logo-text">
+
+            <strong>
+                AKADEMIA ZUZU
+            </strong>
+
+            <span>
+                Opieka weekendowa
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← Strona główna
+    </a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-inner">
+
+    <h1>
+        Opieka weekendowa ⭐
+    </h1>
+
+    <h2>
+        Weekend też może być ZUZU-owy!
+    </h2>
+
+    <p>
+        Potrzebujesz kilku godzin dla siebie?
+        Masz pracę, zakupy, spotkanie
+        albo po prostu chcesz spokojnie
+        załatwić swoje sprawy?
+        My zajmiemy się resztą. ♡
+    </p>
+
+
+    <a
+        href="https://wa.me/48798150723?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20zapyta%C4%87%20o%20opiek%C4%99%20weekendow%C4%85%20w%20Akademii%20ZUZU."
+        target="_blank"
+        class="button button-pink"
+    >
+        💬 Zapytaj o weekend
+    </a>
+
+</div>
+
+</header>
+
+
+<!-- OFERTA -->
+
+<section class="content">
+
+<h2 class="section-title">
+    Weekendowa oferta ZUZU 🌙
+</h2>
+
+<p class="section-subtitle">
+    Wszystkie najważniejsze informacje
+    znajdziesz poniżej.
+</p>
+
+
+<div class="offer-box">
+
+    <img
+        src="opiekaweekendowa.jpg"
+        alt="Opieka weekendowa Akademia ZUZU"
+    >
+
+</div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section class="info-section">
+
+<div class="content">
+
+<div class="info-grid">
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🕡
+        </div>
+
+        <h3>
+            6:30–20:00
+        </h3>
+
+        <p>
+            Weekendowa opieka
+            w szerokim zakresie godzin.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🧸
+        </div>
+
+        <h3>
+            Dzieci 1–6 lat
+        </h3>
+
+        <p>
+            Zapraszamy dzieci
+            od pierwszego do szóstego roku życia.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🍽️
+        </div>
+
+        <h3>
+            Wyżywienie w cenie
+        </h3>
+
+        <p>
+            Podczas pobytu
+            zapewniamy również wyżywienie.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- ZNIŻKA -->
+
+<div class="discount">
+
+    <span>
+        ⭐
+    </span>
+
+    <h2>
+        Stałe ZUZOludki mają taniej!
+    </h2>
+
+    <p>
+        Dzieci zapisane na stałe
+        do Akademii ZUZU otrzymują
+        <strong>20% zniżki na opiekę weekendową.</strong>
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section class="content">
+
+<div class="cta">
+
+    <h2>
+        Rezerwujemy weekend? ♡
+    </h2>
+
+    <p>
+        Napisz do nas,
+        podaj dzień, orientacyjne godziny
+        oraz wiek dziecka.
+        Sprawdzimy dostępność miejsca.
+    </p>
+
+
+    <div class="phone">
+        📞 798 150 723
+    </div>
+
+
+    <div class="buttons">
+
+        <a
+            href="https://wa.me/48798150723?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20zarezerwowa%C4%87%20opiek%C4%99%20weekendow%C4%85%20w%20Akademii%20ZUZU."
+            target="_blank"
+            class="button button-green"
+        >
+            💬 WhatsApp
+        </a>
+
+
+        <a
+            href="tel:+48798150723"
+            class="button button-pink"
+        >
+            ☎️ Zadzwoń
+        </a>
+
+
+        <a
+            href="opieka-na-godziny.html"
+            class="button button-purple"
+        >
+            ⏰ Opieka na godziny
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <strong>
+        ☁️ Akademia ZUZU
+    </strong>
+
+    <br>
+
+    Małe dzieci. Wielkie przygody. ⭐
+
+    <br><br>
+
+    <a href="opieka-stala.html">
+        Opieka stała
+    </a>
+
+    &nbsp; · &nbsp;
+
+    <a href="opieka-na-godziny.html">
+        Opieka na godziny
+    </a>
+
+    &nbsp; · &nbsp;
+
+    <a href="zajecia-dodatkowe.html">
+        Zajęcia dodatkowe
+    </a>
+
+    <br><br>
+
+    <a href="index.html">
+        ← Wróć na stronę główną
+    </a>
+
+    <br><br>
+
+    © 2026 Akademia ZUZU
+
+</footer>
+
+
+</body>
+
+</html>
