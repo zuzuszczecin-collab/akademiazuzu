@@ -4,27 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>
-    Akademia ZUZU | Opieka nad dziećmi w Szczecinie
-</title>
+<title>Akademia ZUZU | Opieka nad dziećmi w Szczecinie</title>
 
 <meta
     name="description"
     content="Akademia ZUZU w Szczecinie. Opieka stała, opieka na godziny, opieka weekendowa i zajęcia dodatkowe dla dzieci."
 >
 
-
 <style>
-
-/* =========================
-   PODSTAWY
-========================= */
 
 *{
     box-sizing:border-box;
@@ -64,7 +53,6 @@ nav{
     min-height:82px;
     margin:auto;
     padding:8px 25px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -182,7 +170,7 @@ nav{
 
 
 /* =========================
-   PRZYCISKI
+   BUTTONS
 ========================= */
 
 .buttons{
@@ -401,7 +389,7 @@ nav{
 
 
 /* =========================
-   OFERTA - 4 KAFELKI
+   OFERTA
 ========================= */
 
 .offer-section{
@@ -430,7 +418,6 @@ nav{
 .oferta-kafelek img{
     display:block;
     width:100%;
-    height:auto;
     aspect-ratio:1 / 1;
     object-fit:cover;
 }
@@ -658,7 +645,7 @@ nav{
 
 
 /* =========================
-   STOPKA
+   FOOTER
 ========================= */
 
 footer{
@@ -679,10 +666,6 @@ footer a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-}
-
-footer a:hover{
-    text-decoration:underline;
 }
 
 
@@ -772,14 +755,6 @@ footer a:hover{
         padding:38px 24px;
     }
 
-    .extended-box h2{
-        font-size:32px;
-    }
-
-    .social-box h2{
-        font-size:31px;
-    }
-
 }
 
 
@@ -838,25 +813,11 @@ footer a:hover{
 
     <div class="links">
 
-        <a href="#onas">
-            O nas
-        </a>
-
-        <a href="#lokalizacje">
-            Lokalizacje
-        </a>
-
-        <a href="#oferta">
-            Oferta
-        </a>
-
-        <a href="#pakiet">
-            Pakiet rozszerzony
-        </a>
-
-        <a href="#kontakt">
-            Kontakt
-        </a>
+        <a href="#onas">O nas</a>
+        <a href="#lokalizacje">Lokalizacje</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#pakiet">Pakiet rozszerzony</a>
+        <a href="#kontakt">Kontakt</a>
 
         <a
             href="#zapisy"
@@ -977,8 +938,8 @@ footer a:hover{
         </strong>
 
         <span>
-            Opieka stała,
-            godzinowa i weekendowa.
+            Stała, godzinowa,
+            weekendowa i zajęcia.
         </span>
 
     </div>
@@ -1080,7 +1041,6 @@ footer a:hover{
 
         </div>
 
-
         <div class="location-bottom">
 
             <a
@@ -1117,7 +1077,6 @@ footer a:hover{
             </div>
 
         </div>
-
 
         <div class="location-bottom">
 
@@ -1160,7 +1119,6 @@ footer a:hover{
 
         </div>
 
-
         <div class="location-bottom">
 
             <a
@@ -1182,7 +1140,9 @@ footer a:hover{
 </div>
 
 
-<!-- OFERTA -->
+<!-- =========================
+     OFERTA
+========================= -->
 
 <section
     id="oferta"
@@ -1194,19 +1154,18 @@ footer a:hover{
 </h2>
 
 <p class="section-subtitle">
-    ZUZU nie musi wyglądać tak samo dla każdego.
-    Wybierz opcję, która najlepiej pasuje
-    do Waszych potrzeb.
+    Kliknij wybraną opcję
+    i zobacz szczegóły.
 </p>
 
 
 <div class="oferta-kafelki">
 
 
-    <!-- 1. ZAJĘCIA DODATKOWE -->
+    <!-- ZAJĘCIA DODATKOWE -->
 
     <a
-        href="#zapisy"
+        href="zajecia-dodatkowe.html"
         class="oferta-kafelek"
         aria-label="Zajęcia dodatkowe"
     >
@@ -1219,10 +1178,10 @@ footer a:hover{
     </a>
 
 
-    <!-- 2. OPIEKA WEEKENDOWA -->
+    <!-- OPIEKA WEEKENDOWA -->
 
     <a
-        href="#zapisy"
+        href="opieka-weekendowa.html"
         class="oferta-kafelek"
         aria-label="Opieka weekendowa"
     >
@@ -1235,10 +1194,10 @@ footer a:hover{
     </a>
 
 
-    <!-- 3. OPIEKA NA GODZINY -->
+    <!-- OPIEKA NA GODZINY -->
 
     <a
-        href="#zapisy"
+        href="opieka-na-godziny.html"
         class="oferta-kafelek"
         aria-label="Opieka na godziny"
     >
@@ -1251,10 +1210,10 @@ footer a:hover{
     </a>
 
 
-    <!-- 4. OPIEKA STAŁA -->
+    <!-- OPIEKA STAŁA -->
 
     <a
-        href="#zapisy"
+        href="opieka-stala.html"
         class="oferta-kafelek"
         aria-label="Opieka stała"
     >
@@ -1288,29 +1247,28 @@ footer a:hover{
     </span>
 
     <h2>
-        ZUZU dopasowane do Waszego dnia
+        Więcej ZUZU, gdy tego potrzebujesz
     </h2>
 
     <p>
-        Standardowe godziny naszych placówek
+        Standardowe godziny opieki
         to <strong>6:30–17:00</strong>.
-        Wiemy jednak, że życie nie zawsze
-        mieści się idealnie w godzinach otwarcia.
     </p>
 
     <p>
-        W wybranych lokalizacjach
-        istnieje możliwość przedłużenia
-        standardowych godzin opieki
-        w ramach
-        <strong>Pakietu Rozszerzonego</strong>.
+        Dla rodziców potrzebujących
+        większej elastyczności
+        przygotowaliśmy
+        <strong>Pakiet Rozszerzony</strong>
+        z opieką od
+        <strong>5:30 do 19:30</strong>.
     </p>
 
     <a
-        href="#zapisy"
+        href="opieka-stala.html#rozszerzony"
         class="button button-purple"
     >
-        Zapytaj o Pakiet Rozszerzony
+        Zobacz Pakiet Rozszerzony
     </a>
 
 </div>
@@ -1334,9 +1292,9 @@ footer a:hover{
 </h2>
 
 <p class="section-subtitle">
-    Wypełnij kilka pól.
-    Po kliknięciu przygotujemy gotową wiadomość,
-    która otworzy się w WhatsApp.
+    Wypełnij kilka pól,
+    a przygotujemy gotową wiadomość
+    do wysłania przez WhatsApp.
 </p>
 
 
@@ -1401,10 +1359,7 @@ footer a:hover{
             Lokalizacja
         </label>
 
-        <select
-            id="location"
-            required
-        >
+        <select id="location" required>
 
             <option value="">
                 Wybierz lokalizację
@@ -1434,13 +1389,10 @@ footer a:hover{
     <div class="form-group">
 
         <label for="offerType">
-            Rodzaj opieki
+            Rodzaj oferty
         </label>
 
-        <select
-            id="offerType"
-            required
-        >
+        <select id="offerType" required>
 
             <option value="">
                 Wybierz ofertę
@@ -1544,10 +1496,9 @@ footer a:hover{
     </h2>
 
     <p>
-        Codzienność ZUZU to nie tylko to,
-        co da się zmieścić na stronie.
         Zajrzyj na naszego Facebooka
-        i zobacz więcej z życia Akademii ZUZU.
+        i zobacz więcej
+        z codziennego życia Akademii ZUZU.
     </p>
 
 
@@ -1623,11 +1574,11 @@ footer a:hover{
     </h2>
 
     <p>
-        Chcesz zapytać o wolne miejsce,
+        Chcesz zapytać
+        o wolne miejsce,
         opiekę godzinową,
-        weekend,
-        zajęcia dodatkowe
-        albo konkretną lokalizację?
+        weekendową
+        albo zajęcia dodatkowe?
         Napisz lub zadzwoń.
     </p>
 
@@ -1671,7 +1622,7 @@ footer a:hover{
 </section>
 
 
-<!-- STOPKA -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1696,7 +1647,6 @@ footer a:hover{
     <a
         href="https://www.facebook.com/zuzu.szczecin"
         target="_blank"
-        rel="noopener noreferrer"
     >
         💙 Facebook
     </a>
@@ -1706,7 +1656,6 @@ footer a:hover{
     <a
         href="https://wa.me/48798150723"
         target="_blank"
-        rel="noopener noreferrer"
     >
         💬 WhatsApp
     </a>
@@ -1718,8 +1667,6 @@ footer a:hover{
 </footer>
 
 
-<!-- WHATSAPP -->
-
 <script>
 
 document
@@ -1730,52 +1677,26 @@ document
 
         event.preventDefault();
 
-
         const parentName =
-            document
-            .getElementById("parentName")
-            .value
-            .trim();
-
+            document.getElementById("parentName").value.trim();
 
         const childName =
-            document
-            .getElementById("childName")
-            .value
-            .trim();
-
+            document.getElementById("childName").value.trim();
 
         const childAge =
-            document
-            .getElementById("childAge")
-            .value
-            .trim();
-
+            document.getElementById("childAge").value.trim();
 
         const location =
-            document
-            .getElementById("location")
-            .value;
-
+            document.getElementById("location").value;
 
         const offerType =
-            document
-            .getElementById("offerType")
-            .value;
-
+            document.getElementById("offerType").value;
 
         const startDate =
-            document
-            .getElementById("startDate")
-            .value
-            .trim();
-
+            document.getElementById("startDate").value.trim();
 
         const extraMessage =
-            document
-            .getElementById("message")
-            .value
-            .trim();
+            document.getElementById("message").value.trim();
 
 
         let message =
@@ -1808,9 +1729,7 @@ ${extraMessage}`;
 Proszę o kontakt. ♡`;
 
 
-        const phone =
-            "48798150723";
-
+        const phone = "48798150723";
 
         const url =
             "https://wa.me/" +
@@ -1818,11 +1737,7 @@ Proszę o kontakt. ♡`;
             "?text=" +
             encodeURIComponent(message);
 
-
-        window.open(
-            url,
-            "_blank"
-        );
+        window.open(url, "_blank");
 
     }
 );
