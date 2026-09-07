@@ -96,7 +96,6 @@ nav{
 .logo-name span{
     color:#756d83;
     font-size:12px;
-    margin-top:2px;
 }
 
 .links{
@@ -157,9 +156,7 @@ nav{
 
 .hero::before{
     content:"";
-
     position:absolute;
-
     inset:0;
 
     background:
@@ -222,7 +219,6 @@ nav{
     color:white;
 
     font-size:68px;
-
     line-height:1;
 
     text-shadow:
@@ -250,7 +246,6 @@ nav{
     color:white;
 
     font-size:20px;
-
     line-height:1.7;
 
     text-shadow:
@@ -280,7 +275,6 @@ nav{
     font-weight:bold;
 
     border:none;
-
     cursor:pointer;
 
     font-size:16px;
@@ -371,6 +365,7 @@ nav{
 
 .quick-card strong{
     display:block;
+
     margin:10px 0 7px;
 
     color:#725ed6;
@@ -390,22 +385,31 @@ nav{
 
 .content{
     max-width:1200px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
 .section-title{
     margin:0 0 15px;
+
     text-align:center;
+
     color:#e84d9b;
+
     font-size:43px;
 }
 
 .section-subtitle{
     max-width:780px;
+
     margin:0 auto 45px;
+
     text-align:center;
+
     color:#706979;
+
     font-size:18px;
     line-height:1.7;
 }
@@ -441,13 +445,17 @@ nav{
 
 .locations-inner{
     max-width:1200px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
 .location-cards{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:25px;
 }
 
@@ -478,7 +486,9 @@ nav{
 
 .location-card h3{
     margin:14px 0 12px;
+
     color:#725ed6;
+
     font-size:24px;
 }
 
@@ -490,13 +500,17 @@ nav{
 
 .location-hours{
     margin-top:10px;
+
     color:#ef1591;
+
     font-weight:bold;
 }
 
 .location-extra{
     margin-top:7px;
+
     color:#725ed6;
+
     font-size:14px;
     font-weight:bold;
 }
@@ -511,13 +525,11 @@ nav{
    OFERTA
 ========================= */
 
-.offer-section{
-    background:white;
-}
-
 .oferta-kafelki{
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:22px;
 }
 
@@ -528,15 +540,9 @@ nav{
 
     border-radius:30px;
 
-    background:white;
-
     box-shadow:0 12px 30px rgba(80,50,120,.15);
 
-    text-decoration:none;
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+    transition:.25s;
 }
 
 .oferta-kafelek img{
@@ -566,7 +572,9 @@ nav{
 
 .extended-inner{
     max-width:1100px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
@@ -606,7 +614,9 @@ nav{
 
 .extended-box p{
     max-width:800px;
+
     margin:0 auto 25px;
+
     font-size:18px;
     line-height:1.8;
 }
@@ -622,7 +632,9 @@ nav{
 
 .form-inner{
     max-width:900px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
@@ -638,13 +650,17 @@ nav{
 
 .form-grid{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:20px;
 }
 
 .form-group{
     display:flex;
+
     flex-direction:column;
+
     gap:8px;
 }
 
@@ -712,7 +728,41 @@ nav{
 
 .form-submit{
     text-align:center;
+
     margin-top:25px;
+}
+
+
+/* STATUS FORMULARZA */
+
+.form-status{
+    display:none;
+
+    margin-top:20px;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
+
+.form-status.success{
+    display:block;
+
+    background:#e4ffe9;
+
+    color:#26753b;
+}
+
+.form-status.error{
+    display:block;
+
+    background:#ffe6e6;
+
+    color:#a12929;
 }
 
 
@@ -722,7 +772,9 @@ nav{
 
 .social-section{
     max-width:1200px;
+
     margin:auto;
+
     padding:20px 25px 90px;
 }
 
@@ -753,8 +805,11 @@ nav{
 
 .social-box p{
     max-width:700px;
+
     margin:0 auto 28px;
+
     color:#625b6b;
+
     font-size:18px;
     line-height:1.7;
 }
@@ -780,6 +835,7 @@ nav{
 
 .magic-icons{
     margin-bottom:15px;
+
     font-size:45px;
 }
 
@@ -800,14 +856,18 @@ nav{
 
 .contact p{
     max-width:720px;
+
     margin:0 auto;
+
     font-size:18px;
     line-height:1.7;
 }
 
 .phone{
     margin:25px 0;
+
     color:#ef1591;
+
     font-size:32px;
     font-weight:bold;
 }
@@ -831,13 +891,17 @@ footer{
 
 footer strong{
     display:block;
+
     margin-bottom:8px;
+
     font-size:20px;
 }
 
 footer a{
     color:white;
+
     text-decoration:none;
+
     font-weight:bold;
 }
 
@@ -856,7 +920,7 @@ footer a{
 
 
 /* =========================
-   TELEFON
+   MOBILE
 ========================= */
 
 @media(max-width:850px){
@@ -865,17 +929,12 @@ footer a{
         display:none;
     }
 
-    .logo-name strong{
-        font-size:20px;
-    }
-
     .hero{
         min-height:620px;
-        background-position:center;
     }
 
     .hero-content{
-        padding:26px 20px;
+        padding:25px 18px;
     }
 
     .hero-logo{
@@ -905,6 +964,7 @@ footer a{
 
     .quick-card + .quick-card{
         border-left:0;
+
         border-top:1px solid #eee7f1;
     }
 
@@ -957,6 +1017,7 @@ footer a{
 
 </head>
 
+
 <body>
 
 
@@ -989,13 +1050,28 @@ footer a{
 
     </div>
 
+
     <div class="links">
 
-        <a href="#onas">O nas</a>
-        <a href="#lokalizacje">Lokalizacje</a>
-        <a href="#oferta">Oferta</a>
-        <a href="#pakiet">Pakiet rozszerzony</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#onas">
+            O nas
+        </a>
+
+        <a href="#lokalizacje">
+            Lokalizacje
+        </a>
+
+        <a href="#oferta">
+            Oferta
+        </a>
+
+        <a href="#pakiet">
+            Pakiet rozszerzony
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
 
         <a
             href="#zapisy"
@@ -1012,7 +1088,7 @@ footer a{
 
 
 <!-- =========================
-     MAGICZNY HERO
+     HERO
 ========================= -->
 
 <header class="hero">
@@ -1039,6 +1115,7 @@ footer a{
         Dużo bliskości, ruchu, sensoryki,
         kreatywności i codziennego dziecięcego śmiechu.
     </p>
+
 
     <div class="buttons">
 
@@ -1101,8 +1178,7 @@ footer a{
         </strong>
 
         <span>
-            Standardowe godziny
-            naszych placówek.
+            Standardowe godziny naszych placówek.
         </span>
 
     </div>
@@ -1134,10 +1210,7 @@ footer a{
      O NAS
 ========================= -->
 
-<section
-    id="onas"
-    class="content"
->
+<section id="onas" class="content">
 
 <h2 class="section-title">
     Cześć, tu ZUZU! ☁️
@@ -1146,6 +1219,7 @@ footer a{
 <p class="section-subtitle">
     Tu mały człowiek może być po prostu małym człowiekiem.
 </p>
+
 
 <div class="about">
 
@@ -1178,10 +1252,7 @@ footer a{
      LOKALIZACJE
 ========================= -->
 
-<div
-    id="lokalizacje"
-    class="locations"
->
+<div id="lokalizacje" class="locations">
 
 <div class="locations-inner">
 
@@ -1193,6 +1264,7 @@ footer a{
     Trzy lokalizacje w Szczecinie.
     Jedna ZUZU-owa filozofia.
 </p>
+
 
 <div class="location-cards">
 
@@ -1315,6 +1387,7 @@ footer a{
 
     </div>
 
+
 </div>
 
 </div>
@@ -1326,10 +1399,7 @@ footer a{
      OFERTA
 ========================= -->
 
-<section
-    id="oferta"
-    class="content offer-section"
->
+<section id="oferta" class="content">
 
 <h2 class="section-title">
     Nasza oferta ⭐
@@ -1339,6 +1409,7 @@ footer a{
     Kliknij wybraną opcję
     i zobacz szczegóły.
 </p>
+
 
 <div class="oferta-kafelki">
 
@@ -1404,10 +1475,7 @@ footer a{
      PAKIET ROZSZERZONY
 ========================= -->
 
-<div
-    id="pakiet"
-    class="extended-section"
->
+<div id="pakiet" class="extended-section">
 
 <div class="extended-inner">
 
@@ -1453,10 +1521,7 @@ footer a{
      FORMULARZ
 ========================= -->
 
-<div
-    id="zapisy"
-    class="form-section"
->
+<div id="zapisy" class="form-section">
 
 <div class="form-inner">
 
@@ -1465,14 +1530,16 @@ footer a{
 </h2>
 
 <p class="section-subtitle">
-    Wypełnij kilka pól,
-    a przygotujemy gotową wiadomość
-    do wysłania przez WhatsApp.
+    Wypełnij formularz.
+    Zgłoszenie trafi do nas na e-mail,
+    a następnie otworzymy gotową wiadomość na WhatsApp.
 </p>
+
 
 <div class="form-box">
 
 <form id="zuzuForm">
+
 
 <div class="form-grid">
 
@@ -1486,7 +1553,42 @@ footer a{
         <input
             type="text"
             id="parentName"
+            name="Imię rodzica"
             placeholder="np. Anna"
+            required
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="parentEmail">
+            Twój e-mail
+        </label>
+
+        <input
+            type="email"
+            id="parentEmail"
+            name="E-mail rodzica"
+            placeholder="np. anna@gmail.com"
+            required
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="parentPhone">
+            Numer telefonu
+        </label>
+
+        <input
+            type="tel"
+            id="parentPhone"
+            name="Telefon rodzica"
+            placeholder="np. 500 600 700"
             required
         >
 
@@ -1502,6 +1604,7 @@ footer a{
         <input
             type="text"
             id="childName"
+            name="Imię dziecka"
             placeholder="np. Zosia"
             required
         >
@@ -1518,6 +1621,7 @@ footer a{
         <input
             type="text"
             id="childAge"
+            name="Wiek dziecka"
             placeholder="np. 18 miesięcy"
             required
         >
@@ -1533,6 +1637,7 @@ footer a{
 
         <select
             id="location"
+            name="Lokalizacja"
             required
         >
 
@@ -1569,6 +1674,7 @@ footer a{
 
         <select
             id="offerType"
+            name="Rodzaj oferty"
             required
         >
 
@@ -1606,6 +1712,7 @@ footer a{
         <input
             type="text"
             id="startDate"
+            name="Od kiedy"
             placeholder="np. od października"
         >
 
@@ -1620,32 +1727,51 @@ footer a{
 
         <textarea
             id="message"
+            name="Wiadomość"
             placeholder="Tu możesz napisać, o co jeszcze chcesz zapytać..."
         ></textarea>
 
     </div>
 
+
 </div>
+
 
 <div class="form-note">
 
     Po kliknięciu
-    <strong>„Wyślij przez WhatsApp”</strong>
-    otworzy się WhatsApp
+    <strong>„Wyślij zgłoszenie”</strong>
+    kopia formularza zostanie przesłana
+    do Akademii ZUZU na e-mail.
+
+    <br><br>
+
+    Następnie otworzy się WhatsApp
     z przygotowaną wiadomością.
+    Tam wystarczy kliknąć
+    <strong>Wyślij</strong>.
 
 </div>
+
 
 <div class="form-submit">
 
     <button
         type="submit"
+        id="submitButton"
         class="button button-green"
     >
-        💬 Wyślij przez WhatsApp
+        💌 Wyślij zgłoszenie
     </button>
 
 </div>
+
+
+<div
+    id="formStatus"
+    class="form-status"
+></div>
+
 
 </form>
 
@@ -1677,6 +1803,7 @@ footer a{
         i zobacz więcej
         z codziennego życia Akademii ZUZU.
     </p>
+
 
     <div class="buttons">
 
@@ -1722,15 +1849,20 @@ footer a{
     </h2>
 
     <p class="section-subtitle">
+
         Trochę farby na ubraniu.
         Zabawki nie zawsze tam,
         gdzie powinny być.
+
         Dużo śmiechu.
         Małe sukcesy.
         Pierwsze przyjaźnie.
+
         I całe mnóstwo historii,
         które zaczynają się od:
+
         „A dzisiaj w ZUZU…”
+
     </p>
 
 </div>
@@ -1742,10 +1874,7 @@ footer a{
      KONTAKT
 ========================= -->
 
-<section
-    id="kontakt"
-    class="content"
->
+<section id="kontakt" class="content">
 
 <div class="contact">
 
@@ -1754,17 +1883,18 @@ footer a{
     </h2>
 
     <p>
-        Chcesz zapytać
-        o wolne miejsce,
+        Chcesz zapytać o wolne miejsce,
         opiekę godzinową,
         weekendową
         albo zajęcia dodatkowe?
         Napisz lub zadzwoń.
     </p>
 
+
     <div class="phone">
         📞 798 150 723
     </div>
+
 
     <div class="buttons">
 
@@ -1848,83 +1978,290 @@ footer a{
 
 
 <!-- =========================
-     WHATSAPP
+     EMAIL + WHATSAPP
 ========================= -->
 
 <script>
 
-document
-.getElementById("zuzuForm")
-.addEventListener(
+const form =
+    document.getElementById("zuzuForm");
+
+const statusBox =
+    document.getElementById("formStatus");
+
+const submitButton =
+    document.getElementById("submitButton");
+
+
+form.addEventListener(
     "submit",
-    function(event){
+    async function(event){
 
         event.preventDefault();
 
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Wysyłamy... ✨";
+
+
+        statusBox.className =
+            "form-status";
+
+        statusBox.textContent = "";
+
+
         const parentName =
-            document.getElementById("parentName").value.trim();
+            document
+            .getElementById("parentName")
+            .value
+            .trim();
+
+
+        const parentEmail =
+            document
+            .getElementById("parentEmail")
+            .value
+            .trim();
+
+
+        const parentPhone =
+            document
+            .getElementById("parentPhone")
+            .value
+            .trim();
+
 
         const childName =
-            document.getElementById("childName").value.trim();
+            document
+            .getElementById("childName")
+            .value
+            .trim();
+
 
         const childAge =
-            document.getElementById("childAge").value.trim();
+            document
+            .getElementById("childAge")
+            .value
+            .trim();
+
 
         const location =
-            document.getElementById("location").value;
+            document
+            .getElementById("location")
+            .value;
+
 
         const offerType =
-            document.getElementById("offerType").value;
+            document
+            .getElementById("offerType")
+            .value;
+
 
         const startDate =
-            document.getElementById("startDate").value.trim();
+            document
+            .getElementById("startDate")
+            .value
+            .trim();
+
 
         const extraMessage =
-            document.getElementById("message").value.trim();
+            document
+            .getElementById("message")
+            .value
+            .trim();
 
 
-        let message =
+        const emailData =
+            new FormData();
+
+
+        emailData.append(
+            "Imię rodzica",
+            parentName
+        );
+
+
+        emailData.append(
+            "E-mail rodzica",
+            parentEmail
+        );
+
+
+        emailData.append(
+            "Telefon rodzica",
+            parentPhone
+        );
+
+
+        emailData.append(
+            "Imię dziecka",
+            childName
+        );
+
+
+        emailData.append(
+            "Wiek dziecka",
+            childAge
+        );
+
+
+        emailData.append(
+            "Lokalizacja",
+            location
+        );
+
+
+        emailData.append(
+            "Rodzaj oferty",
+            offerType
+        );
+
+
+        emailData.append(
+            "Od kiedy",
+            startDate || "Do ustalenia"
+        );
+
+
+        emailData.append(
+            "Wiadomość",
+            extraMessage || "Brak dodatkowej wiadomości"
+        );
+
+
+        emailData.append(
+            "_subject",
+            "NOWE ZGŁOSZENIE ZUZU ⭐"
+        );
+
+
+        emailData.append(
+            "_template",
+            "table"
+        );
+
+
+        emailData.append(
+            "_captcha",
+            "false"
+        );
+
+
+        emailData.append(
+            "_replyto",
+            parentEmail
+        );
+
+
+        try{
+
+
+            const response =
+                await fetch(
+                    "https://formsubmit.co/ajax/zuzu.szczecin@gmail.com",
+                    {
+                        method:"POST",
+                        body:emailData,
+                        headers:{
+                            "Accept":
+                                "application/json"
+                        }
+                    }
+                );
+
+
+            if(!response.ok){
+
+                throw new Error(
+                    "Nie udało się wysłać formularza."
+                );
+
+            }
+
+
+            let whatsappMessage =
 `Dzień dobry! 😊
 
-Chciałabym / chciałbym zapytać o ofertę Akademii ZUZU.
+Właśnie wysłałam / wysłałem formularz ze strony Akademii ZUZU.
 
 👤 Imię rodzica: ${parentName}
+📞 Telefon: ${parentPhone}
+📧 E-mail: ${parentEmail}
+
 🧸 Imię dziecka: ${childName}
 🎂 Wiek dziecka: ${childAge}
+
 ⭐ Interesuje mnie: ${offerType}
 📍 Lokalizacja: ${location}
 📅 Od kiedy: ${startDate || "do ustalenia"}`;
 
 
-        if(extraMessage){
+            if(extraMessage){
 
-            message +=
+                whatsappMessage +=
 `
 
 💬 Dodatkowa wiadomość:
 ${extraMessage}`;
 
-        }
+            }
 
 
-        message +=
+            whatsappMessage +=
 `
 
-Proszę o kontakt. ♡`;
+Proszę o kontakt w sprawie dostępności. ♡`;
 
 
-        const phone = "48798150723";
+            const whatsappUrl =
+                "https://wa.me/48798150723?text=" +
+                encodeURIComponent(
+                    whatsappMessage
+                );
 
-        const url =
-            "https://wa.me/" +
-            phone +
-            "?text=" +
-            encodeURIComponent(message);
 
-        window.open(
-            url,
-            "_blank"
-        );
+            statusBox.className =
+                "form-status success";
+
+
+            statusBox.textContent =
+                "Zgłoszenie wysłane na e-mail ZUZU 💗 Otwieramy WhatsApp...";
+
+
+            setTimeout(
+                function(){
+
+                    window.location.href =
+                        whatsappUrl;
+
+                },
+                1200
+            );
+
+
+        }
+
+        catch(error){
+
+
+            statusBox.className =
+                "form-status error";
+
+
+            statusBox.textContent =
+                "Nie udało się wysłać zgłoszenia na e-mail. Spróbuj ponownie albo napisz do nas na WhatsApp.";
+
+
+            submitButton.disabled =
+                false;
+
+
+            submitButton.textContent =
+                "💌 Wyślij zgłoszenie";
+
+        }
 
     }
 );
