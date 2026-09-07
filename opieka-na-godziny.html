@@ -1,1 +1,578 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Opieka na godziny | Akademia ZUZU Szczecin</title>
+
+<meta
+    name="description"
+    content="Elastyczna opieka na godziny w Akademii ZUZU w Szczecinie. Pojedyncze godziny oraz karnety."
+>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#4d4657;
+    background:#fffafd;
+}
+
+a{
+    text-decoration:none;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.menu{
+    max-width:1200px;
+    min-height:82px;
+    margin:auto;
+    padding:8px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    color:#ef1591;
+    font-size:23px;
+}
+
+.logo-text span{
+    color:#756d83;
+    font-size:12px;
+}
+
+.back{
+    padding:12px 22px;
+    border-radius:30px;
+    background:#ef1591;
+    color:white;
+    font-weight:bold;
+}
+
+.hero{
+    min-height:500px;
+    padding:70px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffeb70 0 24px, transparent 26px),
+        radial-gradient(circle at 90% 15%, #f79cda 0 60px, transparent 62px),
+        radial-gradient(circle at 15% 85%, #a986ff 0 65px, transparent 67px),
+        linear-gradient(135deg,#24116f,#5523a5,#1c0c61);
+}
+
+.hero-inner{
+    max-width:850px;
+}
+
+.hero h1{
+    margin:0;
+    color:white;
+    font-size:64px;
+    text-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.hero h2{
+    color:#ffe75a;
+    font-size:28px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:18px auto 28px;
+    color:white;
+    font-size:19px;
+    line-height:1.7;
+}
+
+.button{
+    display:inline-block;
+    padding:16px 28px;
+    border-radius:35px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.button-pink{
+    background:#ef1591;
+    color:white;
+}
+
+.button-green{
+    background:#25D366;
+    color:white;
+}
+
+.button-white{
+    background:white;
+    color:#5e4cc4;
+}
+
+.content{
+    max-width:1150px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.section-title{
+    margin:0 0 15px;
+    text-align:center;
+    color:#e84d9b;
+    font-size:42px;
+}
+
+.section-subtitle{
+    max-width:750px;
+    margin:0 auto 40px;
+    text-align:center;
+    color:#706979;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.offer-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:start;
+}
+
+.offer-card{
+    background:white;
+    padding:20px;
+    border-radius:35px;
+    box-shadow:0 12px 35px rgba(70,50,100,.12);
+}
+
+.offer-card img{
+    width:100%;
+    display:block;
+    border-radius:25px;
+}
+
+.offer-card h3{
+    margin:20px 0 5px;
+    text-align:center;
+    color:#725ed6;
+    font-size:26px;
+}
+
+.offer-card p{
+    margin:0;
+    text-align:center;
+    color:#665f70;
+    line-height:1.7;
+}
+
+.info{
+    background:#f6f0ff;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.info-card{
+    padding:32px 22px;
+    background:white;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(70,60,90,.09);
+}
+
+.info-icon{
+    font-size:44px;
+}
+
+.info-card h3{
+    color:#725ed6;
+    font-size:22px;
+}
+
+.info-card p{
+    line-height:1.7;
+}
+
+.cta{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 30px;
+    border-radius:38px;
+    text-align:center;
+    background:linear-gradient(135deg,#e5f9ff,#ffe5f4);
+    box-shadow:0 12px 35px rgba(70,50,100,.10);
+}
+
+.cta h2{
+    margin-top:0;
+    color:#ef1591;
+    font-size:40px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.phone{
+    margin:20px 0;
+    color:#725ed6;
+    font-size:32px;
+    font-weight:bold;
+}
+
+footer{
+    padding:45px 20px;
+    background:#5744aa;
+    color:white;
+    text-align:center;
+    line-height:1.7;
+}
+
+footer a{
+    color:white;
+    font-weight:bold;
+}
+
+@media(max-width:850px){
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .offer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="menu">
+
+    <div class="logo">
+
+        <img
+            src="Logo-zuzu.jpg"
+            alt="Logo Akademii ZUZU"
+        >
+
+        <div class="logo-text">
+            <strong>AKADEMIA ZUZU</strong>
+            <span>Opieka na godziny</span>
+        </div>
+
+    </div>
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← Strona główna
+    </a>
+
+</div>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-inner">
+
+    <h1>
+        Opieka na godziny ⏰
+    </h1>
+
+    <h2>
+        Tyle opieki, ile naprawdę potrzebujesz
+    </h2>
+
+    <p>
+        Zakupy, lekarz, spotkanie,
+        praca albo po prostu kilka godzin dla siebie.
+        W ZUZU możesz skorzystać z opieki
+        bez stałego miesięcznego zobowiązania.
+    </p>
+
+    <a
+        href="https://wa.me/48798150723"
+        target="_blank"
+        class="button button-pink"
+    >
+        Zapytaj o wolne miejsce ♡
+    </a>
+
+</div>
+
+</header>
+
+
+<section class="content">
+
+<h2 class="section-title">
+    Wybierz opcję dla siebie ⭐
+</h2>
+
+<p class="section-subtitle">
+    Możesz zapłacić za jednorazową opiekę
+    albo wybrać karnet, jeśli wiesz,
+    że ZUZU przyda Ci się częściej.
+</p>
+
+
+<div class="offer-grid">
+
+
+    <div class="offer-card">
+
+        <img
+            src="opiekanagodziny.jpg"
+            alt="Cennik opieki na godziny Akademia ZUZU"
+        >
+
+        <h3>
+            Opieka jednorazowa
+        </h3>
+
+        <p>
+            Wybierz liczbę godzin
+            i korzystaj wtedy,
+            kiedy tego potrzebujesz.
+        </p>
+
+    </div>
+
+
+    <div class="offer-card">
+
+        <img
+            src="karnet.jpg"
+            alt="Karnety Akademia ZUZU"
+        >
+
+        <h3>
+            Karnety ZUZU
+        </h3>
+
+        <p>
+            Więcej godzin,
+            większa wygoda
+            i bez stałego miesięcznego zobowiązania.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<section class="info">
+
+<div class="content">
+
+<h2 class="section-title">
+    Prosto i elastycznie 🌈
+</h2>
+
+<div class="info-grid">
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            ⏰
+        </div>
+
+        <h3>
+            Wybierasz czas
+        </h3>
+
+        <p>
+            Kilka godzin albo większy pakiet.
+            Ty decydujesz,
+            czego potrzebujesz.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            📅
+        </div>
+
+        <h3>
+            Rezerwujesz termin
+        </h3>
+
+        <p>
+            Opieka jest realizowana
+            w zależności od dostępności miejsc
+            w danym terminie.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🧸
+        </div>
+
+        <h3>
+            Dziecko zostaje z ZUZU
+        </h3>
+
+        <p>
+            Bezpieczna opieka,
+            zabawa, zajęcia
+            i dziecięce przygody.
+        </p>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="content">
+
+<div class="cta">
+
+    <h2>
+        Potrzebujesz kilku godzin? ♡
+    </h2>
+
+    <p>
+        Napisz do nas,
+        podaj dzień, godzinę
+        i wiek dziecka,
+        a sprawdzimy dostępność.
+    </p>
+
+    <div class="phone">
+        📞 798 150 723
+    </div>
+
+    <div>
+
+        <a
+            href="https://wa.me/48798150723"
+            target="_blank"
+            class="button button-green"
+        >
+            💬 Napisz na WhatsApp
+        </a>
+
+        &nbsp;
+
+        <a
+            href="tel:+48798150723"
+            class="button button-pink"
+        >
+            ☎️ Zadzwoń
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    <strong>
+        ☁️ Akademia ZUZU
+    </strong>
+
+    <br>
+
+    Opieka stała · Opieka na godziny · Opieka weekendowa · Zajęcia dodatkowe
+
+    <br><br>
+
+    <a href="index.html">
+        ← Wróć na stronę główną
+    </a>
+
+    <br><br>
+
+    © 2026 Akademia ZUZU
+
+</footer>
+
+
+</body>
+
+</html>
