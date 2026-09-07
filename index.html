@@ -15,10 +15,6 @@
 
 <style>
 
-/* =========================
-   PODSTAWY
-========================= */
-
 *{
     box-sizing:border-box;
     scroll-behavior:smooth;
@@ -39,28 +35,21 @@ a{
     transition:0.2s;
 }
 
-
-/* =========================
-   MENU
-========================= */
+/* MENU */
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-
     background:rgba(255,255,255,0.97);
-
     box-shadow:0 4px 20px rgba(0,0,0,0.07);
 }
 
 .menu{
     max-width:1200px;
     min-height:82px;
-
     margin:auto;
     padding:8px 25px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -75,11 +64,8 @@ nav{
 .logo img{
     width:64px;
     height:64px;
-
     object-fit:cover;
-
     border-radius:18px;
-
     box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
@@ -107,9 +93,7 @@ nav{
 
 .links a{
     color:#5d5667;
-
     text-decoration:none;
-
     font-weight:bold;
 }
 
@@ -120,26 +104,18 @@ nav{
 .links .zapisy{
     background:#ef1591;
     color:white;
-
     padding:13px 22px;
-
     border-radius:30px;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     min-height:700px;
-
     padding:75px 25px;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
 
     background:
@@ -157,50 +133,35 @@ nav{
 .hero-logo{
     width:220px;
     height:220px;
-
     object-fit:cover;
-
     border-radius:40px;
-
     border:6px solid rgba(255,255,255,0.95);
-
     box-shadow:0 18px 45px rgba(55,35,100,0.25);
 }
 
 .hero h1{
     margin:25px 0 0;
-
     color:white;
-
     font-size:68px;
     line-height:1;
-
     text-shadow:0 5px 15px rgba(0,0,0,0.16);
 }
 
 .hero h2{
     margin:20px 0 10px;
-
     color:#fff59a;
-
     font-size:29px;
 }
 
 .hero p{
     max-width:750px;
-
     margin:20px auto 30px;
-
     color:white;
-
     font-size:20px;
     line-height:1.7;
 }
 
-
-/* =========================
-   PRZYCISKI
-========================= */
+/* BUTTONS */
 
 .buttons{
     display:flex;
@@ -211,15 +172,14 @@ nav{
 
 .button{
     display:inline-block;
-
     padding:16px 30px;
-
     border-radius:35px;
-
     text-decoration:none;
     font-weight:bold;
-
     transition:0.2s;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
 }
 
 .button:hover{
@@ -229,36 +189,33 @@ nav{
 .button-pink{
     background:#ef1591;
     color:white;
-
     box-shadow:0 10px 25px rgba(239,21,145,0.3);
 }
 
 .button-white{
     background:white;
     color:#6655c7;
-
     box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 .button-purple{
     background:#6956c8;
     color:white;
-
     box-shadow:0 10px 25px rgba(105,86,200,0.22);
 }
 
+.button-green{
+    background:#25D366;
+    color:white;
+    box-shadow:0 10px 25px rgba(37,211,102,0.25);
+}
 
-/* =========================
-   SZYBKIE INFO
-========================= */
+/* QUICK INFO */
 
 .quick-info{
     max-width:1100px;
-
     margin:-55px auto 0;
-
     padding:0 25px;
-
     position:relative;
     z-index:5;
 }
@@ -266,19 +223,14 @@ nav{
 .quick-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-
     background:white;
-
     border-radius:30px;
-
     box-shadow:0 15px 45px rgba(70,60,90,.15);
-
     overflow:hidden;
 }
 
 .quick-card{
     padding:30px 20px;
-
     text-align:center;
 }
 
@@ -292,80 +244,53 @@ nav{
 
 .quick-card strong{
     display:block;
-
     margin:10px 0 7px;
-
     color:#725ed6;
-
     font-size:19px;
 }
 
 .quick-card span{
     color:#696171;
-
     line-height:1.6;
 }
 
-
-/* =========================
-   SEKCJE
-========================= */
+/* SEKCJE */
 
 .content{
     max-width:1200px;
-
     margin:auto;
-
     padding:90px 25px;
 }
 
 .section-title{
     margin:0 0 15px;
-
     text-align:center;
-
     color:#e84d9b;
-
     font-size:43px;
 }
 
 .section-subtitle{
     max-width:780px;
-
     margin:0 auto 45px;
-
     text-align:center;
-
     color:#706979;
-
     font-size:18px;
     line-height:1.7;
 }
 
-
-/* =========================
-   O NAS
-========================= */
+/* O NAS */
 
 .about{
     padding:48px;
-
     background:white;
-
     border-radius:35px;
-
     box-shadow:0 10px 35px rgba(80,60,100,.09);
-
     text-align:center;
-
     font-size:18px;
     line-height:1.85;
 }
 
-
-/* =========================
-   LOKALIZACJE
-========================= */
+/* LOKALIZACJE */
 
 .locations{
     background:#f8f1ff;
@@ -373,29 +298,21 @@ nav{
 
 .locations-inner{
     max-width:1200px;
-
     margin:auto;
-
     padding:90px 25px;
 }
 
 .location-cards{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:25px;
 }
 
 .location-card{
     overflow:hidden;
-
     background:white;
-
     border-radius:32px;
-
     box-shadow:0 10px 35px rgba(70,60,90,.10);
-
     transition:0.25s;
 }
 
@@ -405,7 +322,6 @@ nav{
 
 .location-top{
     padding:32px 25px 22px;
-
     text-align:center;
 }
 
@@ -415,58 +331,41 @@ nav{
 
 .location-card h3{
     margin:14px 0 12px;
-
     color:#725ed6;
-
     font-size:24px;
 }
 
 .location-address{
     color:#514b5a;
-
     font-weight:bold;
-
     line-height:1.6;
 }
 
 .location-hours{
     margin-top:10px;
-
     color:#ef1591;
-
     font-weight:bold;
 }
 
 .location-bottom{
     padding:0 25px 30px;
-
     text-align:center;
 }
 
-
-/* =========================
-   OFERTA
-========================= */
+/* OFERTA */
 
 .offer-grid{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:24px;
 }
 
 .offer-card{
     padding:34px 25px;
-
     background:white;
-
     border-radius:30px;
-
     box-shadow:0 10px 30px rgba(70,60,90,.10);
-
     text-align:center;
-
     transition:0.25s;
 }
 
@@ -480,22 +379,16 @@ nav{
 
 .offer-card h3{
     margin:15px 0 10px;
-
     color:#725ed6;
-
     font-size:22px;
 }
 
 .offer-card p{
     color:#615a69;
-
     line-height:1.7;
 }
 
-
-/* =========================
-   PAKIET ROZSZERZONY
-========================= */
+/* PAKIET */
 
 .extended-section{
     background:#fff1b5;
@@ -503,117 +396,124 @@ nav{
 
 .extended-inner{
     max-width:1100px;
-
     margin:auto;
-
     padding:90px 25px;
 }
 
 .extended-box{
     padding:55px;
-
     background:white;
-
     border-radius:38px;
-
     box-shadow:0 12px 40px rgba(80,60,100,.10);
-
     text-align:center;
 }
 
 .extended-badge{
     display:inline-block;
-
     padding:9px 18px;
-
     background:#6956c8;
     color:white;
-
     border-radius:25px;
-
     font-size:14px;
     font-weight:bold;
 }
 
 .extended-box h2{
     margin:20px 0 15px;
-
     color:#ef1591;
-
     font-size:40px;
 }
 
 .extended-box p{
     max-width:800px;
-
     margin:0 auto 25px;
-
     font-size:18px;
     line-height:1.8;
 }
 
+/* FORMULARZ */
 
-/* =========================
-   JAK ZAPISAĆ
-========================= */
-
-.steps{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:22px;
+.form-section{
+    background:linear-gradient(135deg,#eefaff,#fff0f7);
 }
 
-.step{
-    position:relative;
+.form-inner{
+    max-width:900px;
+    margin:auto;
+    padding:90px 25px;
+}
 
-    padding:38px 25px;
-
+.form-box{
     background:white;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    box-shadow:0 10px 30px rgba(70,60,90,.09);
+    border-radius:38px;
+    padding:50px;
+    box-shadow:0 12px 40px rgba(70,60,90,.12);
 }
 
-.step-number{
-    width:55px;
-    height:55px;
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
 
-    margin:0 auto 18px;
-
+.form-group{
     display:flex;
-    align-items:center;
-    justify-content:center;
+    flex-direction:column;
+    gap:8px;
+}
 
-    background:#ef1591;
-    color:white;
+.form-group.full{
+    grid-column:1 / -1;
+}
 
-    border-radius:50%;
-
-    font-size:24px;
+.form-group label{
     font-weight:bold;
+    color:#665d70;
 }
 
-.step h3{
-    color:#725ed6;
-
-    font-size:22px;
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:15px 16px;
+    border:2px solid #eee5f1;
+    border-radius:18px;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#4d4657;
+    outline:none;
+    transition:0.2s;
 }
 
-.step p{
-    line-height:1.7;
-
-    color:#615a69;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#ef1591;
+    box-shadow:0 0 0 4px rgba(239,21,145,0.08);
 }
 
+.form-group textarea{
+    min-height:130px;
+    resize:vertical;
+}
 
-/* =========================
-   ZUZU MAGIC
-========================= */
+.form-note{
+    margin:20px 0;
+    padding:15px 18px;
+    border-radius:18px;
+    background:#fff7cf;
+    color:#665d70;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.form-submit{
+    text-align:center;
+    margin-top:25px;
+}
+
+/* MAGIC */
 
 .magic{
     text-align:center;
@@ -621,82 +521,55 @@ nav{
 
 .magic-box{
     padding:55px 30px;
-
-    background:
-        linear-gradient(135deg,#ffe3f2,#e4f8ff);
-
+    background:linear-gradient(135deg,#ffe3f2,#e4f8ff);
     border-radius:38px;
-
     box-shadow:0 10px 35px rgba(80,60,100,.08);
 }
 
 .magic-icons{
     margin-bottom:15px;
-
     font-size:45px;
 }
 
-
-/* =========================
-   KONTAKT
-========================= */
+/* KONTAKT */
 
 .contact{
     padding:60px 25px;
-
-    background:
-        linear-gradient(135deg,#fce2f0,#e4f7ff);
-
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
     border-radius:38px;
-
     text-align:center;
 }
 
 .contact p{
     max-width:720px;
-
     margin:0 auto;
-
     font-size:18px;
     line-height:1.7;
 }
 
 .phone{
     margin:25px 0;
-
     color:#ef1591;
-
     font-size:32px;
     font-weight:bold;
 }
 
-
-/* =========================
-   STOPKA
-========================= */
+/* STOPKA */
 
 footer{
     padding:40px 20px;
-
     background:#5b4bae;
-
     color:white;
-
     text-align:center;
 }
 
 footer strong{
     display:block;
-
     margin-bottom:8px;
-
     font-size:18px;
 }
 
-
-/* =========================
-   TELEFON
-========================= */
+/* MOBILE */
 
 @media(max-width:850px){
 
@@ -743,9 +616,16 @@ footer strong{
     }
 
     .location-cards,
-    .offer-grid,
-    .steps{
+    .offer-grid{
         grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
     }
 
     .section-title{
@@ -756,8 +636,9 @@ footer strong{
         padding:35px 25px;
     }
 
-    .extended-box{
-        padding:40px 25px;
+    .extended-box,
+    .form-box{
+        padding:38px 24px;
     }
 
     .extended-box h2{
@@ -774,9 +655,7 @@ footer strong{
 <body>
 
 
-<!-- =========================
-     MENU
-========================= -->
+<!-- MENU -->
 
 <nav>
 
@@ -790,15 +669,8 @@ footer strong{
         >
 
         <div class="logo-name">
-
-            <strong>
-                AKADEMIA ZUZU
-            </strong>
-
-            <span>
-                Szczecin
-            </span>
-
+            <strong>AKADEMIA ZUZU</strong>
+            <span>Szczecin</span>
         </div>
 
     </div>
@@ -806,32 +678,12 @@ footer strong{
 
     <div class="links">
 
-        <a href="#onas">
-            O nas
-        </a>
-
-        <a href="#lokalizacje">
-            Lokalizacje
-        </a>
-
-        <a href="#oferta">
-            Oferta
-        </a>
-
-        <a href="#pakiet">
-            Pakiet rozszerzony
-        </a>
-
-        <a href="#kontakt">
-            Kontakt
-        </a>
-
-        <a
-            href="#zapisy"
-            class="zapisy"
-        >
-            Zapisy
-        </a>
+        <a href="#onas">O nas</a>
+        <a href="#lokalizacje">Lokalizacje</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#pakiet">Pakiet rozszerzony</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#zapisy" class="zapisy">Zapisy</a>
 
     </div>
 
@@ -840,9 +692,7 @@ footer strong{
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -869,7 +719,6 @@ footer strong{
         kreatywności i codziennego dziecięcego śmiechu.
     </p>
 
-
     <div class="buttons">
 
         <a
@@ -893,9 +742,7 @@ footer strong{
 </header>
 
 
-<!-- =========================
-     SZYBKIE INFO
-========================= -->
+<!-- QUICK INFO -->
 
 <div class="quick-info">
 
@@ -960,14 +807,9 @@ footer strong{
 </div>
 
 
-<!-- =========================
-     O NAS
-========================= -->
+<!-- O NAS -->
 
-<section
-    id="onas"
-    class="content"
->
+<section id="onas" class="content">
 
 <h2 class="section-title">
     Cześć, tu ZUZU! ☁️
@@ -976,7 +818,6 @@ footer strong{
 <p class="section-subtitle">
     Tu mały człowiek może być po prostu małym człowiekiem.
 </p>
-
 
 <div class="about">
 
@@ -987,9 +828,7 @@ footer strong{
 
     <br><br>
 
-    Nie próbujemy robić z dzieci
-    małych dorosłych.
-    Dajemy im przestrzeń na ruch,
+    Dajemy dzieciom przestrzeń na ruch,
     emocje, eksperymentowanie,
     odpoczynek i poznawanie świata
     w ich własnym tempie.
@@ -1006,14 +845,9 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     LOKALIZACJE
-========================= -->
+<!-- LOKALIZACJE -->
 
-<div
-    id="lokalizacje"
-    class="locations"
->
+<div id="lokalizacje" class="locations">
 
 <div class="locations-inner">
 
@@ -1029,8 +863,6 @@ footer strong{
 
 <div class="location-cards">
 
-
-    <!-- WITKIEWICZA -->
 
     <div class="location-card">
 
@@ -1055,7 +887,6 @@ footer strong{
 
         </div>
 
-
         <div class="location-bottom">
 
             <a
@@ -1069,8 +900,6 @@ footer strong{
 
     </div>
 
-
-    <!-- POCZTOWA -->
 
     <div class="location-card">
 
@@ -1095,7 +924,6 @@ footer strong{
 
         </div>
 
-
         <div class="location-bottom">
 
             <a
@@ -1109,8 +937,6 @@ footer strong{
 
     </div>
 
-
-    <!-- WOJCIECHA -->
 
     <div class="location-card">
 
@@ -1135,7 +961,6 @@ footer strong{
 
         </div>
 
-
         <div class="location-bottom">
 
             <a
@@ -1149,7 +974,6 @@ footer strong{
 
     </div>
 
-
 </div>
 
 </div>
@@ -1157,14 +981,9 @@ footer strong{
 </div>
 
 
-<!-- =========================
-     OFERTA
-========================= -->
+<!-- OFERTA -->
 
-<section
-    id="oferta"
-    class="content"
->
+<section id="oferta" class="content">
 
 <h2 class="section-title">
     Co dzieje się w ZUZU?
@@ -1176,141 +995,79 @@ footer strong{
     na różne rodzaje dziecięcych doświadczeń.
 </p>
 
-
 <div class="offer-grid">
 
-
     <div class="offer-card">
-
-        <div class="offer-icon">
-            🧸
-        </div>
-
-        <h3>
-            Bliskość i opieka
-        </h3>
-
+        <div class="offer-icon">🧸</div>
+        <h3>Bliskość i opieka</h3>
         <p>
             Bezpieczeństwo,
             uważność na emocje
             i indywidualne podejście
             do potrzeb dziecka.
         </p>
-
     </div>
 
-
     <div class="offer-card">
-
-        <div class="offer-icon">
-            🎨
-        </div>
-
-        <h3>
-            Kreatywność
-        </h3>
-
+        <div class="offer-icon">🎨</div>
+        <h3>Kreatywność</h3>
         <p>
             Malowanie, tworzenie,
             eksperymentowanie
-            i dziecięca wyobraźnia
-            bez oceniania efektu.
+            i dziecięca wyobraźnia.
         </p>
-
     </div>
 
-
     <div class="offer-card">
-
-        <div class="offer-icon">
-            🌈
-        </div>
-
-        <h3>
-            Sensoryka
-        </h3>
-
+        <div class="offer-icon">🌈</div>
+        <h3>Sensoryka</h3>
         <p>
             Kolory, faktury,
             światło, dźwięki
             i poznawanie świata
             wszystkimi zmysłami.
         </p>
-
     </div>
 
-
     <div class="offer-card">
-
-        <div class="offer-icon">
-            🤸
-        </div>
-
-        <h3>
-            Ruch
-        </h3>
-
+        <div class="offer-icon">🤸</div>
+        <h3>Ruch</h3>
         <p>
             Tory przeszkód,
             aktywność, zabawy ruchowe
             i przestrzeń na dziecięcą energię.
         </p>
-
     </div>
 
-
     <div class="offer-card">
-
-        <div class="offer-icon">
-            🎶
-        </div>
-
-        <h3>
-            Muzyka i zabawa
-        </h3>
-
+        <div class="offer-icon">🎶</div>
+        <h3>Muzyka i zabawa</h3>
         <p>
             Piosenki, rytm,
             taniec, wspólne zabawy
             i mnóstwo śmiechu.
         </p>
-
     </div>
 
-
     <div class="offer-card">
-
-        <div class="offer-icon">
-            🤝
-        </div>
-
-        <h3>
-            Pierwsze relacje
-        </h3>
-
+        <div class="offer-icon">🤝</div>
+        <h3>Pierwsze relacje</h3>
         <p>
             Wspólna zabawa,
             pierwsze przyjaźnie
             i codzienne uczenie się
             bycia razem.
         </p>
-
     </div>
-
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     PAKIET ROZSZERZONY
-========================= -->
+<!-- PAKIET ROZSZERZONY -->
 
-<div
-    id="pakiet"
-    class="extended-section"
->
+<div id="pakiet" class="extended-section">
 
 <div class="extended-inner">
 
@@ -1327,19 +1084,17 @@ footer strong{
     <p>
         Standardowe godziny naszych placówek
         to <strong>6:30–17:00</strong>.
-        Wiemy jednak, że życie nie zawsze
-        mieści się idealnie w godzinach otwarcia.
     </p>
 
     <p>
-        Dlatego w wybranych lokalizacjach
+        W wybranych lokalizacjach
         istnieje możliwość przedłużenia
         standardowych godzin opieki
         w ramach <strong>Pakietu Rozszerzonego</strong>.
     </p>
 
     <a
-        href="#kontakt"
+        href="#zapisy"
         class="button button-purple"
     >
         Zapytaj o Pakiet Rozszerzony
@@ -1352,93 +1107,200 @@ footer strong{
 </div>
 
 
-<!-- =========================
-     ZAPIS
-========================= -->
+<!-- FORMULARZ -->
 
-<section
-    id="zapisy"
-    class="content"
->
+<div id="zapisy" class="form-section">
+
+<div class="form-inner">
 
 <h2 class="section-title">
-    Jak dołączyć do ZUZU? ♡
+    Zapytaj o miejsce ♡
 </h2>
 
 <p class="section-subtitle">
-    Bez formularzowego Mordoru.
-    Zaczynamy od zwykłego kontaktu.
+    Wypełnij kilka pól.
+    Po kliknięciu przygotujemy gotową wiadomość,
+    która otworzy się w WhatsApp.
 </p>
 
 
-<div class="steps">
+<div class="form-box">
+
+<form id="zuzuForm">
+
+<div class="form-grid">
 
 
-    <div class="step">
+    <div class="form-group">
 
-        <div class="step-number">
-            1
-        </div>
+        <label for="parentName">
+            Imię rodzica
+        </label>
 
-        <h3>
-            Wybierz lokalizację
-        </h3>
-
-        <p>
-            Sprawdź Witkiewicza,
-            Pocztową lub Wojciecha
-            i wybierz miejsce najwygodniejsze dla Was.
-        </p>
-
-    </div>
-
-
-    <div class="step">
-
-        <div class="step-number">
-            2
-        </div>
-
-        <h3>
-            Skontaktuj się z nami
-        </h3>
-
-        <p>
-            Zadzwoń i zapytaj
-            o aktualną dostępność miejsc
-            oraz wszystkie szczegóły.
-        </p>
+        <input
+            type="text"
+            id="parentName"
+            placeholder="np. Anna"
+            required
+        >
 
     </div>
 
 
-    <div class="step">
+    <div class="form-group">
 
-        <div class="step-number">
-            3
-        </div>
+        <label for="childName">
+            Imię dziecka
+        </label>
 
-        <h3>
-            Poznajmy się
-        </h3>
+        <input
+            type="text"
+            id="childName"
+            placeholder="np. Zosia"
+            required
+        >
 
-        <p>
-            Opowiemy Ci o ZUZU,
-            odpowiemy na pytania
-            i ustalimy dalsze kroki.
-        </p>
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="childAge">
+            Wiek dziecka
+        </label>
+
+        <input
+            type="text"
+            id="childAge"
+            placeholder="np. 18 miesięcy"
+            required
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="location">
+            Lokalizacja
+        </label>
+
+        <select id="location" required>
+
+            <option value="">
+                Wybierz lokalizację
+            </option>
+
+            <option value="Witkiewicza">
+                ZUZU Witkiewicza
+            </option>
+
+            <option value="Pocztowa">
+                ZUZU Pocztowa
+            </option>
+
+            <option value="Świętego Wojciecha">
+                ZUZU Wojciecha
+            </option>
+
+            <option value="Nie wiem jeszcze">
+                Nie wiem jeszcze
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="startDate">
+            Od kiedy potrzebujecie miejsca?
+        </label>
+
+        <input
+            type="text"
+            id="startDate"
+            placeholder="np. od października"
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="extended">
+            Pakiet Rozszerzony
+        </label>
+
+        <select id="extended">
+
+            <option value="Nie">
+                Nie
+            </option>
+
+            <option value="Tak">
+                Tak, potrzebuję dłuższych godzin
+            </option>
+
+            <option value="Chcę dowiedzieć się więcej">
+                Chcę dowiedzieć się więcej
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group full">
+
+        <label for="message">
+            Dodatkowa wiadomość
+        </label>
+
+        <textarea
+            id="message"
+            placeholder="Tu możesz napisać, o co jeszcze chcesz zapytać..."
+        ></textarea>
 
     </div>
 
 
 </div>
 
-</section>
+
+<div class="form-note">
+
+    Po kliknięciu przycisku
+    <strong>„Wyślij przez WhatsApp”</strong>
+    otworzy się WhatsApp z gotową wiadomością.
+    Nic nie zostanie wysłane bez Twojego kliknięcia
+    „Wyślij” w WhatsApp.
+
+</div>
 
 
-<!-- =========================
-     MAGIC
-========================= -->
+<div class="form-submit">
+
+    <button
+        type="submit"
+        class="button button-green"
+    >
+        💬 Wyślij przez WhatsApp
+    </button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAGIC -->
 
 <section class="content magic">
 
@@ -1469,33 +1331,24 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     KONTAKT
-========================= -->
+<!-- KONTAKT -->
 
-<section
-    id="kontakt"
-    class="content"
->
+<section id="kontakt" class="content">
 
 <div class="contact">
 
     <h2 class="section-title">
-        Porozmawiajmy o miejscu dla Was ♡
+        Wolisz po prostu zadzwonić? ☎️
     </h2>
 
     <p>
-        Chcesz zapytać o wolne miejsce,
-        konkretną lokalizację
-        albo Pakiet Rozszerzony?
-        Po prostu zadzwoń.
+        Jasne. Możesz też skontaktować się
+        z nami bez formularza.
     </p>
-
 
     <div class="phone">
         📞 798 150 723
     </div>
-
 
     <div class="buttons">
 
@@ -1507,10 +1360,12 @@ footer strong{
         </a>
 
         <a
-            href="#lokalizacje"
-            class="button button-white"
+            href="https://wa.me/48798150723"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-green"
         >
-            Zobacz lokalizacje
+            💬 Napisz na WhatsApp
         </a>
 
     </div>
@@ -1520,9 +1375,7 @@ footer strong{
 </section>
 
 
-<!-- =========================
-     STOPKA
-========================= -->
+<!-- STOPKA -->
 
 <footer>
 
@@ -1537,6 +1390,84 @@ footer strong{
     © 2026 Akademia ZUZU
 
 </footer>
+
+
+<!-- JAVASCRIPT WHATSAPP -->
+
+<script>
+
+document
+.getElementById("zuzuForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const parentName =
+        document.getElementById("parentName").value.trim();
+
+    const childName =
+        document.getElementById("childName").value.trim();
+
+    const childAge =
+        document.getElementById("childAge").value.trim();
+
+    const location =
+        document.getElementById("location").value;
+
+    const startDate =
+        document.getElementById("startDate").value.trim();
+
+    const extended =
+        document.getElementById("extended").value;
+
+    const extraMessage =
+        document.getElementById("message").value.trim();
+
+
+    let message =
+`Dzień dobry! 😊
+
+Chciałabym / chciałbym zapytać o miejsce w Akademii ZUZU.
+
+👤 Imię rodzica: ${parentName}
+🧸 Imię dziecka: ${childName}
+🎂 Wiek dziecka: ${childAge}
+📍 Lokalizacja: ${location}
+📅 Potrzebujemy miejsca: ${startDate || "do ustalenia"}
+⭐ Pakiet Rozszerzony: ${extended}`;
+
+
+    if(extraMessage){
+
+        message +=
+`
+
+💬 Dodatkowa wiadomość:
+${extraMessage}`;
+
+    }
+
+
+    message +=
+`
+
+Proszę o kontakt w sprawie dostępności miejsca. ♡`;
+
+
+    const phone = "48798150723";
+
+    const url =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(url, "_blank");
+
+});
+
+</script>
 
 
 </body>
