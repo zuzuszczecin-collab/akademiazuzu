@@ -4,438 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Akademia ZUZU | Szczecin</title>
+<title>Akademia ZUZU</title>
 
 <style>
 *{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  color:#494455;
-  background:#fffafd;
+    font-family:Arial, sans-serif;
+    background:#fff7fb;
+    color:#333;
 }
 
-/* MENU */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,.96);
-  box-shadow:0 4px 20px rgba(0,0,0,.06);
+header{
+    background:linear-gradient(135deg,#7ee8fa,#eec0c6);
+    padding:40px 20px;
+    text-align:center;
 }
 
-.menu{
-  max-width:1200px;
-  margin:auto;
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:10px 25px;
+.logo img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom:15px;
 }
 
-.logo{
-  font-size:30px;
-  font-weight:900;
-  color:#dc579b;
-}
-
-.links{
-  display:flex;
-  gap:25px;
-  align-items:center;
-}
-
-.links a{
-  text-decoration:none;
-  color:#625b70;
-  font-weight:bold;
-}
-
-.links a:hover{
-  color:#dc579b;
-}
-
-.nav-button{
-  background:#dc579b;
-  color:white !important;
-  padding:12px 20px;
-  border-radius:25px;
-}
-
-/* HERO */
-
-.hero{
-  min-height:650px;
-  background:
-    radial-gradient(circle at 15% 20%, #fff1ae 0 70px, transparent 72px),
-    radial-gradient(circle at 88% 22%, #ffd9ec 0 100px, transparent 102px),
-    linear-gradient(135deg,#ffe8f3,#e8f7ff);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:70px 20px;
-}
-
-.hero-content{
-  max-width:850px;
-}
-
-.cloud{
-  font-size:80px;
-  margin-bottom:5px;
-}
-
-.hero h1{
-  margin:0;
-  color:#d94f98;
-  font-size:68px;
-  line-height:1;
-}
-
-.hero h2{
-  color:#7968df;
-  font-size:28px;
-  margin:18px 0;
-}
-
-.hero p{
-  font-size:20px;
-  line-height:1.7;
-  max-width:720px;
-  margin:20px auto 30px;
-}
-
-.buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-}
-
-.button{
-  display:inline-block;
-  text-decoration:none;
-  padding:16px 28px;
-  border-radius:30px;
-  font-weight:bold;
-}
-
-.pink{
-  background:#d94f98;
-  color:white;
-}
-
-.white{
-  background:white;
-  color:#7968df;
-  box-shadow:0 6px 20px rgba(0,0,0,.08);
-}
-
-/* SEKCJE */
-
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:80px 25px;
-}
-
-.title{
-  text-align:center;
-  color:#d94f98;
-  font-size:42px;
-  margin:0 0 15px;
+h1{
+    color:#ffffff;
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
 .subtitle{
-  text-align:center;
-  max-width:700px;
-  margin:0 auto 45px;
-  font-size:18px;
-  line-height:1.6;
+    color:white;
+    font-size:1.2rem;
 }
 
-/* O NAS */
-
-.about{
-  background:white;
-  border-radius:35px;
-  padding:45px;
-  box-shadow:0 10px 35px rgba(90,70,100,.08);
-  text-align:center;
-  font-size:18px;
-  line-height:1.7;
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* LOKALIZACJE */
+nav a{
+    text-decoration:none;
+    color:#dc579b;
+    font-weight:bold;
+    margin:0 15px;
+}
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
+section{
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#dc579b;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+.locations{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .card{
-  background:white;
-  padding:35px 25px;
-  border-radius:28px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(80,60,100,.09);
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-.icon{
-  font-size:50px;
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    width:320px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .card h3{
-  color:#7968df;
-  font-size:23px;
+    color:#7a68dd;
+    margin-bottom:15px;
 }
 
-.card p{
-  line-height:1.6;
+.offer{
+    background:#fff1c9;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
 }
 
-/* DLACZEGO */
-
-.why{
-  max-width:none;
-  background:#fff1b9;
+.button{
+    display:inline-block;
+    background:#dc579b;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-top:20px;
 }
-
-.why-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:75px 25px;
-}
-
-.why .title{
-  color:#735fd3;
-}
-
-/* KONTAKT */
-
-.contact{
-  background:linear-gradient(135deg,#fce5f2,#e7f6ff);
-  border-radius:35px;
-  padding:50px 25px;
-  text-align:center;
-}
-
-.phone{
-  font-size:27px;
-  font-weight:bold;
-  color:#d94f98;
-}
-
-/* STOPKA */
 
 footer{
-  text-align:center;
-  padding:35px 20px;
-  background:#725fd0;
-  color:white;
-}
-
-/* TELEFON */
-
-@media(max-width:850px){
-
-  .links{
-    display:none;
-  }
-
-  .hero{
-    min-height:560px;
-  }
-
-  .hero h1{
-    font-size:48px;
-  }
-
-  .hero h2{
-    font-size:23px;
-  }
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .title{
-    font-size:34px;
-  }
+    background:#7ee8fa;
+    text-align:center;
+    padding:30px;
+    color:#333;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="menu">
-    <div class="logo">☁️ ZUZU</div>
-
-    <div class="links">
-      <a href="#onas">O nas</a>
-      <a href="#lokalizacje">Lokalizacje</a>
-      <a href="#oferta">Oferta</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="nav-button">Zapisy</a>
+<header>
+    <div class="logo">
+        <img src="Logo zuzu.jpg" alt="Logo Akademii ZUZU">
     </div>
-  </div>
-</nav>
-
-
-<header class="hero">
-  <div class="hero-content">
-
-    <div class="cloud">☁️</div>
 
     <h1>Akademia ZUZU</h1>
-
-    <h2>Małe dzieci. Wielkie przygody.</h2>
-
-    <p>
-      Tworzymy w Szczecinie miejsca pełne bliskości,
-      zabawy i dziecięcej ciekawości.
-      U nas każdy dzień to okazja do odkrywania świata.
-    </p>
-
-    <div class="buttons">
-      <a href="#kontakt" class="button pink">Zapisz dziecko ♡</a>
-      <a href="#onas" class="button white">Poznaj ZUZU</a>
-    </div>
-
-  </div>
+    <p class="subtitle">Wyjątkowe miejsce dla najmłodszych w Szczecinie</p>
 </header>
 
-
-<section id="onas">
-
-  <h2 class="title">Cześć, tu ZUZU! ☁️</h2>
-
-  <p class="subtitle">
-    Miejsce stworzone z myślą o najmłodszych
-    i ich codziennych małych-wielkich przygodach.
-  </p>
-
-  <div class="about">
-    W Akademii ZUZU stawiamy na bliskość, bezpieczeństwo,
-    swobodną zabawę i rozwój w naturalnym tempie dziecka.
-    Chcemy, żeby ZUZU było miejscem, do którego dzieci
-    przychodzą z uśmiechem, a rodzice zostawiają je ze spokojną głową.
-  </div>
-
-</section>
-
+<nav>
+    <a href="#lokalizacje">Lokalizacje</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
 
 <section id="lokalizacje">
+    <h2 class="section-title">Nasze lokalizacje</h2>
 
-  <h2 class="title">Nasze ZUZU w Szczecinie</h2>
+    <div class="locations">
 
-  <p class="subtitle">
-    Wybierz lokalizację najwygodniejszą dla Was.
-  </p>
+        <div class="card">
+            <h3>ZUZU Witkiewicza</h3>
+            <p>Przyjazna przestrzeń dla najmłodszych.</p>
+        </div>
 
-  <div class="cards">
+        <div class="card">
+            <h3>ZUZU Pocztowa</h3>
+            <p>Kameralne miejsce pełne dobrej energii.</p>
+        </div>
 
-    <div class="card">
-      <div class="icon">🏡</div>
-      <h3>ZUZU Witkiewicza</h3>
-      <p>
-        Przyjazna przestrzeń dla najmłodszych,
-        pełna zabawy i codziennych odkryć.
-      </p>
+        <div class="card">
+            <h3>ZUZU Wojciecha</h3>
+            <p>Codzienna opieka, rozwój i mnóstwo zabawy.</p>
+        </div>
+
     </div>
-
-    <div class="card">
-      <div class="icon">🌸</div>
-      <h3>ZUZU Pocztowa</h3>
-      <p>
-        Kameralne miejsce z ciepłą,
-        domową atmosferą.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🌈</div>
-      <h3>ZUZU Wojciecha</h3>
-      <p>
-        Zabawa, rozwój i mnóstwo
-        dziecięcej energii każdego dnia.
-      </p>
-    </div>
-
-  </div>
-
 </section>
 
+<section id="oferta">
+    <h2 class="section-title">Dlaczego ZUZU?</h2>
 
-<div class="why" id="oferta">
-  <div class="why-inner">
+    <div class="offer">
+        <p>
+            Ciepła atmosfera, kreatywne zajęcia, rozwój poprzez zabawę
+            oraz troskliwa opieka każdego dnia.
+        </p>
 
-    <h2 class="title">Dlaczego dzieci lubią ZUZU?</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🧸</div>
-        <h3>Bliskość</h3>
-        <p>Dużo ciepła, troski i indywidualnego podejścia.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🎨</div>
-        <h3>Rozwój przez zabawę</h3>
-        <p>Sensoryka, plastyka, ruch i dziecięca kreatywność.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">✨</div>
-        <h3>Małe grupy</h3>
-        <p>Przestrzeń, w której możemy naprawdę poznać każde dziecko.</p>
-      </div>
-
+        <a class="button" href="#kontakt">Zapisz dziecko</a>
     </div>
-
-  </div>
-</div>
-
+</section>
 
 <section id="kontakt">
+    <h2 class="section-title">Kontakt</h2>
 
-  <div class="contact">
-
-    <h2 class="title">Dołączcie do ZUZU ♡</h2>
-
-    <p>
-      Chcesz dowiedzieć się więcej lub zapisać dziecko?
-      Zadzwoń do nas.
-    </p>
-
-    <p class="phone">📞 798 150 723</p>
-
-    <a href="tel:+48798150723" class="button pink">
-      Zadzwoń do ZUZU
-    </a>
-
-  </div>
-
+    <div class="card" style="margin:auto;">
+        <p>Akademia ZUZU</p>
+        <p>Szczecin</p>
+        <p>📞 798 150 723</p>
+        <p>📧 kontakt@akademiazuzu.pl</p>
+    </div>
 </section>
 
-
 <footer>
-  ☁️ Akademia ZUZU · Szczecin · © 2026
+    © 2026 Akademia ZUZU
 </footer>
 
 </body>
