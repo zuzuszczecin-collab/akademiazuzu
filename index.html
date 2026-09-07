@@ -17,7 +17,6 @@
 
 *{
     box-sizing:border-box;
-    scroll-behavior:smooth;
 }
 
 html{
@@ -31,7 +30,8 @@ body{
     background:#fffafd;
 }
 
-section{
+section,
+div[id]{
     scroll-margin-top:95px;
 }
 
@@ -40,7 +40,9 @@ a{
 }
 
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 nav{
     position:sticky;
@@ -51,13 +53,15 @@ nav{
 }
 
 .menu{
-    max-width:1200px;
+    max-width:1350px;
     min-height:82px;
     margin:auto;
     padding:8px 25px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:25px;
 }
 
 .logo{
@@ -66,6 +70,7 @@ nav{
     gap:12px;
     text-decoration:none;
     cursor:pointer;
+    flex-shrink:0;
 }
 
 .logo img{
@@ -99,16 +104,28 @@ nav{
 .links{
     display:flex;
     align-items:center;
-    gap:20px;
+    justify-content:flex-end;
+    gap:17px;
+    flex-wrap:wrap;
 }
 
 .links a{
     color:#5d5667;
     text-decoration:none;
     font-weight:bold;
+    font-size:14px;
+    white-space:nowrap;
 }
 
 .links a:hover{
+    color:#ef1591;
+}
+
+.links .documents-link{
+    color:#6956c8;
+}
+
+.links .documents-link:hover{
     color:#ef1591;
 }
 
@@ -119,16 +136,26 @@ nav{
     border-radius:30px;
 }
 
+.links .zapisy:hover{
+    color:white;
+    transform:translateY(-2px);
+}
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:720px;
     padding:75px 25px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     position:relative;
     overflow:hidden;
 
@@ -144,29 +171,69 @@ nav{
     background-repeat:no-repeat;
 }
 
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.16),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255,0,170,.14),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(120,70,255,.16),
+            transparent 30%
+        );
+
+    pointer-events:none;
+}
+
 .hero-content{
     max-width:900px;
     position:relative;
     z-index:2;
+
     padding:34px;
+
     border-radius:38px;
+
     background:rgba(20,10,70,.25);
+
     backdrop-filter:blur(3px);
+
     box-shadow:0 15px 45px rgba(0,0,0,.25);
 }
 
 .hero-logo{
     width:190px;
     height:190px;
+
     object-fit:cover;
+
     border-radius:36px;
-    border:5px solid white;
+
+    border:5px solid rgba(255,255,255,.95);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.6),
+        0 18px 45px rgba(55,35,100,.30);
 }
 
 .hero h1{
     margin:25px 0 0;
+
     color:white;
+
     font-size:68px;
+    line-height:1;
 
     text-shadow:
         0 0 12px #ff4dc4,
@@ -176,20 +243,33 @@ nav{
 
 .hero h2{
     margin:20px 0 10px;
+
     color:#ffe75a;
+
     font-size:29px;
+
+    text-shadow:
+        0 0 10px rgba(255,231,90,.75);
 }
 
 .hero p{
     max-width:750px;
+
     margin:20px auto 30px;
+
     color:white;
+
     font-size:20px;
     line-height:1.7;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.60);
 }
 
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons{
     display:flex;
@@ -200,13 +280,20 @@ nav{
 
 .button{
     display:inline-block;
+
     padding:16px 30px;
+
     border-radius:35px;
+
     text-decoration:none;
     font-weight:bold;
+
     border:none;
+
     cursor:pointer;
+
     font-size:16px;
+
     transition:.2s;
 }
 
@@ -223,35 +310,43 @@ nav{
 .button-white{
     background:white;
     color:#6655c7;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .button-purple{
     background:#6956c8;
     color:white;
+    box-shadow:0 10px 25px rgba(105,86,200,.22);
 }
 
 .button-green{
     background:#25D366;
     color:white;
+    box-shadow:0 10px 25px rgba(37,211,102,.25);
 }
 
 .button-facebook{
     background:#1877f2;
     color:white;
+    box-shadow:0 10px 25px rgba(24,119,242,.22);
 }
 
 .button-email{
     background:#8a5cf6;
     color:white;
+    box-shadow:0 10px 25px rgba(138,92,246,.22);
 }
 
 
-/* QUICK INFO */
+/* =========================
+   QUICK INFO
+========================= */
 
 .quick-info{
     max-width:1100px;
     margin:-55px auto 0;
     padding:0 25px;
+
     position:relative;
     z-index:5;
 }
@@ -259,9 +354,13 @@ nav{
 .quick-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
+
     background:white;
+
     border-radius:30px;
+
     box-shadow:0 15px 45px rgba(70,60,90,.15);
+
     overflow:hidden;
 }
 
@@ -280,8 +379,11 @@ nav{
 
 .quick-card strong{
     display:block;
+
     margin:10px 0 7px;
+
     color:#725ed6;
+
     font-size:19px;
 }
 
@@ -291,69 +393,85 @@ nav{
 }
 
 
-/* SEKCJE */
+/* =========================
+   SEKCJE
+========================= */
 
 .content{
     max-width:1200px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
 .section-title{
     margin:0 0 15px;
+
     text-align:center;
+
     color:#e84d9b;
+
     font-size:43px;
 }
 
 .section-subtitle{
     max-width:780px;
+
     margin:0 auto 45px;
+
     text-align:center;
+
     color:#706979;
+
     font-size:18px;
     line-height:1.7;
 }
 
 
-/* O NAS */
+/* =========================
+   O NAS
+========================= */
 
 .about{
     padding:48px;
+
     background:white;
+
     border-radius:35px;
+
     box-shadow:0 10px 35px rgba(80,60,100,.09);
+
     text-align:center;
+
     font-size:18px;
     line-height:1.85;
 }
 
 
 /* =========================
-   LOKALIZACJE + GRZYBKI
+   LOKALIZACJE
 ========================= */
 
 .locations{
     position:relative;
     overflow:hidden;
-    background:
-        linear-gradient(
-            rgba(248,241,255,.94),
-            rgba(248,241,255,.94)
-        );
+
+    background:#f8f1ff;
 }
 
 
-/* GRZYBKI LEWA STRONA */
+/* MAGICZNA DEKORACJA LEWA */
 
 .locations::before{
     content:"";
+
     position:absolute;
 
-    left:-40px;
-    bottom:-20px;
+    left:-80px;
+    bottom:-30px;
 
-    width:390px;
+    width:420px;
     height:350px;
 
     background-image:url("hero-magiczne-zuzu.jpg");
@@ -362,14 +480,14 @@ nav{
 
     background-size:1850px auto;
 
-    background-position:29% 88%;
+    background-position:28% 88%;
 
     border-radius:50px;
 
-    opacity:.95;
+    opacity:.55;
 
     filter:
-        saturate(1.15)
+        saturate(1.2)
         drop-shadow(0 8px 22px rgba(81,37,143,.22));
 
     pointer-events:none;
@@ -379,29 +497,30 @@ nav{
     -webkit-mask-image:
         linear-gradient(
             to right,
-            black 60%,
+            black 55%,
             transparent 100%
         );
 
     mask-image:
         linear-gradient(
             to right,
-            black 60%,
+            black 55%,
             transparent 100%
         );
 }
 
 
-/* GRZYBKI PRAWA STRONA */
+/* MAGICZNA DEKORACJA PRAWA */
 
 .locations::after{
     content:"";
+
     position:absolute;
 
-    right:-40px;
-    bottom:-10px;
+    right:-80px;
+    bottom:-30px;
 
-    width:420px;
+    width:430px;
     height:360px;
 
     background-image:url("hero-magiczne-zuzu.jpg");
@@ -410,14 +529,14 @@ nav{
 
     background-size:1850px auto;
 
-    background-position:79% 88%;
+    background-position:80% 88%;
 
     border-radius:50px;
 
-    opacity:.95;
+    opacity:.55;
 
     filter:
-        saturate(1.15)
+        saturate(1.2)
         drop-shadow(0 8px 22px rgba(81,37,143,.22));
 
     pointer-events:none;
@@ -427,28 +546,29 @@ nav{
     -webkit-mask-image:
         linear-gradient(
             to left,
-            black 60%,
+            black 55%,
             transparent 100%
         );
 
     mask-image:
         linear-gradient(
             to left,
-            black 60%,
+            black 55%,
             transparent 100%
         );
 }
 
 
 .locations-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:90px 25px 110px;
+
     position:relative;
     z-index:2;
-
-    max-width:1200px;
-    margin:auto;
-    padding:90px 25px 110px;
 }
-
 
 .location-cards{
     display:grid;
@@ -459,12 +579,11 @@ nav{
 .location-card{
     overflow:hidden;
 
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.97);
 
     border-radius:32px;
 
-    box-shadow:
-        0 10px 35px rgba(70,60,90,.10);
+    box-shadow:0 10px 35px rgba(70,60,90,.10);
 
     transition:.25s;
 
@@ -486,71 +605,97 @@ nav{
 
 .location-card h3{
     margin:14px 0 4px;
+
     color:#725ed6;
+
     font-size:24px;
 }
 
 .location-subname{
     color:#ef1591;
+
     font-size:17px;
     font-weight:bold;
+
     margin-bottom:14px;
 }
 
 .location-address{
     color:#514b5a;
+
     font-weight:bold;
+
     line-height:1.6;
 }
 
 .location-hours{
     margin-top:10px;
+
     color:#ef1591;
+
     font-weight:bold;
 }
 
 .location-extra{
     margin-top:7px;
+
     color:#725ed6;
+
     font-size:14px;
     font-weight:bold;
 }
 
 .location-bottom{
     padding:0 25px 30px;
+
     text-align:center;
 }
 
 
-/* OFERTA */
+/* =========================
+   OFERTA
+========================= */
 
 .oferta-kafelki{
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:22px;
 }
 
 .oferta-kafelek{
     display:block;
+
     overflow:hidden;
+
     border-radius:30px;
+
     box-shadow:0 12px 30px rgba(80,50,120,.15);
+
     transition:.25s;
 }
 
 .oferta-kafelek img{
     display:block;
+
     width:100%;
+
     aspect-ratio:1 / 1;
+
     object-fit:cover;
 }
 
 .oferta-kafelek:hover{
     transform:translateY(-8px) scale(1.02);
+
+    box-shadow:0 18px 40px rgba(108,67,180,.25);
 }
 
 
-/* PAKIET */
+/* =========================
+   PAKIET ROZSZERZONY
+========================= */
 
 .extended-section{
     background:#fff1b5;
@@ -558,56 +703,78 @@ nav{
 
 .extended-inner{
     max-width:1100px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
 .extended-box{
     padding:55px;
+
     background:white;
+
     border-radius:38px;
+
     box-shadow:0 12px 40px rgba(80,60,100,.10);
+
     text-align:center;
 }
 
 .extended-badge{
     display:inline-block;
+
     padding:9px 18px;
+
     background:#6956c8;
     color:white;
+
     border-radius:25px;
+
     font-size:14px;
     font-weight:bold;
 }
 
 .extended-box h2{
     margin:20px 0 15px;
+
     color:#ef1591;
+
     font-size:40px;
 }
 
 .extended-box p{
     max-width:800px;
+
     margin:0 auto 25px;
+
     font-size:18px;
     line-height:1.8;
 }
 
 .extended-image-wrap{
     max-width:780px;
+
     margin:38px auto 32px;
 }
 
 .extended-image{
     display:block;
+
     width:100%;
     height:auto;
+
     border-radius:30px;
-    box-shadow:0 15px 40px rgba(49,27,100,.22);
+
+    box-shadow:
+        0 15px 40px rgba(49,27,100,.22),
+        0 0 30px rgba(239,21,145,.12);
 }
 
 
-/* FORMULARZ */
+/* =========================
+   FORMULARZ
+========================= */
 
 .form-section{
     background:linear-gradient(135deg,#eefaff,#fff0f7);
@@ -615,26 +782,35 @@ nav{
 
 .form-inner{
     max-width:900px;
+
     margin:auto;
+
     padding:90px 25px;
 }
 
 .form-box{
     background:white;
+
     border-radius:38px;
+
     padding:50px;
+
     box-shadow:0 12px 40px rgba(70,60,90,.12);
 }
 
 .form-grid{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:20px;
 }
 
 .form-group{
     display:flex;
+
     flex-direction:column;
+
     gap:8px;
 }
 
@@ -644,79 +820,153 @@ nav{
 
 .form-group label{
     font-weight:bold;
+
+    color:#665d70;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
     width:100%;
+
     padding:15px 16px;
+
     border:2px solid #eee5f1;
+
     border-radius:18px;
+
     font-size:16px;
+
+    font-family:Arial, Helvetica, sans-serif;
+
     background:white;
+
+    color:#4d4657;
+
+    outline:none;
+
+    transition:.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#ef1591;
+
+    box-shadow:0 0 0 4px rgba(239,21,145,.08);
 }
 
 .form-group textarea{
     min-height:130px;
+    resize:vertical;
 }
 
 .form-note{
     margin:20px 0;
+
     padding:15px 18px;
+
     border-radius:18px;
+
     background:#fff7cf;
+
+    color:#665d70;
+
     line-height:1.6;
+
+    font-size:14px;
 }
 
 .form-submit{
     text-align:center;
+
+    margin-top:25px;
 }
 
 .form-status{
     display:none;
+
     margin-top:20px;
+
     padding:16px;
+
     border-radius:18px;
+
     text-align:center;
+
     font-weight:bold;
 }
 
 .form-status.success{
     display:block;
+
     background:#e4ffe9;
+
     color:#26753b;
 }
 
 .form-status.error{
     display:block;
+
     background:#ffe6e6;
+
     color:#a12929;
 }
 
 
-/* SOCIAL */
+/* =========================
+   SOCIAL
+========================= */
 
 .social-section{
     max-width:1200px;
+
     margin:auto;
+
     padding:20px 25px 90px;
 }
 
 .social-box{
     padding:55px 30px;
+
     border-radius:38px;
+
     text-align:center;
+
     background:linear-gradient(135deg,#e9f3ff,#ffe7f4);
+
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+}
+
+.social-icons{
+    font-size:46px;
+
+    margin-bottom:15px;
 }
 
 .social-box h2{
+    margin:0 0 15px;
+
     color:#725ed6;
+
     font-size:38px;
 }
 
+.social-box p{
+    max-width:700px;
 
-/* MAGIC */
+    margin:0 auto 28px;
+
+    color:#625b6b;
+
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   MAGIC
+========================= */
 
 .magic{
     text-align:center;
@@ -724,63 +974,125 @@ nav{
 
 .magic-box{
     padding:55px 30px;
+
     background:linear-gradient(135deg,#ffe3f2,#e4f8ff);
+
     border-radius:38px;
+
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+}
+
+.magic-icons{
+    margin-bottom:15px;
+
+    font-size:45px;
 }
 
 
-/* KONTAKT */
+/* =========================
+   KONTAKT
+========================= */
 
 .contact{
     padding:60px 25px;
+
     background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+
     border-radius:38px;
+
     text-align:center;
+}
+
+.contact p{
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:18px;
+    line-height:1.7;
 }
 
 .phone{
     margin:25px 0 12px;
+
     color:#ef1591;
+
     font-size:32px;
     font-weight:bold;
 }
 
 .email{
     margin:0 0 30px;
+
     font-size:22px;
     font-weight:bold;
 }
 
 .email a{
     color:#6956c8;
+
     text-decoration:none;
 }
 
+.email a:hover{
+    color:#ef1591;
+}
 
-/* FOOTER */
+
+/* =========================
+   STOPKA
+========================= */
 
 footer{
     padding:45px 20px;
+
     background:#5b4bae;
+
     color:white;
+
     text-align:center;
+
     line-height:1.7;
+}
+
+footer strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:20px;
 }
 
 footer a{
     color:white;
+
     text-decoration:none;
+
     font-weight:bold;
 }
 
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:1200px){
 
+    .menu{
+        max-width:100%;
+    }
+
+    .links{
+        gap:12px;
+    }
+
+    .links a{
+        font-size:13px;
+    }
+
     .locations::before,
     .locations::after{
-        opacity:.45;
+        opacity:.35;
     }
 
 }
@@ -795,7 +1107,9 @@ footer a{
 }
 
 
-/* TELEFON */
+/* =========================
+   TELEFON
+========================= */
 
 @media(max-width:850px){
 
@@ -805,6 +1119,12 @@ footer a{
 
     .hero{
         min-height:620px;
+
+        padding:55px 18px;
+    }
+
+    .hero-content{
+        padding:25px 18px;
     }
 
     .hero-logo{
@@ -816,12 +1136,25 @@ footer a{
         font-size:46px;
     }
 
+    .hero h2{
+        font-size:23px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .quick-info{
+        margin-top:-35px;
+    }
+
     .quick-grid{
         grid-template-columns:1fr;
     }
 
     .quick-card + .quick-card{
         border-left:0;
+
         border-top:1px solid #eee7f1;
     }
 
@@ -829,18 +1162,9 @@ footer a{
         grid-template-columns:1fr;
     }
 
-    .locations::before{
-        width:250px;
-        height:230px;
-        background-size:1200px auto;
-        opacity:.30;
-    }
-
+    .locations::before,
     .locations::after{
-        width:260px;
-        height:230px;
-        background-size:1200px auto;
-        opacity:.30;
+        opacity:.18;
     }
 
     .form-grid{
@@ -851,21 +1175,64 @@ footer a{
         grid-column:auto;
     }
 
+    .section-title{
+        font-size:34px;
+    }
+
+    .about{
+        padding:35px 25px;
+    }
+
+    .extended-box,
+    .form-box{
+        padding:38px 24px;
+    }
+
+    .extended-box h2{
+        font-size:32px;
+    }
+
+    .phone{
+        font-size:27px;
+    }
+
+    .email{
+        font-size:18px;
+    }
+
 }
 
 
-/* MAŁY TELEFON */
+/* =========================
+   MAŁY TELEFON
+========================= */
 
 @media(max-width:600px){
 
     .oferta-kafelki{
         grid-template-columns:1fr 1fr;
+
         gap:12px;
     }
 
-    .locations::before,
-    .locations::after{
-        opacity:.20;
+    .oferta-kafelek{
+        border-radius:20px;
+    }
+
+    .logo-name strong{
+        font-size:19px;
+    }
+
+    .extended-inner{
+        padding:60px 15px;
+    }
+
+    .extended-box{
+        padding:30px 15px;
+    }
+
+    .extended-image{
+        border-radius:20px;
     }
 
 }
@@ -880,11 +1247,19 @@ footer a{
 <div id="top"></div>
 
 
+<!-- =========================
+     MENU
+========================= -->
+
 <nav>
 
 <div class="menu">
 
-    <a href="#top" class="logo">
+    <a
+        href="#top"
+        class="logo"
+        aria-label="Wróć na górę strony"
+    >
 
         <img
             src="Logo-zuzu.jpg"
@@ -892,8 +1267,15 @@ footer a{
         >
 
         <div class="logo-name">
-            <strong>AKADEMIA ZUZU</strong>
-            <span>Szczecin</span>
+
+            <strong>
+                AKADEMIA ZUZU
+            </strong>
+
+            <span>
+                Szczecin
+            </span>
+
         </div>
 
     </a>
@@ -901,13 +1283,43 @@ footer a{
 
     <div class="links">
 
-        <a href="#onas">O nas</a>
-        <a href="#lokalizacje">Lokalizacje</a>
-        <a href="#oferta">Oferta</a>
-        <a href="#pakiet">Pakiet rozszerzony</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#onas">
+            O nas
+        </a>
 
-        <a href="#zapisy" class="zapisy">
+        <a href="#lokalizacje">
+            Lokalizacje
+        </a>
+
+        <a href="#oferta">
+            Oferta
+        </a>
+
+        <a href="#pakiet">
+            Pakiet rozszerzony
+        </a>
+
+
+        <!-- DOKUMENTY DO POBRANIA -->
+
+        <a
+            href="ankieta-zdrowia-do-druku.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="documents-link"
+        >
+            📄 Dokumenty do pobrania
+        </a>
+
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
+
+        <a
+            href="#zapisy"
+            class="zapisy"
+        >
             Zapisy
         </a>
 
@@ -917,6 +1329,10 @@ footer a{
 
 </nav>
 
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
@@ -928,25 +1344,34 @@ footer a{
         alt="Logo Akademii ZUZU"
     >
 
-    <h1>Akademia ZUZU</h1>
+    <h1>
+        Akademia ZUZU
+    </h1>
 
     <h2>
         Małe dzieci. Wielkie przygody. ✨
     </h2>
 
     <p>
-        Trzy wyjątkowe miejsca w Szczecinie stworzone dla najmłodszych.
-        Dużo bliskości, ruchu, sensoryki, kreatywności
-        i codziennego dziecięcego śmiechu.
+        Trzy wyjątkowe miejsca w Szczecinie
+        stworzone dla najmłodszych.
+        Dużo bliskości, ruchu, sensoryki,
+        kreatywności i codziennego dziecięcego śmiechu.
     </p>
 
     <div class="buttons">
 
-        <a href="#zapisy" class="button button-pink">
+        <a
+            href="#zapisy"
+            class="button button-pink"
+        >
             Zapisz dziecko ♡
         </a>
 
-        <a href="#oferta" class="button button-white">
+        <a
+            href="#oferta"
+            class="button button-white"
+        >
             Zobacz ofertę
         </a>
 
@@ -957,37 +1382,65 @@ footer a{
 </header>
 
 
+<!-- =========================
+     QUICK INFO
+========================= -->
+
 <div class="quick-info">
 
 <div class="quick-grid">
 
     <div class="quick-card">
-        <div class="quick-icon">🏡</div>
-        <strong>3 lokalizacje</strong>
+
+        <div class="quick-icon">
+            🏡
+        </div>
+
+        <strong>
+            3 lokalizacje
+        </strong>
 
         <span>
             Witkiewicza<br>
             Pocztowa<br>
             Świętego Wojciecha
         </span>
+
     </div>
 
+
     <div class="quick-card">
-        <div class="quick-icon">🕡</div>
-        <strong>6:30–17:00</strong>
+
+        <div class="quick-icon">
+            🕡
+        </div>
+
+        <strong>
+            6:30–17:00
+        </strong>
 
         <span>
             Standardowe godziny naszych placówek.
         </span>
+
     </div>
+
 
     <div class="quick-card">
-        <div class="quick-icon">⭐</div>
-        <strong>Elastyczna oferta</strong>
+
+        <div class="quick-icon">
+            ⭐
+        </div>
+
+        <strong>
+            Elastyczna oferta
+        </strong>
 
         <span>
-            Stała, godzinowa, weekendowa i zajęcia.
+            Stała, godzinowa,
+            weekendowa i zajęcia.
         </span>
+
     </div>
 
 </div>
@@ -995,7 +1448,14 @@ footer a{
 </div>
 
 
-<section id="onas" class="content">
+<!-- =========================
+     O NAS
+========================= -->
+
+<section
+    id="onas"
+    class="content"
+>
 
 <h2 class="section-title">
     Cześć, tu ZUZU! ☁️
@@ -1007,28 +1467,39 @@ footer a{
 
 <div class="about">
 
-    W Akademii ZUZU wierzymy, że dzieciństwo powinno być pełne
-    bezpieczeństwa, bliskości, ciekawości i dobrej zabawy.
+    W Akademii ZUZU wierzymy,
+    że dzieciństwo powinno być pełne
+    bezpieczeństwa, bliskości,
+    ciekawości i dobrej zabawy.
 
     <br><br>
 
-    Dajemy dzieciom przestrzeń na ruch, emocje,
-    eksperymentowanie, odpoczynek
-    i poznawanie świata w ich własnym tempie.
+    Dajemy dzieciom przestrzeń
+    na ruch, emocje,
+    eksperymentowanie,
+    odpoczynek i poznawanie świata
+    w ich własnym tempie.
 
     <br><br>
 
-    Bo czasem największym odkryciem dnia jest nowa zabawa,
-    plama z farby na ręce albo pierwsza przyjaźń. ♡
+    Bo czasem największym odkryciem dnia
+    jest nowa zabawa,
+    plama z farby na ręce
+    albo pierwsza przyjaźń. ♡
 
 </div>
 
 </section>
 
 
-<!-- LOKALIZACJE Z GRZYBKAMI -->
+<!-- =========================
+     LOKALIZACJE
+========================= -->
 
-<div id="lokalizacje" class="locations">
+<div
+    id="lokalizacje"
+    class="locations"
+>
 
 <div class="locations-inner">
 
@@ -1045,232 +1516,309 @@ footer a{
 <div class="location-cards">
 
 
-<div class="location-card">
+    <!-- WITKIEWICZA -->
 
-<div class="location-top">
+    <div class="location-card">
 
-<div class="location-icon">🏡</div>
+        <div class="location-top">
 
-<h3>ZUZU Witkiewicza</h3>
+            <div class="location-icon">
+                🏡
+            </div>
 
-<div class="location-subname">
-Akademia Wyobraźni
+            <h3>
+                ZUZU Witkiewicza
+            </h3>
+
+            <div class="location-subname">
+                Akademia Wyobraźni
+            </div>
+
+            <div class="location-address">
+                Witkiewicza 58/U18<br>
+                71-125 Szczecin
+            </div>
+
+            <div class="location-hours">
+                🕡 6:30–17:00
+            </div>
+
+            <div class="location-extra">
+                ⭐ Pakiet Rozszerzony
+            </div>
+
+        </div>
+
+        <div class="location-bottom">
+
+            <a
+                href="witkiewicza.html"
+                class="button button-pink"
+            >
+                Poznaj Witkiewicza
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- POCZTOWA -->
+
+    <div class="location-card">
+
+        <div class="location-top">
+
+            <div class="location-icon">
+                🌸
+            </div>
+
+            <h3>
+                ZUZU Pocztowa
+            </h3>
+
+            <div class="location-subname">
+                American Academy
+            </div>
+
+            <div class="location-address">
+                Pocztowa 12/U1<br>
+                70-360 Szczecin
+            </div>
+
+            <div class="location-hours">
+                🕡 6:30–17:00
+            </div>
+
+        </div>
+
+        <div class="location-bottom">
+
+            <a
+                href="pocztowa.html"
+                class="button button-pink"
+            >
+                Poznaj Pocztową
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WOJCIECHA -->
+
+    <div class="location-card">
+
+        <div class="location-top">
+
+            <div class="location-icon">
+                🌈
+            </div>
+
+            <h3>
+                ZUZU Wojciecha
+            </h3>
+
+            <div class="location-subname">
+                Akademia Magii
+            </div>
+
+            <div class="location-address">
+                Świętego Wojciecha 16/1<br>
+                70-435 Szczecin
+            </div>
+
+            <div class="location-hours">
+                🕡 6:30–17:00
+            </div>
+
+            <div class="location-extra">
+                ⭐ Pakiet Rozszerzony
+            </div>
+
+        </div>
+
+        <div class="location-bottom">
+
+            <a
+                href="wojciecha.html"
+                class="button button-pink"
+            >
+                Poznaj Wojciecha
+            </a>
+
+        </div>
+
+    </div>
+
+
 </div>
 
-<div class="location-address">
-Witkiewicza 58/U18<br>
-71-125 Szczecin
-</div>
-
-<div class="location-hours">
-🕡 6:30–17:00
-</div>
-
-<div class="location-extra">
-⭐ Pakiet Rozszerzony
-</div>
-
-</div>
-
-<div class="location-bottom">
-
-<a href="witkiewicza.html" class="button button-pink">
-Poznaj Witkiewicza
-</a>
-
 </div>
 
 </div>
 
 
-<div class="location-card">
+<!-- =========================
+     OFERTA
+========================= -->
 
-<div class="location-top">
-
-<div class="location-icon">🌸</div>
-
-<h3>ZUZU Pocztowa</h3>
-
-<div class="location-subname">
-American Academy
-</div>
-
-<div class="location-address">
-Pocztowa 12/U1<br>
-70-360 Szczecin
-</div>
-
-<div class="location-hours">
-🕡 6:30–17:00
-</div>
-
-</div>
-
-<div class="location-bottom">
-
-<a href="pocztowa.html" class="button button-pink">
-Poznaj Pocztową
-</a>
-
-</div>
-
-</div>
-
-
-<div class="location-card">
-
-<div class="location-top">
-
-<div class="location-icon">🌈</div>
-
-<h3>ZUZU Wojciecha</h3>
-
-<div class="location-subname">
-Akademia Magii
-</div>
-
-<div class="location-address">
-Świętego Wojciecha 16/1<br>
-70-435 Szczecin
-</div>
-
-<div class="location-hours">
-🕡 6:30–17:00
-</div>
-
-<div class="location-extra">
-⭐ Pakiet Rozszerzony
-</div>
-
-</div>
-
-<div class="location-bottom">
-
-<a href="wojciecha.html" class="button button-pink">
-Poznaj Wojciecha
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-<section id="oferta" class="content">
+<section
+    id="oferta"
+    class="content"
+>
 
 <h2 class="section-title">
-Nasza oferta ⭐
+    Nasza oferta ⭐
 </h2>
 
 <p class="section-subtitle">
-Kliknij wybraną opcję i zobacz szczegóły.
+    Kliknij wybraną opcję
+    i zobacz szczegóły.
 </p>
 
 
 <div class="oferta-kafelki">
 
-<a href="opieka-stala.html" class="oferta-kafelek">
-<img
-src="kafelek-opieka stała.png"
-alt="Opieka stała"
->
-</a>
 
-<a href="opieka-na-godziny.html" class="oferta-kafelek">
-<img
-src="kafelek-opieka na godziny.png"
-alt="Opieka na godziny"
->
-</a>
+    <a
+        href="opieka-stala.html"
+        class="oferta-kafelek"
+    >
 
-<a href="opieka-weekendowa.html" class="oferta-kafelek">
-<img
-src="kafelek-opieka weekendowa.png"
-alt="Opieka weekendowa"
->
-</a>
+        <img
+            src="kafelek-opieka stała.png"
+            alt="Opieka stała Akademia ZUZU"
+        >
 
-<a href="zajecia-dodatkowe.html" class="oferta-kafelek">
-<img
-src="kafelek-zajecia dodatkowe.png"
-alt="Zajęcia dodatkowe"
->
-</a>
+    </a>
+
+
+    <a
+        href="opieka-na-godziny.html"
+        class="oferta-kafelek"
+    >
+
+        <img
+            src="kafelek-opieka na godziny.png"
+            alt="Opieka na godziny Akademia ZUZU"
+        >
+
+    </a>
+
+
+    <a
+        href="opieka-weekendowa.html"
+        class="oferta-kafelek"
+    >
+
+        <img
+            src="kafelek-opieka weekendowa.png"
+            alt="Opieka weekendowa Akademia ZUZU"
+        >
+
+    </a>
+
+
+    <a
+        href="zajecia-dodatkowe.html"
+        class="oferta-kafelek"
+    >
+
+        <img
+            src="kafelek-zajecia dodatkowe.png"
+            alt="Zajęcia dodatkowe Akademia ZUZU"
+        >
+
+    </a>
+
 
 </div>
 
 </section>
 
 
-<div id="pakiet" class="extended-section">
+<!-- =========================
+     PAKIET ROZSZERZONY
+========================= -->
+
+<div
+    id="pakiet"
+    class="extended-section"
+>
 
 <div class="extended-inner">
 
 <div class="extended-box">
 
-<span class="extended-badge">
-⭐ PAKIET ROZSZERZONY
-</span>
+    <span class="extended-badge">
+        ⭐ PAKIET ROZSZERZONY
+    </span>
 
-<h2>
-Więcej ZUZU, gdy tego potrzebujesz
-</h2>
+    <h2>
+        Więcej ZUZU, gdy tego potrzebujesz
+    </h2>
 
-<p>
-Standardowe godziny opieki to
-<strong>6:30–17:00</strong>.
-</p>
+    <p>
+        Standardowe godziny opieki
+        to <strong>6:30–17:00</strong>.
+    </p>
 
-<p>
-Dla rodziców potrzebujących większej elastyczności
-przygotowaliśmy <strong>Pakiet Rozszerzony</strong>
-z opieką od <strong>5:30 do 19:30</strong>.
-</p>
+    <p>
+        Dla rodziców potrzebujących
+        większej elastyczności
+        przygotowaliśmy
+        <strong>Pakiet Rozszerzony</strong>
+        z opieką od
+        <strong>5:30 do 19:30</strong>.
+    </p>
 
 
-<div class="extended-image-wrap">
+    <div class="extended-image-wrap">
 
-<img
-src="pakiet-rozszerzony.png"
-class="extended-image"
-alt="Pakiet Rozszerzony Akademia ZUZU"
+        <img
+            src="pakiet-rozszerzony.png"
+            class="extended-image"
+            alt="Pakiet Rozszerzony Akademia ZUZU"
+        >
+
+    </div>
+
+
+    <a
+        href="opieka-stala.html#rozszerzony"
+        class="button button-purple"
+    >
+        Zobacz Pakiet Rozszerzony
+    </a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FORMULARZ
+========================= -->
+
+<div
+    id="zapisy"
+    class="form-section"
 >
-
-</div>
-
-
-<a
-href="opieka-stala.html#rozszerzony"
-class="button button-purple"
->
-Zobacz Pakiet Rozszerzony
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="zapisy" class="form-section">
 
 <div class="form-inner">
 
 <h2 class="section-title">
-Zapytaj o miejsce ♡
+    Zapytaj o miejsce ♡
 </h2>
 
 <p class="section-subtitle">
-Wypełnij formularz.
-Zgłoszenie trafi do nas na e-mail,
-a następnie otworzymy gotową wiadomość na WhatsApp.
+    Wypełnij formularz.
+    Zgłoszenie trafi do nas na e-mail,
+    a następnie otworzymy gotową wiadomość na WhatsApp.
 </p>
 
 
@@ -1281,211 +1829,234 @@ a następnie otworzymy gotową wiadomość na WhatsApp.
 <div class="form-grid">
 
 
-<div class="form-group">
+    <div class="form-group">
 
-<label for="parentName">
-Imię rodzica
-</label>
+        <label for="parentName">
+            Imię rodzica
+        </label>
 
-<input
-type="text"
-id="parentName"
-placeholder="np. Anna"
-required
->
+        <input
+            type="text"
+            id="parentName"
+            name="Imię rodzica"
+            placeholder="np. Anna"
+            required
+        >
 
-</div>
-
-
-<div class="form-group">
-
-<label for="parentEmail">
-Twój e-mail
-</label>
-
-<input
-type="email"
-id="parentEmail"
-placeholder="np. anna@gmail.com"
-required
->
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-<label for="parentPhone">
-Numer telefonu
-</label>
+        <label for="parentEmail">
+            Twój e-mail
+        </label>
 
-<input
-type="tel"
-id="parentPhone"
-placeholder="np. 500 600 700"
-required
->
+        <input
+            type="email"
+            id="parentEmail"
+            name="E-mail rodzica"
+            placeholder="np. anna@gmail.com"
+            required
+        >
 
-</div>
-
-
-<div class="form-group">
-
-<label for="childName">
-Imię dziecka
-</label>
-
-<input
-type="text"
-id="childName"
-placeholder="np. Zosia"
-required
->
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-<label for="childAge">
-Wiek dziecka
-</label>
+        <label for="parentPhone">
+            Numer telefonu
+        </label>
 
-<input
-type="text"
-id="childAge"
-placeholder="np. 18 miesięcy"
-required
->
+        <input
+            type="tel"
+            id="parentPhone"
+            name="Telefon rodzica"
+            placeholder="np. 500 600 700"
+            required
+        >
 
-</div>
-
-
-<div class="form-group">
-
-<label for="location">
-Lokalizacja
-</label>
-
-<select id="location" required>
-
-<option value="">
-Wybierz lokalizację
-</option>
-
-<option value="Witkiewicza - Akademia Wyobraźni">
-ZUZU Witkiewicza – Akademia Wyobraźni
-</option>
-
-<option value="Pocztowa - American Academy">
-ZUZU Pocztowa – American Academy
-</option>
-
-<option value="Świętego Wojciecha - Akademia Magii">
-ZUZU Wojciecha – Akademia Magii
-</option>
-
-<option value="Nie wiem jeszcze">
-Nie wiem jeszcze
-</option>
-
-</select>
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-<label for="offerType">
-Rodzaj oferty
-</label>
+        <label for="childName">
+            Imię dziecka
+        </label>
 
-<select id="offerType" required>
+        <input
+            type="text"
+            id="childName"
+            name="Imię dziecka"
+            placeholder="np. Zosia"
+            required
+        >
 
-<option value="">
-Wybierz ofertę
-</option>
-
-<option value="Opieka stała">
-Opieka stała
-</option>
-
-<option value="Opieka na godziny">
-Opieka na godziny
-</option>
-
-<option value="Opieka weekendowa">
-Opieka weekendowa
-</option>
-
-<option value="Zajęcia dodatkowe">
-Zajęcia dodatkowe
-</option>
-
-</select>
-
-</div>
+    </div>
 
 
-<div class="form-group">
+    <div class="form-group">
 
-<label for="startDate">
-Od kiedy?
-</label>
+        <label for="childAge">
+            Wiek dziecka
+        </label>
 
-<input
-type="text"
-id="startDate"
-placeholder="np. od października"
->
+        <input
+            type="text"
+            id="childAge"
+            name="Wiek dziecka"
+            placeholder="np. 18 miesięcy"
+            required
+        >
 
-</div>
+    </div>
 
 
-<div class="form-group full">
+    <div class="form-group">
 
-<label for="message">
-Dodatkowa wiadomość
-</label>
+        <label for="location">
+            Lokalizacja
+        </label>
 
-<textarea
-id="message"
-placeholder="Tu możesz napisać, o co jeszcze chcesz zapytać..."
-></textarea>
+        <select
+            id="location"
+            name="Lokalizacja"
+            required
+        >
 
-</div>
+            <option value="">
+                Wybierz lokalizację
+            </option>
+
+            <option value="Witkiewicza - Akademia Wyobraźni">
+                ZUZU Witkiewicza – Akademia Wyobraźni
+            </option>
+
+            <option value="Pocztowa - American Academy">
+                ZUZU Pocztowa – American Academy
+            </option>
+
+            <option value="Świętego Wojciecha - Akademia Magii">
+                ZUZU Wojciecha – Akademia Magii
+            </option>
+
+            <option value="Nie wiem jeszcze">
+                Nie wiem jeszcze
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="offerType">
+            Rodzaj oferty
+        </label>
+
+        <select
+            id="offerType"
+            name="Rodzaj oferty"
+            required
+        >
+
+            <option value="">
+                Wybierz ofertę
+            </option>
+
+            <option value="Opieka stała">
+                Opieka stała
+            </option>
+
+            <option value="Opieka na godziny">
+                Opieka na godziny
+            </option>
+
+            <option value="Opieka weekendowa">
+                Opieka weekendowa
+            </option>
+
+            <option value="Zajęcia dodatkowe">
+                Zajęcia dodatkowe
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="startDate">
+            Od kiedy?
+        </label>
+
+        <input
+            type="text"
+            id="startDate"
+            name="Od kiedy"
+            placeholder="np. od października"
+        >
+
+    </div>
+
+
+    <div class="form-group full">
+
+        <label for="message">
+            Dodatkowa wiadomość
+        </label>
+
+        <textarea
+            id="message"
+            name="Wiadomość"
+            placeholder="Tu możesz napisać, o co jeszcze chcesz zapytać..."
+        ></textarea>
+
+    </div>
+
 
 </div>
 
 
 <div class="form-note">
 
-Po kliknięciu
-<strong>„Wyślij zgłoszenie”</strong>
-kopia formularza zostanie przesłana
-do Akademii ZUZU na e-mail.
+    Po kliknięciu
+    <strong>„Wyślij zgłoszenie”</strong>
+    kopia formularza zostanie przesłana
+    do Akademii ZUZU na e-mail.
 
-<br><br>
+    <br><br>
 
-Następnie otworzy się WhatsApp
-z przygotowaną wiadomością.
+    Następnie otworzy się WhatsApp
+    z przygotowaną wiadomością.
+    Tam wystarczy kliknąć
+    <strong>Wyślij</strong>.
 
 </div>
 
 
 <div class="form-submit">
 
-<button
-type="submit"
-id="submitButton"
-class="button button-green"
->
-💌 Wyślij zgłoszenie
-</button>
+    <button
+        type="submit"
+        id="submitButton"
+        class="button button-green"
+    >
+        💌 Wyślij zgłoszenie
+    </button>
 
 </div>
 
-<div id="formStatus" class="form-status"></div>
+
+<div
+    id="formStatus"
+    class="form-status"
+></div>
+
 
 </form>
 
@@ -1496,255 +2067,430 @@ class="button button-green"
 </div>
 
 
+<!-- =========================
+     SOCIAL
+========================= -->
+
 <div class="social-section">
 
 <div class="social-box">
 
-<h2>
-Podejrzyj, co dzieje się w ZUZU
-</h2>
+    <div class="social-icons">
+        ☁️ 💙 📱
+    </div>
 
-<p>
-Zajrzyj na naszego Facebooka i zobacz więcej
-z codziennego życia Akademii ZUZU.
-</p>
+    <h2>
+        Podejrzyj, co dzieje się w ZUZU
+    </h2>
 
-<div class="buttons">
+    <p>
+        Zajrzyj na naszego Facebooka
+        i zobacz więcej
+        z codziennego życia Akademii ZUZU.
+    </p>
 
-<a
-href="https://www.facebook.com/zuzu.szczecin"
-target="_blank"
-class="button button-facebook"
->
-💙 Facebook ZUZU
-</a>
 
-<a
-href="https://wa.me/48798150723"
-target="_blank"
-class="button button-green"
->
-💬 WhatsApp
-</a>
+    <div class="buttons">
+
+        <a
+            href="https://www.facebook.com/zuzu.szczecin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-facebook"
+        >
+            💙 Facebook ZUZU
+        </a>
+
+        <a
+            href="https://wa.me/48798150723"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-green"
+        >
+            💬 WhatsApp
+        </a>
+
+    </div>
 
 </div>
 
 </div>
 
-</div>
 
+<!-- =========================
+     MAGIC
+========================= -->
 
 <section class="content magic">
 
 <div class="magic-box">
 
-<h2 class="section-title">
-Tu dzieje się dzieciństwo
-</h2>
+    <div class="magic-icons">
+        ☁️ ⭐ 🌈 🧸 🌈 ⭐ ☁️
+    </div>
 
-<p class="section-subtitle">
+    <h2 class="section-title">
+        Tu dzieje się dzieciństwo
+    </h2>
 
-Trochę farby na ubraniu.
-Zabawki nie zawsze tam, gdzie powinny być.
-Dużo śmiechu.
-Małe sukcesy.
-Pierwsze przyjaźnie.
+    <p class="section-subtitle">
 
-</p>
+        Trochę farby na ubraniu.
+        Zabawki nie zawsze tam,
+        gdzie powinny być.
+
+        Dużo śmiechu.
+        Małe sukcesy.
+        Pierwsze przyjaźnie.
+
+        I całe mnóstwo historii,
+        które zaczynają się od:
+
+        „A dzisiaj w ZUZU…”
+
+    </p>
 
 </div>
 
 </section>
 
 
-<section id="kontakt" class="content">
+<!-- =========================
+     KONTAKT
+========================= -->
+
+<section
+    id="kontakt"
+    class="content"
+>
 
 <div class="contact">
 
-<h2 class="section-title">
-Zostań z nami w kontakcie ♡
-</h2>
+    <h2 class="section-title">
+        Zostań z nami w kontakcie ♡
+    </h2>
 
-<p>
-Chcesz zapytać o wolne miejsce,
-opiekę godzinową,
-weekendową albo zajęcia dodatkowe?
-Napisz lub zadzwoń.
-</p>
-
-
-<div class="phone">
-📞 798 150 723
-</div>
+    <p>
+        Chcesz zapytać o wolne miejsce,
+        opiekę godzinową,
+        weekendową
+        albo zajęcia dodatkowe?
+        Napisz lub zadzwoń.
+    </p>
 
 
-<div class="email">
-
-✉️
-
-<a href="mailto:zuzu.szczecin@gmail.com">
-zuzu.szczecin@gmail.com
-</a>
-
-</div>
+    <div class="phone">
+        📞 798 150 723
+    </div>
 
 
-<div class="buttons">
+    <div class="email">
 
-<a
-href="tel:+48798150723"
-class="button button-pink"
->
-☎️ Zadzwoń
-</a>
+        ✉️
 
-<a
-href="https://wa.me/48798150723"
-target="_blank"
-class="button button-green"
->
-💬 WhatsApp
-</a>
+        <a href="mailto:zuzu.szczecin@gmail.com">
+            zuzu.szczecin@gmail.com
+        </a>
 
-<a
-href="mailto:zuzu.szczecin@gmail.com"
-class="button button-email"
->
-✉️ Napisz e-mail
-</a>
+    </div>
 
-<a
-href="https://www.facebook.com/zuzu.szczecin"
-target="_blank"
-class="button button-facebook"
->
-💙 Facebook
-</a>
 
-</div>
+    <div class="buttons">
+
+        <a
+            href="tel:+48798150723"
+            class="button button-pink"
+        >
+            ☎️ Zadzwoń
+        </a>
+
+        <a
+            href="https://wa.me/48798150723"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-green"
+        >
+            💬 WhatsApp
+        </a>
+
+        <a
+            href="mailto:zuzu.szczecin@gmail.com"
+            class="button button-email"
+        >
+            ✉️ Napisz e-mail
+        </a>
+
+        <a
+            href="https://www.facebook.com/zuzu.szczecin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-facebook"
+        >
+            💙 Facebook
+        </a>
+
+    </div>
 
 </div>
 
 </section>
 
 
+<!-- =========================
+     STOPKA
+========================= -->
+
 <footer>
 
-<strong>
-☁️ Akademia ZUZU
-</strong>
+    <strong>
+        ☁️ Akademia ZUZU
+    </strong>
 
-Szczecin · Witkiewicza · Pocztowa · Świętego Wojciecha
+    Szczecin · Witkiewicza · Pocztowa · Świętego Wojciecha
 
-<br><br>
+    <br>
 
-📞 798 150 723
+    🕡 6:30–17:00
 
-<br>
+    <br><br>
 
-✉️ zuzu.szczecin@gmail.com
+    <a href="tel:+48798150723">
+        📞 798 150 723
+    </a>
 
-<br><br>
+    <br>
 
-© 2026 Akademia ZUZU
+    <a href="mailto:zuzu.szczecin@gmail.com">
+        ✉️ zuzu.szczecin@gmail.com
+    </a>
+
+    <br><br>
+
+    <a
+        href="ankieta-zdrowia-do-druku.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        📄 Dokumenty do pobrania
+    </a>
+
+    <br><br>
+
+    <a
+        href="https://www.facebook.com/zuzu.szczecin"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        💙 Facebook
+    </a>
+
+    &nbsp; · &nbsp;
+
+    <a
+        href="https://wa.me/48798150723"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        💬 WhatsApp
+    </a>
+
+    <br><br>
+
+    © 2026 Akademia ZUZU
 
 </footer>
 
 
+<!-- =========================
+     EMAIL + WHATSAPP
+========================= -->
+
 <script>
 
-const form = document.getElementById("zuzuForm");
-const statusBox = document.getElementById("formStatus");
-const submitButton = document.getElementById("submitButton");
+const form =
+    document.getElementById("zuzuForm");
 
-form.addEventListener("submit", async function(event){
+const statusBox =
+    document.getElementById("formStatus");
 
-event.preventDefault();
-
-submitButton.disabled = true;
-submitButton.textContent = "Wysyłamy... ✨";
-
-const parentName =
-document.getElementById("parentName").value.trim();
-
-const parentEmail =
-document.getElementById("parentEmail").value.trim();
-
-const parentPhone =
-document.getElementById("parentPhone").value.trim();
-
-const childName =
-document.getElementById("childName").value.trim();
-
-const childAge =
-document.getElementById("childAge").value.trim();
-
-const location =
-document.getElementById("location").value;
-
-const offerType =
-document.getElementById("offerType").value;
-
-const startDate =
-document.getElementById("startDate").value.trim();
-
-const extraMessage =
-document.getElementById("message").value.trim();
+const submitButton =
+    document.getElementById("submitButton");
 
 
-const emailData = new FormData();
+form.addEventListener(
+    "submit",
+    async function(event){
 
-emailData.append("Imię rodzica",parentName);
-emailData.append("E-mail rodzica",parentEmail);
-emailData.append("Telefon rodzica",parentPhone);
-emailData.append("Imię dziecka",childName);
-emailData.append("Wiek dziecka",childAge);
-emailData.append("Lokalizacja",location);
-emailData.append("Rodzaj oferty",offerType);
-emailData.append("Od kiedy",startDate || "Do ustalenia");
-emailData.append("Wiadomość",extraMessage || "Brak dodatkowej wiadomości");
+        event.preventDefault();
 
-emailData.append(
-"_subject",
-"NOWE ZGŁOSZENIE ZUZU ⭐"
-);
+        submitButton.disabled = true;
 
-emailData.append(
-"_template",
-"table"
-);
+        submitButton.textContent =
+            "Wysyłamy... ✨";
 
-emailData.append(
-"_captcha",
-"false"
-);
+        statusBox.className =
+            "form-status";
 
-emailData.append(
-"_replyto",
-parentEmail
-);
+        statusBox.textContent = "";
 
 
-try{
-
-const response =
-await fetch(
-"https://formsubmit.co/ajax/zuzu.szczecin@gmail.com",
-{
-method:"POST",
-body:emailData,
-headers:{
-"Accept":"application/json"
-}
-}
-);
-
-if(!response.ok){
-throw new Error();
-}
+        const parentName =
+            document
+            .getElementById("parentName")
+            .value
+            .trim();
 
 
-let whatsappMessage =
+        const parentEmail =
+            document
+            .getElementById("parentEmail")
+            .value
+            .trim();
+
+
+        const parentPhone =
+            document
+            .getElementById("parentPhone")
+            .value
+            .trim();
+
+
+        const childName =
+            document
+            .getElementById("childName")
+            .value
+            .trim();
+
+
+        const childAge =
+            document
+            .getElementById("childAge")
+            .value
+            .trim();
+
+
+        const location =
+            document
+            .getElementById("location")
+            .value;
+
+
+        const offerType =
+            document
+            .getElementById("offerType")
+            .value;
+
+
+        const startDate =
+            document
+            .getElementById("startDate")
+            .value
+            .trim();
+
+
+        const extraMessage =
+            document
+            .getElementById("message")
+            .value
+            .trim();
+
+
+        const emailData =
+            new FormData();
+
+
+        emailData.append(
+            "Imię rodzica",
+            parentName
+        );
+
+        emailData.append(
+            "E-mail rodzica",
+            parentEmail
+        );
+
+        emailData.append(
+            "Telefon rodzica",
+            parentPhone
+        );
+
+        emailData.append(
+            "Imię dziecka",
+            childName
+        );
+
+        emailData.append(
+            "Wiek dziecka",
+            childAge
+        );
+
+        emailData.append(
+            "Lokalizacja",
+            location
+        );
+
+        emailData.append(
+            "Rodzaj oferty",
+            offerType
+        );
+
+        emailData.append(
+            "Od kiedy",
+            startDate || "Do ustalenia"
+        );
+
+        emailData.append(
+            "Wiadomość",
+            extraMessage || "Brak dodatkowej wiadomości"
+        );
+
+        emailData.append(
+            "_subject",
+            "NOWE ZGŁOSZENIE ZUZU ⭐"
+        );
+
+        emailData.append(
+            "_template",
+            "table"
+        );
+
+        emailData.append(
+            "_captcha",
+            "false"
+        );
+
+        emailData.append(
+            "_replyto",
+            parentEmail
+        );
+
+
+        try{
+
+
+            const response =
+                await fetch(
+                    "https://formsubmit.co/ajax/zuzu.szczecin@gmail.com",
+                    {
+                        method:"POST",
+                        body:emailData,
+                        headers:{
+                            "Accept":"application/json"
+                        }
+                    }
+                );
+
+
+            if(!response.ok){
+
+                throw new Error(
+                    "Nie udało się wysłać formularza."
+                );
+
+            }
+
+
+            let whatsappMessage =
 `Dzień dobry! 😊
 
 Właśnie wysłałam / wysłałem formularz ze strony Akademii ZUZU.
@@ -1761,55 +2507,73 @@ Właśnie wysłałam / wysłałem formularz ze strony Akademii ZUZU.
 📅 Od kiedy: ${startDate || "do ustalenia"}`;
 
 
-if(extraMessage){
+            if(extraMessage){
 
-whatsappMessage +=
+                whatsappMessage +=
 `
 
 💬 Dodatkowa wiadomość:
 ${extraMessage}`;
 
-}
+            }
 
 
-const whatsappUrl =
-"https://wa.me/48798150723?text=" +
-encodeURIComponent(whatsappMessage);
+            whatsappMessage +=
+`
+
+Proszę o kontakt w sprawie dostępności. ♡`;
 
 
-statusBox.className =
-"form-status success";
-
-statusBox.textContent =
-"Zgłoszenie wysłane 💗 Otwieramy WhatsApp...";
-
-
-setTimeout(function(){
-
-window.location.href =
-whatsappUrl;
-
-},1200);
+            const whatsappUrl =
+                "https://wa.me/48798150723?text=" +
+                encodeURIComponent(
+                    whatsappMessage
+                );
 
 
-}
+            statusBox.className =
+                "form-status success";
 
-catch(error){
 
-statusBox.className =
-"form-status error";
+            statusBox.textContent =
+                "Zgłoszenie wysłane na e-mail ZUZU 💗 Otwieramy WhatsApp...";
 
-statusBox.textContent =
-"Nie udało się wysłać formularza.";
 
-submitButton.disabled = false;
+            setTimeout(
+                function(){
 
-submitButton.textContent =
-"💌 Wyślij zgłoszenie";
+                    window.location.href =
+                        whatsappUrl;
 
-}
+                },
+                1200
+            );
 
-});
+
+        }
+
+        catch(error){
+
+
+            statusBox.className =
+                "form-status error";
+
+
+            statusBox.textContent =
+                "Nie udało się wysłać zgłoszenia na e-mail. Spróbuj ponownie albo napisz do nas na WhatsApp.";
+
+
+            submitButton.disabled =
+                false;
+
+
+            submitButton.textContent =
+                "💌 Wyślij zgłoszenie";
+
+        }
+
+    }
+);
 
 </script>
 
