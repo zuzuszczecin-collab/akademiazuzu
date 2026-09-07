@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZUZU Witkiewicza | Akademia ZUZU</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#4d4657;
+    background:#fffafd;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.96);
+    box-shadow:0 4px 20px rgba(0,0,0,0.07);
+}
+
+.menu{
+    max-width:1200px;
+    min-height:82px;
+    margin:auto;
+    padding:8px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:64px;
+    height:64px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.logo-name{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-name strong{
+    color:#ef1591;
+    font-size:24px;
+}
+
+.logo-name span{
+    color:#756d83;
+    font-size:12px;
+}
+
+.links{
+    display:flex;
+    gap:24px;
+    align-items:center;
+}
+
+.links a{
+    text-decoration:none;
+    color:#5d5667;
+    font-weight:bold;
+}
+
+.links a:hover{
+    color:#ef1591;
+}
+
+.home{
+    background:#ef1591;
+    color:white !important;
+    padding:12px 20px;
+    border-radius:30px;
+}
+
+.hero{
+    min-height:560px;
+    padding:70px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 12% 20%, #ffe976 0 30px, transparent 32px),
+        radial-gradient(circle at 90% 15%, #f7a7d8 0 65px, transparent 67px),
+        linear-gradient(135deg,#29c5df,#55cbdc);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-logo{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:35px;
+    border:5px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+}
+
+.hero h1{
+    margin:25px 0 10px;
+    color:white;
+    font-size:58px;
+    text-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.hero h2{
+    color:#fff59a;
+    font-size:26px;
+}
+
+.hero p{
+    max-width:720px;
+    margin:20px auto 0;
+    color:white;
+    font-size:19px;
+    line-height:1.7;
+}
+
+.content{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.section-title{
+    text-align:center;
+    color:#e84d9b;
+    font-size:40px;
+    margin:0 0 15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 40px;
+    font-size:18px;
+    line-height:1.7;
+    color:#706979;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.card{
+    background:white;
+    padding:32px 25px;
+    border-radius:28px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+}
+
+.card-icon{
+    font-size:46px;
+}
+
+.card h3{
+    color:#725ed6;
+    font-size:22px;
+}
+
+.card p{
+    line-height:1.7;
+}
+
+.about{
+    background:white;
+    padding:45px;
+    border-radius:35px;
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.day{
+    background:#fff1b5;
+}
+
+.day-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    background:white;
+    border-radius:25px;
+    padding:25px 18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.step strong{
+    display:block;
+    color:#ef1591;
+    font-size:18px;
+    margin:10px 0;
+}
+
+.contact{
+    background:linear-gradient(135deg,#ffe4f1,#e6f7ff);
+    border-radius:35px;
+    padding:50px 25px;
+    text-align:center;
+}
+
+.phone{
+    font-size:28px;
+    font-weight:bold;
+    color:#ef1591;
+    margin:20px 0;
+}
+
+.button{
+    display:inline-block;
+    padding:15px 28px;
+    background:#ef1591;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:30px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    color:#6655c7;
+    font-weight:bold;
+}
+
+footer{
+    background:#5b4bae;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+@media(max-width:850px){
+
+    .links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-logo{
+        width:140px;
+        height:140px;
+    }
+
+    .cards,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:33px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="menu">
+
+    <div class="logo">
+        <img src="Logo-zuzu.jpg" alt="Logo Akademii ZUZU">
+
+        <div class="logo-name">
+            <strong>AKADEMIA ZUZU</strong>
+            <span>Witkiewicza</span>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="#onas">O miejscu</a>
+        <a href="#codziennosc">Codzienność</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="index.html" class="home">Strona główna</a>
+    </div>
+
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+    <img src="Logo-zuzu.jpg" class="hero-logo" alt="Logo ZUZU">
+
+    <h1>ZUZU Witkiewicza</h1>
+
+    <h2>Nasza główna ZUZU-owa baza ☁️</h2>
+
+    <p>
+        Ciepła przestrzeń dla najmłodszych,
+        w której każdy dzień wypełniają zabawa,
+        bliskość, odkrywanie świata i dziecięcy śmiech.
+    </p>
+
+</div>
+
+</header>
+
+<section id="onas" class="content">
+
+<h2 class="section-title">
+    Witajcie na Witkiewicza ♡
+</h2>
+
+<p class="section-subtitle">
+    Miejsce stworzone dla dzieci i z myślą o ich codziennym komforcie.
+</p>
+
+<div class="about">
+
+    ZUZU Witkiewicza to nasza główna lokalizacja.
+    Tworzymy tu przyjazne środowisko, w którym dzieci
+    mogą bawić się, odpoczywać, rozwijać i poznawać świat
+    w swoim własnym tempie.
+
+    <br><br>
+
+    Zależy nam na kameralnej atmosferze,
+    bliskim kontakcie z dziećmi
+    i codzienności pełnej małych przygód.
+
+</div>
+
+</section>
+
+<section class="content">
+
+<h2 class="section-title">
+    Co znajdziecie na Witkiewicza?
+</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <div class="card-icon">🧸</div>
+        <h3>Ciepła opieka</h3>
+        <p>
+            Dużo bliskości, troski i indywidualnego podejścia.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Kreatywna zabawa</h3>
+        <p>
+            Zajęcia sensoryczne, plastyczne i mnóstwo swobodnej zabawy.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🌈</div>
+        <h3>Codzienne przygody</h3>
+        <p>
+            Ruch, poznawanie świata, wspólne odkrycia i dziecięca ciekawość.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+<div id="codziennosc" class="day">
+
+<div class="day-inner">
+
+<h2 class="section-title">
+    Jak wygląda dzień w ZUZU?
+</h2>
+
+<p class="section-subtitle">
+    Bez wyścigu. Bez presji. Z rytmem dopasowanym do małych ludzi.
+</p>
+
+<div class="steps">
+
+    <div class="step">
+        <div class="card-icon">☀️</div>
+        <strong>Dzień dobry!</strong>
+        <span>Powitanie i spokojny początek dnia.</span>
+    </div>
+
+    <div class="step">
+        <div class="card-icon">🎨</div>
+        <strong>Zabawa</strong>
+        <span>Aktywności, sensoryka i kreatywne odkrywanie.</span>
+    </div>
+
+    <div class="step">
+        <div class="card-icon">🍲</div>
+        <strong>Posiłki</strong>
+        <span>Czas na wspólne jedzenie i odpoczynek.</span>
+    </div>
+
+    <div class="step">
+        <div class="card-icon">🌙</div>
+        <strong>Odpoczynek</strong>
+        <span>Spokojne chwile dostosowane do potrzeb dzieci.</span>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+<section id="kontakt" class="content">
+
+<div class="contact">
+
+    <h2 class="section-title">
+        ZUZU Witkiewicza
+    </h2>
+
+    <p>
+        Chcesz poznać nas bliżej albo zapisać dziecko?
+    </p>
+
+    <div class="phone">
+        📞 798 150 723
+    </div>
+
+    <a href="tel:+48798150723" class="button">
+        Zadzwoń
+    </a>
+
+    <br>
+
+    <a href="index.html" class="back">
+        ← Wróć na stronę główną ZUZU
+    </a>
+
+</div>
+
+</section>
+
+<footer>
+    ☁️ Akademia ZUZU · Witkiewicza · Szczecin · © 2026
+</footer>
+
+</body>
+
+</html>
