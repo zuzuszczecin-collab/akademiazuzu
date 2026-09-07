@@ -1,1 +1,1132 @@
+<!DOCTYPE html>
+<html lang="pl">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zajęcia dodatkowe | Akademia ZUZU Szczecin</title>
+
+<meta
+    name="description"
+    content="Zajęcia dodatkowe dla dzieci w Akademii ZUZU w Szczecinie. Sensoplastyka, zajęcia rozwojowe, kreatywne i sensoryczne."
+>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#4d4657;
+    background:#fffafd;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(255,255,255,.97);
+
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.menu{
+    max-width:1200px;
+    min-height:82px;
+
+    margin:auto;
+    padding:8px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:64px;
+    height:64px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    color:#ef1591;
+    font-size:23px;
+}
+
+.logo-text span{
+    color:#756d83;
+    font-size:12px;
+}
+
+.back{
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    background:#ef1591;
+    color:white;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:500px;
+
+    padding:70px 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffe45d 0 24px, transparent 26px),
+        radial-gradient(circle at 90% 15%, #fd88cf 0 60px, transparent 62px),
+        radial-gradient(circle at 15% 85%, #a986ff 0 65px, transparent 67px),
+        radial-gradient(circle at 90% 80%, #55d8e8 0 45px, transparent 47px),
+        linear-gradient(135deg,#24116f,#5523a5,#1c0c61);
+}
+
+.hero-inner{
+    max-width:850px;
+}
+
+.hero-icon{
+    font-size:65px;
+}
+
+.hero h1{
+    margin:10px 0;
+
+    color:white;
+
+    font-size:64px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.hero h2{
+    color:#ffe75a;
+
+    font-size:28px;
+}
+
+.hero p{
+    max-width:700px;
+
+    margin:18px auto 28px;
+
+    color:white;
+
+    font-size:19px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button{
+    display:inline-block;
+
+    padding:16px 28px;
+
+    border-radius:35px;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.button-pink{
+    background:#ef1591;
+    color:white;
+
+    box-shadow:0 10px 25px rgba(239,21,145,.25);
+}
+
+.button-green{
+    background:#25D366;
+    color:white;
+
+    box-shadow:0 10px 25px rgba(37,211,102,.22);
+}
+
+.button-purple{
+    background:#6956c8;
+    color:white;
+}
+
+
+/* =========================
+   SEKCJE
+========================= */
+
+.content{
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:80px 25px;
+}
+
+.section-title{
+    margin:0 0 15px;
+
+    text-align:center;
+
+    color:#e84d9b;
+
+    font-size:42px;
+}
+
+.section-subtitle{
+    max-width:750px;
+
+    margin:0 auto 40px;
+
+    text-align:center;
+
+    color:#706979;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   SENSOPLASTYKA
+========================= */
+
+.activity{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+}
+
+.activity-image{
+    padding:18px;
+
+    background:white;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 45px rgba(70,50,100,.15);
+}
+
+.activity-image img{
+    display:block;
+
+    width:100%;
+
+    border-radius:25px;
+}
+
+.activity-info{
+    padding:40px;
+
+    background:#fff;
+
+    border-radius:35px;
+
+    box-shadow:0 12px 35px rgba(70,50,100,.10);
+}
+
+.activity-badge{
+    display:inline-block;
+
+    padding:9px 18px;
+
+    background:#ef1591;
+
+    color:white;
+
+    border-radius:25px;
+
+    font-weight:bold;
+}
+
+.activity-info h2{
+    margin:18px 0 10px;
+
+    color:#725ed6;
+
+    font-size:38px;
+}
+
+.activity-info > p{
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   DANE
+========================= */
+
+.details{
+    margin:28px 0;
+}
+
+.detail{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:13px 0;
+
+    padding:15px 18px;
+
+    background:#f8f3ff;
+
+    border-radius:18px;
+}
+
+.detail-icon{
+    width:42px;
+
+    font-size:29px;
+
+    text-align:center;
+}
+
+.detail strong{
+    display:block;
+
+    color:#725ed6;
+
+    margin-bottom:3px;
+}
+
+
+/* =========================
+   SENSORYKA
+========================= */
+
+.sensory-section{
+    background:#fff0d8;
+}
+
+.sensory-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.sensory-card{
+    padding:32px 22px;
+
+    background:white;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.09);
+}
+
+.sensory-icon{
+    font-size:45px;
+}
+
+.sensory-card h3{
+    color:#725ed6;
+
+    font-size:22px;
+}
+
+.sensory-card p{
+    line-height:1.7;
+
+    margin-bottom:0;
+}
+
+
+/* =========================
+   UWAGA
+========================= */
+
+.warning{
+    max-width:850px;
+
+    margin:45px auto 0;
+
+    padding:35px 30px;
+
+    background:#6544a8;
+
+    color:white;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(70,50,100,.15);
+}
+
+.warning-icon{
+    font-size:43px;
+}
+
+.warning h2{
+    margin:10px 0;
+
+    color:#ffe75a;
+
+    font-size:28px;
+}
+
+.warning p{
+    margin:0;
+
+    line-height:1.7;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   WIĘCEJ ZAJĘĆ
+========================= */
+
+.more{
+    text-align:center;
+}
+
+.more-box{
+    padding:50px 30px;
+
+    background:linear-gradient(135deg,#e7f9ff,#ffe6f4);
+
+    border-radius:38px;
+
+    box-shadow:0 10px 35px rgba(70,60,90,.09);
+}
+
+.more-icons{
+    font-size:45px;
+}
+
+.more-box h2{
+    margin:15px 0;
+
+    color:#ef1591;
+
+    font-size:36px;
+}
+
+.more-box p{
+    max-width:700px;
+
+    margin:0 auto;
+
+    line-height:1.8;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.cta{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:60px 30px;
+
+    border-radius:38px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#e5f9ff,#ffe5f4);
+
+    box-shadow:0 12px 35px rgba(70,50,100,.10);
+}
+
+.cta h2{
+    margin-top:0;
+
+    color:#ef1591;
+
+    font-size:40px;
+}
+
+.cta p{
+    max-width:700px;
+
+    margin:0 auto 25px;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.phone{
+    margin:20px 0;
+
+    color:#725ed6;
+
+    font-size:32px;
+
+    font-weight:bold;
+}
+
+.buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   STOPKA
+========================= */
+
+footer{
+    padding:45px 20px;
+
+    background:#5744aa;
+
+    color:white;
+
+    text-align:center;
+
+    line-height:1.7;
+}
+
+footer strong{
+    font-size:20px;
+}
+
+footer a{
+    color:white;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .activity{
+        grid-template-columns:1fr;
+    }
+
+    .sensory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+}
+
+
+@media(max-width:550px){
+
+    .logo-text strong{
+        font-size:18px;
+    }
+
+    .back{
+        padding:10px 15px;
+
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:450px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .activity-info{
+        padding:30px 22px;
+    }
+
+    .activity-info h2{
+        font-size:32px;
+    }
+
+    .activity-image{
+        padding:10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<nav>
+
+<div class="menu">
+
+    <div class="logo">
+
+        <img
+            src="Logo-zuzu.jpg"
+            alt="Logo Akademii ZUZU"
+        >
+
+        <div class="logo-text">
+
+            <strong>
+                AKADEMIA ZUZU
+            </strong>
+
+            <span>
+                Zajęcia dodatkowe
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← Strona główna
+    </a>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<div class="hero-inner">
+
+    <div class="hero-icon">
+        🎨⭐🎵
+    </div>
+
+    <h1>
+        Zajęcia dodatkowe
+    </h1>
+
+    <h2>
+        Małe talenty. Wielkie możliwości. ♡
+    </h2>
+
+    <p>
+        ZUZU to nie tylko opieka.
+        To również miejsce pełne ruchu,
+        muzyki, kolorów, sensorycznych odkryć
+        i dziecięcej kreatywności.
+    </p>
+
+
+    <a
+        href="#sensoplastyka"
+        class="button button-pink"
+    >
+        Zobacz zajęcia
+    </a>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     SENSOPLASTYKA
+========================= -->
+
+<section
+    id="sensoplastyka"
+    class="content"
+>
+
+<h2 class="section-title">
+    Sensoplastyka 🎨
+</h2>
+
+<p class="section-subtitle">
+    Glutki, ciapki, ugniatanie
+    i totalna sensoryczna rozpierducha! ♡
+</p>
+
+
+<div class="activity">
+
+
+    <div class="activity-image">
+
+        <img
+            src="sensoplastyka.jpg"
+            alt="Sensoplastyka w Akademii ZUZU"
+        >
+
+    </div>
+
+
+    <div class="activity-info">
+
+        <span class="activity-badge">
+            🎨 SENSOPLASTYKA W ZUZU
+        </span>
+
+        <h2>
+            Brudzimy się szczęściem!
+        </h2>
+
+        <p>
+            Dotykamy, ugniatamy,
+            mieszamy, przesypujemy
+            i poznajemy świat
+            wszystkimi zmysłami.
+        </p>
+
+
+        <div class="details">
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <strong>
+                        Kiedy?
+                    </strong>
+
+                    W każdy piątek
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    🕤
+                </div>
+
+                <div>
+
+                    <strong>
+                        Godzina
+                    </strong>
+
+                    9:30
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Gdzie?
+                    </strong>
+
+                    ZUZU<br>
+                    ul. Świętego Wojciecha 16/1<br>
+                    Szczecin
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    👶
+                </div>
+
+                <div>
+
+                    <strong>
+                        Dla kogo?
+                    </strong>
+
+                    Dzieci od 8. miesiąca życia
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <strong>
+                        Wstęp
+                    </strong>
+
+                    35 zł
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <a
+            href="https://wa.me/48798150723?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20zapisa%C4%87%20dziecko%20na%20Sensoplastyk%C4%99%20w%20Akademii%20ZUZU."
+            target="_blank"
+            class="button button-green"
+        >
+            💬 Zapisz dziecko
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CO ROBIMY
+========================= -->
+
+<section class="sensory-section">
+
+<div class="content">
+
+<h2 class="section-title">
+    Małe ręce mają dużo roboty 😎
+</h2>
+
+<p class="section-subtitle">
+    Nie chodzi o stworzenie idealnego dzieła.
+    Chodzi o doświadczenie,
+    zabawę i poznawanie świata.
+</p>
+
+
+<div class="sensory-grid">
+
+
+    <div class="sensory-card">
+
+        <div class="sensory-icon">
+            👐
+        </div>
+
+        <h3>
+            Dotykamy
+        </h3>
+
+        <p>
+            Poznajemy różne
+            faktury, konsystencje
+            i materiały.
+        </p>
+
+    </div>
+
+
+    <div class="sensory-card">
+
+        <div class="sensory-icon">
+            🎨
+        </div>
+
+        <h3>
+            Mieszamy
+        </h3>
+
+        <p>
+            Kolory, masy,
+            składniki i wszystko,
+            co można bezpiecznie
+            połączyć.
+        </p>
+
+    </div>
+
+
+    <div class="sensory-card">
+
+        <div class="sensory-icon">
+            🌈
+        </div>
+
+        <h3>
+            Odkrywamy
+        </h3>
+
+        <p>
+            Dziecko eksperymentuje
+            i poznaje świat
+            w swoim własnym tempie.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<div class="warning">
+
+    <div class="warning-icon">
+        👕🎨
+    </div>
+
+    <h2>
+        Ubierzcie się... niewyjściowo!
+    </h2>
+
+    <p>
+        Istnieje spora szansa,
+        że po zajęciach Sensoplastyka
+        będzie nie tylko na stoliku,
+        ale również na dziecku...
+        i trochę na Was. 😂
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     WIĘCEJ ZAJĘĆ
+========================= -->
+
+<section class="content more">
+
+<div class="more-box">
+
+    <div class="more-icons">
+        🎵 🌈 ⭐ 🧸 🎨
+    </div>
+
+    <h2>
+        A to dopiero początek!
+    </h2>
+
+    <p>
+        Oferta zajęć dodatkowych ZUZU
+        będzie się rozwijać.
+        W tym miejscu będziemy dodawać
+        kolejne zajęcia, wydarzenia
+        i ZUZU-owe przygody.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KONTAKT
+========================= -->
+
+<section class="content">
+
+<div class="cta">
+
+    <h2>
+        Zapisujemy na Sensoplastykę? ♡
+    </h2>
+
+    <p>
+        Liczba miejsc jest ograniczona.
+        Napisz do nas na WhatsApp
+        lub zadzwoń i zarezerwuj miejsce.
+    </p>
+
+
+    <div class="phone">
+        📞 798 150 723
+    </div>
+
+
+    <div class="buttons">
+
+        <a
+            href="https://wa.me/48798150723?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20zapisa%C4%87%20dziecko%20na%20Sensoplastyk%C4%99%20w%20Akademii%20ZUZU."
+            target="_blank"
+            class="button button-green"
+        >
+            💬 WhatsApp
+        </a>
+
+
+        <a
+            href="tel:+48798150723"
+            class="button button-pink"
+        >
+            ☎️ Zadzwoń
+        </a>
+
+
+        <a
+            href="index.html#oferta"
+            class="button button-purple"
+        >
+            ⭐ Pozostała oferta
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     STOPKA
+========================= -->
+
+<footer>
+
+    <strong>
+        ☁️ Akademia ZUZU
+    </strong>
+
+    <br>
+
+    Małe dzieci. Wielkie przygody. ⭐
+
+    <br><br>
+
+    <a href="opieka-stala.html">
+        Opieka stała
+    </a>
+
+    &nbsp; · &nbsp;
+
+    <a href="opieka-na-godziny.html">
+        Opieka na godziny
+    </a>
+
+    &nbsp; · &nbsp;
+
+    <a href="opieka-weekendowa.html">
+        Opieka weekendowa
+    </a>
+
+    <br><br>
+
+    <a href="index.html">
+        ← Wróć na stronę główną
+    </a>
+
+    <br><br>
+
+    © 2026 Akademia ZUZU
+
+</footer>
+
+
+</body>
+
+</html>
