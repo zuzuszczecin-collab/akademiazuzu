@@ -6,104 +6,146 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Opieka stała | Akademia ZUZU Szczecin</title>
+<title>Opieka stała nad dzieckiem Szczecin | Akademia ZUZU</title>
 
 <meta
     name="description"
-    content="Opieka stała w Akademii ZUZU w Szczecinie. Standardowa opieka oraz Pakiet Rozszerzony."
+    content="Opieka stała nad dzieckiem w Szczecinie – Akademia ZUZU. Codzienna opieka dla najmłodszych w 3 lokalizacjach: Witkiewicza, Pocztowa i Świętego Wojciecha."
 >
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link
+    rel="canonical"
+    href="https://akademiazuzu.pl/opieka-stala.html"
+>
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+
+<meta
+    property="og:title"
+    content="Opieka stała nad dzieckiem Szczecin | Akademia ZUZU"
+>
+
+<meta
+    property="og:description"
+    content="Stała opieka nad najmłodszymi w Akademii ZUZU w Szczecinie. Trzy lokalizacje, codzienna zabawa, zajęcia, sensoryka i rozwój."
+>
+
+<meta
+    property="og:url"
+    content="https://akademiazuzu.pl/opieka-stala.html"
+>
+
+<meta
+    property="og:image"
+    content="https://akademiazuzu.pl/kafelek-opieka%20sta%C5%82a.png"
+>
+
+<meta
+    property="og:site_name"
+    content="Akademia ZUZU"
+>
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta
+    name="twitter:title"
+    content="Opieka stała nad dzieckiem Szczecin | Akademia ZUZU"
+>
+
+<meta
+    name="twitter:description"
+    content="Codzienna opieka nad najmłodszymi w trzech lokalizacjach Akademii ZUZU w Szczecinie."
+>
+
+<meta
+    name="twitter:image"
+    content="https://akademiazuzu.pl/kafelek-opieka%20sta%C5%82a.png"
+>
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Opieka stała nad dzieckiem w Szczecinie",
+    "url": "https://akademiazuzu.pl/opieka-stala.html",
+    "description": "Stała opieka nad najmłodszymi w Akademii ZUZU w Szczecinie.",
+    "provider": {
+        "@type": "ChildCare",
+        "name": "Akademia ZUZU",
+        "url": "https://akademiazuzu.pl/",
+        "telephone": "+48798150723",
+        "email": "zuzu.szczecin@gmail.com"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Szczecin"
+    }
+}
+</script>
+
 
 <style>
 
-/* ==================================================
-   PODSTAWY
-================================================== */
-
 *{
     box-sizing:border-box;
-}
-
-html{
     scroll-behavior:smooth;
 }
 
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    color:#4e4659;
+    color:#4d4657;
     background:#fffafd;
-    overflow-x:hidden;
 }
 
 a{
-    text-decoration:none;
+    transition:.2s;
 }
 
 section{
-    scroll-margin-top:90px;
+    scroll-margin-top:95px;
 }
 
 
-/* ==================================================
-   MENU
-================================================== */
+/* MENU */
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-
     background:rgba(255,255,255,.97);
-
-    box-shadow:
-        0 4px 18px
-        rgba(0,0,0,.07);
+    box-shadow:0 4px 20px rgba(0,0,0,.07);
 }
 
 .menu{
     max-width:1200px;
-    min-height:78px;
-
+    min-height:82px;
     margin:auto;
     padding:8px 25px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
-
-    gap:25px;
 }
 
 .logo{
     display:flex;
     align-items:center;
-
-    gap:10px;
-
-    color:#ef1591;
-
-    cursor:pointer;
+    gap:12px;
 }
 
 .logo img{
-    width:58px;
-    height:58px;
-
-    border-radius:16px;
-
+    width:64px;
+    height:64px;
     object-fit:cover;
 
-    box-shadow:
-        0 4px 15px
-        rgba(0,0,0,.13);
+    border-radius:18px;
 
-    transition:.25s;
-}
-
-.logo:hover img{
-    transform:
-        rotate(-4deg)
-        scale(1.06);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 .logo-text{
@@ -112,812 +154,521 @@ nav{
 }
 
 .logo-text strong{
-    font-size:21px;
     color:#ef1591;
+    font-size:24px;
 }
 
 .logo-text span{
-    font-size:11px;
-    color:#777080;
+    color:#756d83;
+    font-size:12px;
 }
 
-.menu-links{
+.links{
     display:flex;
     align-items:center;
-
     gap:20px;
 }
 
-.menu-links a{
-    color:#514a5a;
-
-    font-size:14px;
+.links a{
+    text-decoration:none;
+    color:#5d5667;
     font-weight:bold;
-
-    transition:.2s;
 }
 
-.menu-links a:hover{
+.links a:hover{
     color:#ef1591;
 }
 
-.home-button{
-    background:#ef1591;
-
-    color:white !important;
-
-    padding:13px 22px;
-
+.home{
+    padding:12px 20px;
     border-radius:30px;
 
-    box-shadow:
-        0 8px 20px
-        rgba(239,21,145,.20);
+    background:#ef1591;
+    color:white !important;
 }
 
 
-/* ==================================================
-   HERO
-================================================== */
+/* HERO */
 
 .hero{
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:520px;
+    min-height:650px;
+    padding:70px 25px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    padding:70px 25px;
-
     text-align:center;
 
     background:
-        linear-gradient(
-            rgba(13,5,60,.18),
-            rgba(13,5,60,.35)
-        ),
-        url("hero-magiczne-zuzu.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-.hero::after{
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(255,0,180,.20),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 85% 30%,
-            rgba(71,170,255,.18),
-            transparent 25%
-        );
-
-    pointer-events:none;
+        radial-gradient(circle at 12% 20%, #ffe976 0 28px, transparent 30px),
+        radial-gradient(circle at 90% 16%, #f7a7d8 0 65px, transparent 67px),
+        radial-gradient(circle at 14% 85%, #c8adff 0 65px, transparent 67px),
+        linear-gradient(135deg,#6ac9dd,#42bfd6);
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
+    max-width:900px;
+}
 
-    max-width:820px;
+.hero-logo{
+    width:180px;
+    height:180px;
 
-    padding:38px 45px;
+    object-fit:cover;
 
     border-radius:35px;
+    border:5px solid white;
 
-    background:
-        rgba(25,13,82,.40);
-
-    backdrop-filter:
-        blur(3px);
-
-    box-shadow:
-        0 15px 45px
-        rgba(0,0,0,.25);
-
-    animation:
-        heroAppear .9s ease both;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
 }
 
 .hero h1{
-    margin:0;
+    margin:25px 0 12px;
 
     color:white;
 
-    font-size:60px;
+    font-size:52px;
+    line-height:1.08;
 
-    text-shadow:
-        0 0 12px #ff40c2,
-        0 0 24px rgba(255,64,194,.65);
+    text-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .hero h2{
-    margin:16px 0;
+    margin:15px 0;
 
-    color:#ffe74d;
+    color:#fff59a;
 
-    font-size:28px;
+    font-size:27px;
 }
 
 .hero p{
-    max-width:680px;
-
-    margin:15px auto 0;
+    max-width:760px;
+    margin:20px auto 30px;
 
     color:white;
 
-    font-size:18px;
+    font-size:19px;
     line-height:1.7;
-
-    text-shadow:
-        0 2px 7px
-        rgba(0,0,0,.5);
 }
 
 
-/* ==================================================
-   GWIAZDKI
-================================================== */
+/* BUTTON */
 
-.magic-star{
-    position:absolute;
-
-    z-index:1;
-
-    color:#ffe75a;
-
-    pointer-events:none;
-
-    animation:
-        twinkle
-        2.5s
-        ease-in-out
-        infinite;
-}
-
-.star-one{
-    top:18%;
-    left:8%;
-
-    font-size:30px;
-}
-
-.star-two{
-    top:30%;
-    right:9%;
-
-    font-size:23px;
-
-    animation-delay:.8s;
-}
-
-.star-three{
-    bottom:16%;
-    left:17%;
-
-    font-size:20px;
-
-    animation-delay:1.3s;
-}
-
-.star-four{
-    bottom:20%;
-    right:18%;
-
-    font-size:31px;
-
-    animation-delay:.4s;
-}
-
-
-/* ==================================================
-   WSPÓLNE
-================================================== */
-
-.content{
-    max-width:1150px;
-
-    margin:auto;
-
-    padding:80px 25px;
-}
-
-.section-title{
-    margin:0 0 12px;
-
-    text-align:center;
-
-    color:#e84d9b;
-
-    font-size:40px;
-}
-
-.section-subtitle{
-    max-width:750px;
-
-    margin:0 auto 45px;
-
-    text-align:center;
-
-    line-height:1.7;
-
-    color:#696170;
-
-    font-size:17px;
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
 }
 
 .button{
     display:inline-block;
 
-    padding:15px 26px;
+    padding:15px 28px;
 
     border-radius:30px;
 
+    text-decoration:none;
     font-weight:bold;
 
-    transition:.25s;
+    transition:.2s;
 }
 
 .button:hover{
-    transform:
-        translateY(-4px)
-        scale(1.02);
+    transform:translateY(-3px);
 }
 
 .button-pink{
     background:#ef1591;
     color:white;
 
-    box-shadow:
-        0 10px 25px
-        rgba(239,21,145,.28);
+    box-shadow:0 10px 25px rgba(239,21,145,.25);
+}
+
+.button-white{
+    background:white;
+    color:#6655c7;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .button-purple{
-    background:#6956d6;
+    background:#6956c8;
     color:white;
 
-    box-shadow:
-        0 10px 25px
-        rgba(105,86,214,.25);
+    box-shadow:0 10px 25px rgba(105,86,200,.22);
 }
 
 
-/* ==================================================
-   OPIEKA STANDARDOWA
-================================================== */
+/* QUICK */
 
-.standard-section{
-    background:white;
+.quick-info{
+    max-width:1100px;
+
+    margin:-55px auto 0;
+    padding:0 25px;
+
+    position:relative;
+    z-index:5;
 }
 
-.standard-grid{
+.quick-grid{
     display:grid;
+    grid-template-columns:repeat(3,1fr);
 
-    grid-template-columns:
-        .85fr 1.15fr;
-
-    gap:45px;
-
-    align-items:center;
-}
-
-.standard-card{
-    padding:40px;
-
-    border-radius:32px;
-
-    background:#f7efff;
-
-    box-shadow:
-        0 12px 35px
-        rgba(80,50,110,.10);
-
-    transition:.3s;
-}
-
-.standard-card:hover{
-    transform:
-        translateY(-7px);
-
-    box-shadow:
-        0 18px 40px
-        rgba(80,50,110,.16);
-}
-
-.badge{
-    display:inline-block;
-
-    margin-bottom:15px;
-
-    padding:9px 18px;
-
-    border-radius:25px;
-
-    background:#ef1591;
-    color:white;
-
-    font-size:13px;
-    font-weight:bold;
-}
-
-.standard-card h3{
-    margin:0 0 10px;
-
-    color:#6c5ad3;
-
-    font-size:34px;
-}
-
-.price{
-    margin:10px 0 15px;
-
-    color:#ef1591;
-
-    font-size:43px;
-    font-weight:bold;
-}
-
-.standard-card p{
-    line-height:1.7;
-}
-
-.standard-list{
-    margin:22px 0;
-
-    line-height:2;
-}
-
-
-/* ==================================================
-   GRAFIKA OPIEKI STAŁEJ
-================================================== */
-
-.standard-poster{
-    text-align:center;
-}
-
-.standard-poster img{
-    display:block;
-
-    width:100%;
-    max-width:540px;
-
-    margin:auto;
+    background:white;
 
     border-radius:30px;
 
-    box-shadow:
-        0 18px 45px rgba(46,24,100,.22),
-        0 0 28px rgba(239,21,145,.12);
-
-    transition:.35s;
-}
-
-.standard-poster img:hover{
-    transform:
-        translateY(-6px)
-        scale(1.015);
-}
-
-
-/* ==================================================
-   ZALETY
-================================================== */
-
-.benefits{
-    background:#fffafd;
-}
-
-.benefit-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:18px;
-}
-
-.benefit{
-    padding:30px 18px;
-
-    text-align:center;
-
-    background:white;
-
-    border-radius:25px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(80,60,100,.08);
-
-    transition:.3s;
-}
-
-.benefit:hover{
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        0 15px 30px
-        rgba(105,86,214,.15);
-}
-
-.benefit-icon{
-    font-size:38px;
-
-    transition:.3s;
-}
-
-.benefit:hover .benefit-icon{
-    transform:scale(1.15);
-}
-
-.benefit strong{
-    display:block;
-
-    margin-top:12px;
-
-    color:#6956d6;
-}
-
-
-/* ==================================================
-   PIERWSZY DZIEŃ
-================================================== */
-
-.first-day{
-    position:relative;
+    box-shadow:0 15px 45px rgba(70,60,90,.15);
 
     overflow:hidden;
-
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            rgba(255,222,91,.22),
-            transparent 18%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(105,86,214,.12),
-            transparent 20%
-        ),
-        linear-gradient(
-            135deg,
-            #fff7fc,
-            #f5efff
-        );
 }
 
-.first-day-box{
-    padding:55px 45px;
-
-    border-radius:38px;
-
-    background:white;
-
-    box-shadow:
-        0 15px 45px
-        rgba(80,60,100,.10);
-}
-
-.first-day-title{
+.quick-card{
+    padding:30px 20px;
     text-align:center;
-
-    margin-bottom:40px;
 }
 
-.backpack{
+.quick-card + .quick-card{
+    border-left:1px solid #eee7f1;
+}
+
+.quick-icon{
+    font-size:35px;
+}
+
+.quick-card strong{
     display:block;
 
-    font-size:58px;
+    margin:10px 0 7px;
 
-    margin-bottom:10px;
-
-    animation:
-        floatIcon
-        3s
-        ease-in-out
-        infinite;
-}
-
-.first-day-title h2{
-    margin:0 0 12px;
-
-    color:#ef1591;
-
-    font-size:40px;
-}
-
-.first-day-title p{
-    max-width:720px;
-
-    margin:auto;
-
-    line-height:1.7;
-}
-
-.first-day-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:20px;
-}
-
-.first-card{
-    padding:30px 24px;
-
-    border-radius:26px;
-
-    background:#faf6ff;
-
-    text-align:center;
-
-    transition:.3s;
-}
-
-.first-card:hover{
-    transform:
-        translateY(-7px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(105,86,214,.12);
-}
-
-.first-card-icon{
-    font-size:42px;
-
-    margin-bottom:12px;
-}
-
-.first-card h3{
-    margin:0 0 10px;
-
-    color:#6956d6;
+    color:#725ed6;
 
     font-size:19px;
 }
 
-.first-card p{
-    margin:0;
-
-    line-height:1.65;
-
-    font-size:14px;
+.quick-card span{
+    color:#696171;
+    line-height:1.6;
 }
 
-.first-day-tip{
-    max-width:850px;
 
-    margin:30px auto 0;
+/* SEKCJE */
 
-    padding:24px 30px;
+.content{
+    max-width:1200px;
 
-    border-radius:24px;
+    margin:auto;
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff2b8,
-            #ffe6f3
-        );
+    padding:85px 25px;
+}
+
+.section-title{
+    margin:0 0 15px;
 
     text-align:center;
+
+    color:#e84d9b;
+
+    font-size:42px;
+}
+
+.section-subtitle{
+    max-width:820px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    color:#706979;
+
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* INTRO */
+
+.intro-box{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:45px;
+
+    background:white;
+
+    border-radius:35px;
+
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+
+    text-align:center;
+
+    font-size:18px;
+    line-height:1.85;
+}
+
+
+/* GRAFIKA */
+
+.main-image{
+    max-width:850px;
+
+    margin:0 auto;
+
+    text-align:center;
+}
+
+.main-image img{
+    width:100%;
+    max-height:650px;
+
+    object-fit:contain;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 40px rgba(70,60,90,.15);
+}
+
+
+/* KARTY */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+}
+
+.card{
+    padding:32px 25px;
+
+    background:white;
+
+    border-radius:28px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+
+    text-align:center;
+
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card-icon{
+    font-size:46px;
+}
+
+.card h3{
+    margin:15px 0 10px;
+
+    color:#725ed6;
+
+    font-size:22px;
+}
+
+.card p{
+    color:#615a69;
 
     line-height:1.7;
 }
 
-.first-day-tip strong{
+
+/* DLA KOGO */
+
+.forwho{
+    background:#fff1b5;
+}
+
+.forwho-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:85px 25px;
+}
+
+.check-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.check{
+    padding:25px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    font-size:17px;
+    line-height:1.7;
+}
+
+.check strong{
     color:#ef1591;
 }
 
 
-/* ==================================================
-   PAKIET ROZSZERZONY
-================================================== */
+/* PAKIET */
 
 .extended{
-    background:
-        linear-gradient(
-            135deg,
-            #fff0ae,
-            #ffe5ef
-        );
-}
+    max-width:1000px;
 
-.extended-box{
-    padding:55px;
+    margin:auto;
 
-    background:white;
+    padding:50px;
 
-    border-radius:38px;
+    background:linear-gradient(135deg,#e7f9ff,#ffe2f2);
 
-    box-shadow:
-        0 15px 45px
-        rgba(80,60,100,.12);
+    border-radius:35px;
 
-    text-align:center;
+    box-shadow:0 10px 35px rgba(80,60,100,.09);
 }
 
 .extended-badge{
     display:inline-block;
 
-    padding:10px 20px;
+    margin-bottom:15px;
+
+    padding:8px 16px;
+
+    background:#6956c8;
+    color:white;
 
     border-radius:25px;
 
-    background:#6956d6;
-    color:white;
-
-    font-weight:bold;
     font-size:14px;
+    font-weight:bold;
 }
 
-.extended-box h2{
-    margin:25px 0 10px;
+.extended h2{
+    margin:0 0 18px;
 
     color:#ef1591;
-
-    font-size:42px;
-}
-
-.extended-hours{
-    margin:15px 0;
-
-    color:#6956d6;
-
-    font-size:30px;
-    font-weight:bold;
-}
-
-.extended-description{
-    max-width:800px;
-
-    margin:15px auto;
-
-    line-height:1.7;
-}
-
-.extended-price{
-    margin:20px 0 5px;
-
-    color:#ef1591;
-
-    font-size:45px;
-    font-weight:bold;
-}
-
-.extended-features{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:18px;
-
-    margin:35px 0;
-}
-
-.extended-feature{
-    padding:25px 15px;
-
-    background:#faf5ff;
-
-    border-radius:24px;
-
-    color:#6956d6;
-
-    font-weight:bold;
-
-    transition:.3s;
-}
-
-.extended-feature:hover{
-    transform:
-        translateY(-7px);
-}
-
-.extended-feature span{
-    display:block;
-
-    margin-bottom:10px;
 
     font-size:35px;
 }
 
+.extended-hours{
+    margin:18px 0;
 
-/* ==================================================
-   GRAFIKA PAKIETU
-================================================== */
+    color:#6956c8;
 
-.extended-poster{
-    max-width:690px;
-
-    margin:40px auto;
+    font-size:30px;
+    font-weight:bold;
 }
 
-.extended-poster img{
-    display:block;
+.extended p{
+    font-size:18px;
+    line-height:1.8;
+}
 
-    width:100%;
+
+/* LOKALIZACJE */
+
+.locations{
+    background:#f7f0ff;
+}
+
+.location-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:85px 25px;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+}
+
+.location-card{
+    padding:32px 25px;
+
+    background:white;
 
     border-radius:30px;
 
-    box-shadow:
-        0 18px 45px rgba(46,24,100,.25),
-        0 0 30px rgba(239,21,145,.15);
-
-    transition:.35s;
-}
-
-.extended-poster img:hover{
-    transform:
-        translateY(-6px)
-        scale(1.01);
-}
-
-
-/* ==================================================
-   KONTAKT
-================================================== */
-
-.contact-section{
-    background:#f7f2ff;
-}
-
-.contact-box{
-    padding:55px 30px;
-
-    border-radius:38px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffe5f3,
-            #e4f5ff
-        );
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
 
     text-align:center;
-
-    box-shadow:
-        0 10px 35px
-        rgba(80,60,100,.08);
 }
 
-.contact-box h2{
-    margin:0 0 15px;
-
-    color:#ef1591;
-
-    font-size:39px;
+.location-icon{
+    font-size:45px;
 }
 
-.contact-box p{
-    max-width:700px;
+.location-card h3{
+    color:#725ed6;
 
-    margin:0 auto 25px;
+    font-size:24px;
+}
 
+.location-card p{
+    line-height:1.7;
+}
+
+
+/* SEO */
+
+.seo-links{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:35px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.08);
+
+    text-align:center;
+}
+
+.seo-links p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.seo-links a{
+    color:#6956c8;
+    font-weight:bold;
+}
+
+
+/* KONTAKT */
+
+.contact{
+    padding:55px 25px;
+
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+
+    border-radius:35px;
+
+    text-align:center;
+}
+
+.contact p{
+    font-size:18px;
     line-height:1.7;
 }
 
 .phone{
-    margin:20px 0 8px;
+    margin:24px 0;
 
     color:#ef1591;
 
@@ -925,319 +676,25 @@ nav{
     font-weight:bold;
 }
 
-.email{
-    margin-bottom:28px;
 
-    font-size:19px;
-    font-weight:bold;
-}
-
-.email a{
-    color:#6956d6;
-}
-
-.contact-buttons{
-    display:flex;
-    justify-content:center;
-
-    gap:14px;
-
-    flex-wrap:wrap;
-}
-
-
-/* ==================================================
-   PŁYWAJĄCY WHATSAPP
-================================================== */
-
-.floating-whatsapp{
-    position:fixed;
-
-    right:24px;
-    bottom:24px;
-
-    z-index:3000;
-
-    width:68px;
-    height:68px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#25D366;
-    color:white;
-
-    font-size:34px;
-
-    box-shadow:
-        0 10px 30px rgba(37,211,102,.40),
-        0 0 0 0 rgba(37,211,102,.35);
-
-    animation:
-        whatsappPulse
-        2.5s
-        infinite;
-
-    transition:.25s;
-}
-
-.floating-whatsapp:hover{
-    transform:scale(1.12);
-}
-
-.whatsapp-label{
-    position:absolute;
-
-    right:78px;
-
-    width:max-content;
-
-    padding:10px 14px;
-
-    border-radius:15px;
-
-    background:white;
-
-    color:#4e4659;
-
-    font-size:13px;
-    font-weight:bold;
-
-    box-shadow:
-        0 5px 20px
-        rgba(0,0,0,.13);
-
-    opacity:0;
-
-    transform:
-        translateX(8px);
-
-    pointer-events:none;
-
-    transition:.25s;
-}
-
-.floating-whatsapp:hover
-.whatsapp-label{
-    opacity:1;
-
-    transform:
-        translateX(0);
-}
-
-
-/* ==================================================
-   ANIMACJE PO PRZEWINIĘCIU
-================================================== */
-
-.reveal{
-    opacity:0;
-
-    transform:
-        translateY(35px);
-
-    transition:
-        opacity .75s ease,
-        transform .75s ease;
-}
-
-.reveal.visible{
-    opacity:1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* ==================================================
-   KEYFRAMES
-================================================== */
-
-@keyframes heroAppear{
-
-    from{
-        opacity:0;
-
-        transform:
-            translateY(25px)
-            scale(.97);
-    }
-
-    to{
-        opacity:1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
-
-
-@keyframes twinkle{
-
-    0%,
-    100%{
-        opacity:.45;
-
-        transform:
-            scale(.8)
-            rotate(0deg);
-    }
-
-    50%{
-        opacity:1;
-
-        transform:
-            scale(1.25)
-            rotate(15deg);
-    }
-}
-
-
-@keyframes floatIcon{
-
-    0%,
-    100%{
-        transform:
-            translateY(0);
-    }
-
-    50%{
-        transform:
-            translateY(-8px);
-    }
-}
-
-
-@keyframes whatsappPulse{
-
-    0%{
-        box-shadow:
-            0 10px 30px rgba(37,211,102,.40),
-            0 0 0 0 rgba(37,211,102,.35);
-    }
-
-    70%{
-        box-shadow:
-            0 10px 30px rgba(37,211,102,.40),
-            0 0 0 14px rgba(37,211,102,0);
-    }
-
-    100%{
-        box-shadow:
-            0 10px 30px rgba(37,211,102,.40),
-            0 0 0 0 rgba(37,211,102,0);
-    }
-}
-
-
-/* ==================================================
-   STOPKA
-================================================== */
+/* FOOTER */
 
 footer{
-    padding:40px 20px;
+    padding:35px 20px;
 
-    background:#382083;
-
+    background:#5b4bae;
     color:white;
 
     text-align:center;
-
-    line-height:1.8;
-}
-
-footer strong{
-    font-size:20px;
-}
-
-footer a{
-    color:white;
-
-    font-weight:bold;
 }
 
 
-/* ==================================================
-   TABLET
-================================================== */
+/* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
-    .menu-links{
+    .links{
         display:none;
-    }
-
-    .hero{
-        min-height:430px;
-    }
-
-    .hero h1{
-        font-size:44px;
-    }
-
-    .standard-grid{
-        grid-template-columns:1fr;
-    }
-
-    .standard-card{
-        max-width:600px;
-
-        margin:auto;
-    }
-
-    .standard-poster img{
-        max-width:600px;
-    }
-
-    .benefit-grid{
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .first-day-grid{
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .extended-features{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* ==================================================
-   TELEFON
-================================================== */
-
-@media(max-width:600px){
-
-    .menu{
-        padding:
-            8px 14px;
-    }
-
-    .logo-text strong{
-        font-size:18px;
-    }
-
-    .content{
-        padding:
-            60px 16px;
-    }
-
-    .hero{
-        padding:
-            50px 15px;
-    }
-
-    .hero-content{
-        padding:
-            30px 20px;
     }
 
     .hero h1{
@@ -1248,99 +705,34 @@ footer a{
         font-size:22px;
     }
 
-    .hero p{
-        font-size:16px;
+    .hero-logo{
+        width:145px;
+        height:145px;
+    }
+
+    .quick-info{
+        margin-top:-35px;
+    }
+
+    .quick-grid,
+    .cards,
+    .location-grid,
+    .check-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-card + .quick-card{
+        border-left:0;
+        border-top:1px solid #eee7f1;
     }
 
     .section-title{
-        font-size:32px;
+        font-size:34px;
     }
 
-    .standard-card{
-        padding:
-            28px 22px;
-    }
-
-    .standard-card h3{
-        font-size:29px;
-    }
-
-    .price{
-        font-size:38px;
-    }
-
-    .benefit-grid{
-        grid-template-columns:1fr;
-    }
-
-    .first-day-box{
-        padding:
-            38px 18px;
-    }
-
-    .first-day-title h2{
-        font-size:31px;
-    }
-
-    .first-day-grid{
-        grid-template-columns:1fr;
-    }
-
-    .extended-box{
-        padding:
-            35px 18px;
-    }
-
-    .extended-box h2{
-        font-size:33px;
-    }
-
-    .extended-hours{
-        font-size:25px;
-    }
-
-    .extended-price{
-        font-size:40px;
-    }
-
-    .standard-poster img,
-    .extended-poster img{
-        border-radius:20px;
-    }
-
-    .floating-whatsapp{
-        right:16px;
-        bottom:16px;
-
-        width:60px;
-        height:60px;
-
-        font-size:30px;
-    }
-
-    .whatsapp-label{
-        display:none;
-    }
-
-}
-
-
-/* ==================================================
-   DOSTĘPNOŚĆ
-================================================== */
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-        animation-duration:.01ms !important;
-        animation-iteration-count:1 !important;
-        transition-duration:.01ms !important;
-    }
-
-    html{
-        scroll-behavior:auto;
+    .intro-box,
+    .extended{
+        padding:35px 25px;
     }
 
 }
@@ -1352,26 +744,18 @@ footer a{
 
 <body>
 
-<div id="top"></div>
 
-
-<!-- ==================================================
-     MENU
-================================================== -->
+<!-- MENU -->
 
 <nav>
 
 <div class="menu">
 
-    <a
-        href="#top"
-        class="logo"
-        aria-label="Wróć na górę strony"
-    >
+    <div class="logo">
 
         <img
             src="Logo-zuzu.jpg"
-            alt="Logo Akademii ZUZU"
+            alt="Akademia ZUZU – opieka nad dziećmi Szczecin"
         >
 
         <div class="logo-text">
@@ -1381,37 +765,41 @@ footer a{
             </strong>
 
             <span>
-                Opieka stała
+                Opieka stała · Szczecin
             </span>
 
         </div>
 
-    </a>
+    </div>
 
 
-    <div class="menu-links">
+    <div class="links">
 
-        <a href="#standard">
-            Opieka standardowa
+        <a href="#opieka">
+            Opieka stała
         </a>
 
-        <a href="#pierwszy-dzien">
-            Pierwszy dzień
+        <a href="#codziennosc">
+            Codzienność
         </a>
 
         <a href="#rozszerzony">
-            Pakiet Rozszerzony
+            Pakiet rozszerzony
         </a>
 
-        <a href="index.html#lokalizacje">
+        <a href="#lokalizacje">
             Lokalizacje
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
         </a>
 
         <a
             href="index.html"
-            class="home-button"
+            class="home"
         >
-            ← Strona główna
+            Strona główna
         </a>
 
     </div>
@@ -1421,756 +809,566 @@ footer a{
 </nav>
 
 
-<!-- ==================================================
-     HERO
-================================================== -->
+<!-- HERO -->
 
 <header class="hero">
 
-    <span class="magic-star star-one">
-        ★
-    </span>
+<div class="hero-content">
 
-    <span class="magic-star star-two">
-        ✦
-    </span>
+    <img
+        src="Logo-zuzu.jpg"
+        class="hero-logo"
+        alt="Logo Akademii ZUZU Szczecin"
+    >
 
-    <span class="magic-star star-three">
-        ★
-    </span>
+    <h1>
+        Opieka stała nad dzieckiem w Szczecinie
+    </h1>
 
-    <span class="magic-star star-four">
-        ✦
-    </span>
+    <h2>
+        Codzienna przestrzeń na zabawę, rozwój i małe-wielkie przygody ☁️
+    </h2>
 
+    <p>
+        Akademia ZUZU oferuje stałą opiekę nad najmłodszymi
+        w trzech lokalizacjach w Szczecinie.
+        Każdy dzień to bezpieczna przestrzeń,
+        zabawa, ruch, sensoryka,
+        kreatywność i dziecięce odkrywanie świata.
+    </p>
 
-    <div class="hero-content">
+    <div class="buttons">
 
-        <h1>
-            Opieka stała
-        </h1>
+        <a
+            href="#lokalizacje"
+            class="button button-white"
+        >
+            Zobacz placówki
+        </a>
 
-        <h2>
-            ZUZU każdego dnia ⭐
-        </h2>
-
-        <p>
-            Codzienna opieka,
-            bliskość,
-            bezpieczeństwo,
-            zabawa i rozwój
-            w magicznym świecie Akademii ZUZU.
-        </p>
+        <a
+            href="#kontakt"
+            class="button button-pink"
+        >
+            Zapytaj o miejsce ♡
+        </a>
 
     </div>
+
+</div>
 
 </header>
 
 
-<!-- ==================================================
-     STANDARDOWA OPIEKA
-================================================== -->
+<!-- SZYBKIE INFORMACJE -->
 
-<section
-    id="standard"
-    class="standard-section"
->
+<div class="quick-info">
 
-<div class="content reveal">
+<div class="quick-grid">
 
-    <h2 class="section-title">
-        Standardowa opieka 🧸
-    </h2>
+    <div class="quick-card">
 
-    <p class="section-subtitle">
-        Codzienna opieka w Akademii ZUZU
-        w godzinach standardowych.
-    </p>
-
-
-    <div class="standard-grid">
-
-
-        <!-- LEWA KARTA -->
-
-        <div class="standard-card">
-
-            <span class="badge">
-                OPIEKA STAŁA
-            </span>
-
-            <h3>
-                ZUZU na co dzień
-            </h3>
-
-            <div class="price">
-                300 zł
-            </div>
-
-            <p>
-                miesięcznie w godzinach
-                <strong>6:30–17:00</strong>
-                z programem
-                <strong>„Aktywnie w żłobku”</strong>.
-            </p>
-
-
-            <div class="standard-list">
-
-                ⭐ Codzienna opieka
-
-                <br>
-
-                🕡 Standardowe godziny
-                6:30–17:00
-
-                <br>
-
-                🍽️ Wyżywienie –
-                18,50 zł / dzień
-
-                <br>
-
-                📝 Wpisowe –
-                400 zł
-
-                <br>
-
-                🌈 Zajęcia
-                i codzienna zabawa
-
-            </div>
-
-
-            <a
-                href="https://wa.me/48798150723?text=Dzień%20dobry%2C%20chcę%20zapytać%20o%20miejsce%20w%20Akademii%20ZUZU%20w%20ramach%20opieki%20stałej."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button button-pink"
-            >
-                💬 Zapytaj o miejsce
-            </a>
-
+        <div class="quick-icon">
+            📍
         </div>
 
+        <strong>
+            3 lokalizacje
+        </strong>
 
-        <!-- PRAWA GRAFIKA -->
-
-        <div class="standard-poster">
-
-            <img
-                src="opieka-stala.jpg"
-                alt="Oferta opieki stałej Akademia ZUZU"
-            >
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-     ZALETY
-================================================== -->
-
-<section class="benefits">
-
-<div class="content reveal">
-
-    <div class="benefit-grid">
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                🥣
-            </div>
-
-            <strong>
-                Własna kuchnia
-            </strong>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                🎵
-            </div>
-
-            <strong>
-                Zajęcia muzyczne
-            </strong>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                💬
-            </div>
-
-            <strong>
-                Zajęcia językowe
-            </strong>
-
-        </div>
-
-
-        <div class="benefit">
-
-            <div class="benefit-icon">
-                🐾
-            </div>
-
-            <strong>
-                Zooterapia
-            </strong>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-     PIERWSZY DZIEŃ
-================================================== -->
-
-<section
-    id="pierwszy-dzien"
-    class="first-day"
->
-
-<div class="content reveal">
-
-<div class="first-day-box">
-
-
-    <div class="first-day-title">
-
-        <span class="backpack">
-            🎒
+        <span>
+            Witkiewicza<br>
+            Pocztowa<br>
+            Świętego Wojciecha
         </span>
 
-        <h2>
-            Pierwszy dzień w ZUZU
-        </h2>
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🕡
+        </div>
+
+        <strong>
+            6:30–17:00
+        </strong>
+
+        <span>
+            standardowe godziny opieki
+        </span>
+
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            ⭐
+        </div>
+
+        <strong>
+            Pakiet Rozszerzony
+        </strong>
+
+        <span>
+            możliwość opieki
+            od 5:30 do 19:30
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- OPIEKA -->
+
+<section
+    id="opieka"
+    class="content"
+>
+
+<h2 class="section-title">
+    Stała opieka nad dzieckiem w Akademii ZUZU ♡
+</h2>
+
+<p class="section-subtitle">
+    Dla rodzin, które potrzebują regularnej
+    i przewidywalnej opieki nad dzieckiem w Szczecinie.
+</p>
+
+
+<div class="intro-box">
+
+    <strong>Opieka stała w Akademii ZUZU</strong>
+    to codzienna przestrzeń dla najmłodszych,
+    w której ważne są bezpieczeństwo,
+    dobra atmosfera
+    oraz możliwość poznawania świata
+    poprzez zabawę i doświadczenie.
+
+    <br><br>
+
+    Rodzice szukający
+    <strong>żłobka w Szczecinie</strong>
+    często potrzebują miejsca,
+    które stanie się dla dziecka
+    częścią jego codziennego rytmu.
+
+    <br><br>
+
+    W ZUZU jest czas na zabawę,
+    ruch,
+    sensorykę,
+    zajęcia kreatywne,
+    wspólne posiłki,
+    odpoczynek
+    oraz pierwsze dziecięce relacje.
+
+</div>
+
+</section>
+
+
+<!-- GRAFIKA -->
+
+<section class="content">
+
+<div class="main-image">
+
+    <img
+        src="kafelek-opieka stała.png"
+        alt="Opieka stała nad dzieckiem Szczecin – Akademia ZUZU"
+        loading="lazy"
+    >
+
+</div>
+
+</section>
+
+
+<!-- CODZIENNOŚĆ -->
+
+<section
+    id="codziennosc"
+    class="content"
+>
+
+<h2 class="section-title">
+    Co daje codzienna opieka w ZUZU?
+</h2>
+
+<p class="section-subtitle">
+    Stały rytm dnia,
+    znajome miejsce,
+    wspólne aktywności
+    i przestrzeń dostosowana do najmłodszych.
+</p>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <div class="card-icon">
+            🧸
+        </div>
+
+        <h3>
+            Poczucie bezpieczeństwa
+        </h3>
 
         <p>
-            Pierwszy dzień to wielka przygoda.
-            Kilka drobiazgów pomoże nam zadbać
-            o komfort malucha
-            i sprawi,
-            że wszystko będzie pod ręką. 💗
+            Powtarzalny rytm dnia
+            i znajoma przestrzeń
+            pomagają dziecku spokojnie
+            odnaleźć się w codzienności.
         </p>
 
     </div>
 
 
-    <div class="first-day-grid">
+    <div class="card">
 
-
-        <div class="first-card">
-
-            <div class="first-card-icon">
-                👕
-            </div>
-
-            <h3>
-                Ubranka na zmianę
-            </h3>
-
-            <p>
-                Przygotuj wygodny komplet ubrań
-                na zmianę odpowiedni do pogody
-                i codziennych ZUZU-owych przygód.
-            </p>
-
+        <div class="card-icon">
+            🎨
         </div>
 
+        <h3>
+            Rozwój przez zabawę
+        </h3>
 
-        <div class="first-card">
-
-            <div class="first-card-icon">
-                🏷️
-            </div>
-
-            <h3>
-                Podpisz rzeczy
-            </h3>
-
-            <p>
-                Warto podpisać ubrania,
-                buciki oraz inne rzeczy dziecka
-                imieniem lub inicjałami.
-            </p>
-
-        </div>
-
-
-        <div class="first-card">
-
-            <div class="first-card-icon">
-                🥿
-            </div>
-
-            <h3>
-                Wygodne buciki
-            </h3>
-
-            <p>
-                Zabierz wygodne obuwie
-                na zmianę,
-                w którym maluch
-                może swobodnie się bawić.
-            </p>
-
-        </div>
-
-
-        <div class="first-card">
-
-            <div class="first-card-icon">
-                🧸
-            </div>
-
-            <h3>
-                Coś znajomego
-            </h3>
-
-            <p>
-                Jeśli dziecko ma ulubioną
-                przytulankę lub kocyk,
-                może zabrać je ze sobą.
-            </p>
-
-        </div>
-
-
-        <div class="first-card">
-
-            <div class="first-card-icon">
-                😴
-            </div>
-
-            <h3>
-                Rzeczy do odpoczynku
-            </h3>
-
-            <p>
-                Jeśli maluch korzysta
-                ze smoczka
-                lub innych rzeczy potrzebnych
-                podczas odpoczynku,
-                przygotuj je na pierwszy dzień.
-            </p>
-
-        </div>
-
-
-        <div class="first-card">
-
-            <div class="first-card-icon">
-                💗
-            </div>
-
-            <h3>
-                Informacje dla Cioci ZUZU
-            </h3>
-
-            <p>
-                Powiedz nam o ważnych
-                przyzwyczajeniach dziecka
-                i wszystkim,
-                co pomoże zadbać
-                o jego komfort.
-            </p>
-
-        </div>
-
+        <p>
+            Sensoryka,
+            ruch,
+            muzyka,
+            twórcze aktywności
+            i codzienne odkrywanie świata.
+        </p>
 
     </div>
 
 
-    <div class="first-day-tip">
+    <div class="card">
 
-        ✨
-        <strong>Mała podpowiedź:</strong>
+        <div class="card-icon">
+            🤝
+        </div>
 
-        nie trzeba pakować połowy domu 😂
+        <h3>
+            Pierwsze relacje
+        </h3>
 
-        Najważniejsze są wygodne rzeczy,
-        ubrania na zmianę
-        oraz informacje,
-        które pomogą Ciociom ZUZU
-        poznać małego człowieka.
+        <p>
+            Wspólne zabawy,
+            dziecięce rozmowy
+            i stopniowe poznawanie
+            życia w małej grupie.
+        </p>
 
     </div>
-
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- ==================================================
-     PAKIET ROZSZERZONY
-================================================== -->
+<!-- DLA KOGO -->
+
+<div class="forwho">
+
+<div class="forwho-inner">
+
+<h2 class="section-title">
+    Dla kogo jest opieka stała?
+</h2>
+
+<p class="section-subtitle">
+    To rozwiązanie dla rodziców,
+    którzy potrzebują regularnej opieki
+    w ciągu tygodnia.
+</p>
+
+
+<div class="check-grid">
+
+    <div class="check">
+        💗 <strong>Codzienna opieka</strong><br>
+        dla rodzin potrzebujących
+        stałego miejsca dla dziecka.
+    </div>
+
+    <div class="check">
+        🕡 <strong>Regularne godziny</strong><br>
+        standardowo od 6:30 do 17:00.
+    </div>
+
+    <div class="check">
+        🌈 <strong>Rozwój i aktywności</strong><br>
+        ruch, sensoryka,
+        kreatywność i zabawa.
+    </div>
+
+    <div class="check">
+        📍 <strong>Trzy lokalizacje</strong><br>
+        możliwość wyboru placówki
+        Akademii ZUZU w Szczecinie.
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAKIET -->
 
 <section
     id="rozszerzony"
-    class="extended"
+    class="content"
 >
 
-<div class="content reveal">
-
-<div class="extended-box">
-
+<div class="extended">
 
     <span class="extended-badge">
         ⭐ PAKIET ROZSZERZONY ⭐
     </span>
 
-
     <h2>
-        Potrzebujesz większej elastyczności?
+        Potrzebujesz wcześniejszych lub późniejszych godzin?
     </h2>
 
-
     <div class="extended-hours">
-        🌙 5:30 – 19:30 ☀️
+        5:30 – 19:30
     </div>
-
-
-    <p class="extended-description">
-
-        Wcześniejsze rozpoczęcie dnia?
-        Późniejszy odbiór?
-
-        <br><br>
-
-        Pakiet Rozszerzony został stworzony
-        dla rodziców,
-        których dzień nie zawsze kończy się
-        o 17:00.
-
-    </p>
-
-
-    <div class="extended-price">
-        499 zł
-    </div>
-
 
     <p>
-        miesięcznie z programem
-        <strong>
-            „Aktywnie w żłobku”
-        </strong>.
+        Standardowe godziny opieki
+        w Akademii ZUZU
+        to <strong>6:30–17:00</strong>.
     </p>
 
-
-    <div class="extended-features">
-
-
-        <div class="extended-feature">
-
-            <span>
-                🌙
-            </span>
-
-            Wcześniejsza opieka
-
-        </div>
-
-
-        <div class="extended-feature">
-
-            <span>
-                ☀️
-            </span>
-
-            Późniejsza opieka
-
-        </div>
-
-
-        <div class="extended-feature">
-
-            <span>
-                🗓️
-            </span>
-
-            Większa elastyczność
-
-        </div>
-
-
-    </div>
-
-
-    <!-- GRAFIKA -->
-
-    <div class="extended-poster">
-
-        <img
-            src="pakiet-rozszerzony.png"
-            alt="Pakiet Rozszerzony Akademia ZUZU"
-        >
-
-    </div>
-
+    <p>
+        Pakiet Rozszerzony daje możliwość
+        wcześniejszego rozpoczęcia
+        lub późniejszego zakończenia
+        pobytu dziecka.
+    </p>
 
     <a
-        href="https://wa.me/48798150723?text=Dzień%20dobry%2C%20chcę%20zapytać%20o%20Pakiet%20Rozszerzony%20Akademii%20ZUZU."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button button-pink"
+        href="#kontakt"
+        class="button button-purple"
     >
-        💬 Zapytaj o Pakiet Rozszerzony
+        Zapytaj o Pakiet Rozszerzony
     </a>
-
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- ==================================================
-     KONTAKT
-================================================== -->
+<!-- LOKALIZACJE -->
 
-<section class="contact-section">
+<div
+    id="lokalizacje"
+    class="locations"
+>
 
-<div class="content reveal">
+<div class="location-inner">
 
-<div class="contact-box">
+<h2 class="section-title">
+    Opieka stała w trzech lokalizacjach w Szczecinie 📍
+</h2>
+
+<p class="section-subtitle">
+    Wybierz Akademię ZUZU,
+    która najbardziej pasuje
+    do Waszej codzienności.
+</p>
 
 
-    <h2>
-        Zapytaj nas o miejsce ♡
+<div class="location-grid">
+
+    <div class="location-card">
+
+        <div class="location-icon">
+            🌈
+        </div>
+
+        <h3>
+            ZUZU Witkiewicza
+        </h3>
+
+        <p>
+            Witkiewicza 58/U18<br>
+            71-125 Szczecin
+        </p>
+
+        <a
+            href="witkiewicza.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
+    </div>
+
+
+    <div class="location-card">
+
+        <div class="location-icon">
+            🌸
+        </div>
+
+        <h3>
+            ZUZU Pocztowa
+        </h3>
+
+        <p>
+            Pocztowa 12/U1<br>
+            70-360 Szczecin
+        </p>
+
+        <a
+            href="pocztowa.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
+    </div>
+
+
+    <div class="location-card">
+
+        <div class="location-icon">
+            🪄
+        </div>
+
+        <h3>
+            ZUZU Wojciecha
+        </h3>
+
+        <p>
+            Świętego Wojciecha 16/1<br>
+            70-435 Szczecin
+        </p>
+
+        <a
+            href="wojciecha.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- LINKOWANIE -->
+
+<section class="content">
+
+<div class="seo-links">
+
+    <h2 class="section-title">
+        Potrzebujesz innej formy opieki?
     </h2>
 
-
     <p>
-        Chcesz zapisać dziecko
-        do Akademii ZUZU?
-
-        Napisz lub zadzwoń.
-
-        Pomożemy dobrać lokalizację
-        i odpowiedni wariant opieki.
+        Akademia ZUZU oferuje również
+        <a href="opieka-na-godziny.html">
+            opiekę na godziny w Szczecinie
+        </a>,
+        <a href="opieka-weekendowa.html">
+            opiekę weekendową nad dziećmi
+        </a>
+        oraz
+        <a href="zajecia-dodatkowe.html">
+            zajęcia dodatkowe dla najmłodszych
+        </a>.
     </p>
 
+    <p>
+        Wróć również na
+        <a href="index.html">
+            stronę główną Akademii ZUZU – żłobek Szczecin
+        </a>.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section
+    id="kontakt"
+    class="content"
+>
+
+<div class="contact">
+
+    <h2 class="section-title">
+        Zapytaj o miejsce w Akademii ZUZU ♡
+    </h2>
+
+    <p>
+        Interesuje Cię stała opieka nad dzieckiem
+        w Szczecinie?
+        Skontaktuj się z nami
+        i zapytaj o dostępność miejsca.
+    </p>
 
     <div class="phone">
         📞 798 150 723
     </div>
 
-
-    <div class="email">
-
-        ✉️
-
-        <a href="mailto:zuzu.szczecin@gmail.com">
-            zuzu.szczecin@gmail.com
-        </a>
-
-    </div>
-
-
-    <div class="contact-buttons">
-
+    <div class="buttons">
 
         <a
             href="tel:+48798150723"
             class="button button-pink"
         >
-            ☎️ Zadzwoń
+            Zadzwoń
         </a>
-
 
         <a
-            href="https://wa.me/48798150723"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:zuzu.szczecin@gmail.com"
             class="button button-purple"
         >
-            💬 WhatsApp
+            Napisz e-mail
         </a>
-
 
         <a
             href="index.html#zapisy"
-            class="button button-pink"
+            class="button button-white"
         >
-            💗 Formularz zapisów
+            Zapisy
         </a>
 
-
     </div>
-
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- ==================================================
-     STOPKA
-================================================== -->
-
 <footer>
 
-    <strong>
-        ⭐ Akademia ZUZU
-    </strong>
-
-    <br>
-
-    Małe dzieci.
-    Wielkie przygody.
-
-    <br><br>
-
-    📞 798 150 723
-
-    <br>
-
-    ✉️
-    zuzu.szczecin@gmail.com
-
-    <br><br>
-
-    <a href="index.html">
-        ← Wróć na stronę główną
-    </a>
+    ☁️ Akademia ZUZU · opieka nad dziećmi · Szczecin · © 2026
 
 </footer>
-
-
-<!-- ==================================================
-     PŁYWAJĄCY WHATSAPP
-================================================== -->
-
-<a
-    href="https://wa.me/48798150723?text=Dzień%20dobry%2C%20mam%20pytanie%20dotyczące%20Akademii%20ZUZU."
-    target="_blank"
-    rel="noopener noreferrer"
-    class="floating-whatsapp"
-    aria-label="Napisz do Akademii ZUZU na WhatsApp"
->
-
-    💬
-
-    <span class="whatsapp-label">
-        Napisz do Cioci ZUZU 💗
-    </span>
-
-</a>
-
-
-<!-- ==================================================
-     ANIMACJE
-================================================== -->
-
-<script>
-
-const revealElements =
-    document.querySelectorAll(
-        ".reveal"
-    );
-
-
-if(
-    "IntersectionObserver"
-    in window
-){
-
-    const revealObserver =
-        new IntersectionObserver(
-
-            function(entries){
-
-                entries.forEach(
-                    function(entry){
-
-                        if(
-                            entry.isIntersecting
-                        ){
-
-                            entry
-                            .target
-                            .classList
-                            .add(
-                                "visible"
-                            );
-
-                            revealObserver
-                            .unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    }
-                );
-
-            },
-
-            {
-                threshold:0.10
-            }
-
-        );
-
-
-    revealElements.forEach(
-        function(element){
-
-            revealObserver
-            .observe(
-                element
-            );
-
-        }
-    );
-
-}
-else{
-
-    revealElements.forEach(
-        function(element){
-
-            element
-            .classList
-            .add(
-                "visible"
-            );
-
-        }
-    );
-
-}
-
-</script>
 
 
 </body>
