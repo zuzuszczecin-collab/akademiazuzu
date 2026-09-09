@@ -6,12 +6,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zajęcia dodatkowe | Akademia ZUZU Szczecin</title>
+<title>Zajęcia dla dzieci Szczecin | Akademia ZUZU</title>
 
 <meta
     name="description"
-    content="Zajęcia dodatkowe dla dzieci w Akademii ZUZU w Szczecinie. Sensoplastyka, zajęcia rozwojowe, kreatywne i sensoryczne."
+    content="Zajęcia dodatkowe dla dzieci w Szczecinie – Akademia ZUZU. Sensoryka, kreatywne aktywności, zabawa, ruch i zajęcia wspierające rozwój najmłodszych."
 >
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link
+    rel="canonical"
+    href="https://akademiazuzu.pl/zajecia-dodatkowe.html"
+>
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+
+<meta
+    property="og:title"
+    content="Zajęcia dla dzieci Szczecin | Akademia ZUZU"
+>
+
+<meta
+    property="og:description"
+    content="Zajęcia sensoryczne, kreatywne i rozwojowe dla najmłodszych w Akademii ZUZU w Szczecinie."
+>
+
+<meta
+    property="og:url"
+    content="https://akademiazuzu.pl/zajecia-dodatkowe.html"
+>
+
+<meta
+    property="og:site_name"
+    content="Akademia ZUZU"
+>
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta
+    name="twitter:title"
+    content="Zajęcia dla dzieci Szczecin | Akademia ZUZU"
+>
+
+<meta
+    name="twitter:description"
+    content="Sensoryczne, kreatywne i rozwojowe zajęcia dla najmłodszych w Szczecinie."
+>
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Zajęcia dodatkowe dla dzieci w Szczecinie",
+    "url": "https://akademiazuzu.pl/zajecia-dodatkowe.html",
+    "description": "Zajęcia sensoryczne, kreatywne, ruchowe i rozwojowe dla najmłodszych w Akademii ZUZU w Szczecinie.",
+    "provider": {
+        "@type": "ChildCare",
+        "name": "Akademia ZUZU",
+        "url": "https://akademiazuzu.pl/",
+        "telephone": "+48798150723",
+        "email": "zuzu.szczecin@gmail.com"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Szczecin"
+    }
+}
+</script>
+
 
 <style>
 
@@ -28,28 +93,27 @@ body{
 }
 
 a{
-    text-decoration:none;
+    transition:.2s;
+}
+
+section{
+    scroll-margin-top:95px;
 }
 
 
-/* =========================
-   MENU
-========================= */
+/* MENU */
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-
     background:rgba(255,255,255,.97);
-
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
+    box-shadow:0 4px 20px rgba(0,0,0,.07);
 }
 
 .menu{
     max-width:1200px;
     min-height:82px;
-
     margin:auto;
     padding:8px 25px;
 
@@ -67,11 +131,8 @@ nav{
 .logo img{
     width:64px;
     height:64px;
-
     object-fit:cover;
-
     border-radius:18px;
-
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
@@ -82,7 +143,7 @@ nav{
 
 .logo-text strong{
     color:#ef1591;
-    font-size:23px;
+    font-size:24px;
 }
 
 .logo-text span{
@@ -90,25 +151,34 @@ nav{
     font-size:12px;
 }
 
-.back{
-    padding:12px 22px;
+.links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
 
-    border-radius:30px;
-
-    background:#ef1591;
-    color:white;
-
+.links a{
+    text-decoration:none;
+    color:#5d5667;
     font-weight:bold;
 }
 
+.links a:hover{
+    color:#ef1591;
+}
 
-/* =========================
-   HERO
-========================= */
+.home{
+    padding:12px 20px;
+    border-radius:30px;
+    background:#ef1591;
+    color:white !important;
+}
+
+
+/* HERO */
 
 .hero{
-    min-height:500px;
-
+    min-height:650px;
     padding:70px 25px;
 
     display:flex;
@@ -118,63 +188,63 @@ nav{
     text-align:center;
 
     background:
-        radial-gradient(circle at 10% 20%, #ffe45d 0 24px, transparent 26px),
-        radial-gradient(circle at 90% 15%, #fd88cf 0 60px, transparent 62px),
-        radial-gradient(circle at 15% 85%, #a986ff 0 65px, transparent 67px),
-        radial-gradient(circle at 90% 80%, #55d8e8 0 45px, transparent 47px),
-        linear-gradient(135deg,#24116f,#5523a5,#1c0c61);
+        radial-gradient(circle at 12% 20%, #ffe976 0 28px, transparent 30px),
+        radial-gradient(circle at 90% 16%, #f7a7d8 0 65px, transparent 67px),
+        radial-gradient(circle at 14% 85%, #c8adff 0 65px, transparent 67px),
+        linear-gradient(135deg,#6ac9dd,#42bfd6);
 }
 
-.hero-inner{
-    max-width:850px;
+.hero-content{
+    max-width:900px;
 }
 
-.hero-icon{
-    font-size:65px;
+.hero-logo{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:35px;
+    border:5px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
 }
 
 .hero h1{
-    margin:10px 0;
-
+    margin:25px 0 12px;
     color:white;
-
-    font-size:64px;
-
-    text-shadow:0 5px 15px rgba(0,0,0,.25);
+    font-size:52px;
+    line-height:1.08;
+    text-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .hero h2{
-    color:#ffe75a;
-
-    font-size:28px;
+    margin:15px 0;
+    color:#fff59a;
+    font-size:27px;
 }
 
 .hero p{
-    max-width:700px;
-
-    margin:18px auto 28px;
-
+    max-width:780px;
+    margin:20px auto 30px;
     color:white;
-
     font-size:19px;
-
     line-height:1.7;
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* PRZYCISKI */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+}
 
 .button{
     display:inline-block;
-
-    padding:16px 28px;
-
-    border-radius:35px;
-
+    padding:15px 28px;
+    border-radius:30px;
+    text-decoration:none;
     font-weight:bold;
-
     transition:.2s;
 }
 
@@ -185,446 +255,345 @@ nav{
 .button-pink{
     background:#ef1591;
     color:white;
-
     box-shadow:0 10px 25px rgba(239,21,145,.25);
 }
 
-.button-green{
-    background:#25D366;
-    color:white;
-
-    box-shadow:0 10px 25px rgba(37,211,102,.22);
+.button-white{
+    background:white;
+    color:#6655c7;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .button-purple{
     background:#6956c8;
     color:white;
+    box-shadow:0 10px 25px rgba(105,86,200,.22);
 }
 
 
-/* =========================
-   SEKCJE
-========================= */
+/* QUICK INFO */
+
+.quick-info{
+    max-width:1100px;
+    margin:-55px auto 0;
+    padding:0 25px;
+    position:relative;
+    z-index:5;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    background:white;
+    border-radius:30px;
+    box-shadow:0 15px 45px rgba(70,60,90,.15);
+    overflow:hidden;
+}
+
+.quick-card{
+    padding:30px 20px;
+    text-align:center;
+}
+
+.quick-card + .quick-card{
+    border-left:1px solid #eee7f1;
+}
+
+.quick-icon{
+    font-size:35px;
+}
+
+.quick-card strong{
+    display:block;
+    margin:10px 0 7px;
+    color:#725ed6;
+    font-size:19px;
+}
+
+.quick-card span{
+    color:#696171;
+    line-height:1.6;
+}
+
+
+/* SEKCJE */
 
 .content{
-    max-width:1100px;
-
+    max-width:1200px;
     margin:auto;
-
-    padding:80px 25px;
+    padding:85px 25px;
 }
 
 .section-title{
     margin:0 0 15px;
-
     text-align:center;
-
     color:#e84d9b;
-
     font-size:42px;
 }
 
 .section-subtitle{
-    max-width:750px;
-
-    margin:0 auto 40px;
-
+    max-width:820px;
+    margin:0 auto 45px;
     text-align:center;
-
     color:#706979;
-
     font-size:18px;
-
     line-height:1.7;
 }
 
 
-/* =========================
-   SENSOPLASTYKA
-========================= */
+/* INTRO */
 
-.activity{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:40px;
-
-    align-items:center;
-}
-
-.activity-image{
-    padding:18px;
-
+.intro-box{
+    max-width:1000px;
+    margin:auto;
+    padding:45px;
     background:white;
-
     border-radius:35px;
-
-    box-shadow:0 15px 45px rgba(70,50,100,.15);
-}
-
-.activity-image img{
-    display:block;
-
-    width:100%;
-
-    border-radius:25px;
-}
-
-.activity-info{
-    padding:40px;
-
-    background:#fff;
-
-    border-radius:35px;
-
-    box-shadow:0 12px 35px rgba(70,50,100,.10);
-}
-
-.activity-badge{
-    display:inline-block;
-
-    padding:9px 18px;
-
-    background:#ef1591;
-
-    color:white;
-
-    border-radius:25px;
-
-    font-weight:bold;
-}
-
-.activity-info h2{
-    margin:18px 0 10px;
-
-    color:#725ed6;
-
-    font-size:38px;
-}
-
-.activity-info > p{
-    font-size:17px;
-
-    line-height:1.8;
-}
-
-
-/* =========================
-   DANE
-========================= */
-
-.details{
-    margin:28px 0;
-}
-
-.detail{
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin:13px 0;
-
-    padding:15px 18px;
-
-    background:#f8f3ff;
-
-    border-radius:18px;
-}
-
-.detail-icon{
-    width:42px;
-
-    font-size:29px;
-
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
     text-align:center;
-}
-
-.detail strong{
-    display:block;
-
-    color:#725ed6;
-
-    margin-bottom:3px;
+    font-size:18px;
+    line-height:1.85;
 }
 
 
-/* =========================
-   SENSORYKA
-========================= */
+/* KARTY */
 
-.sensory-section{
-    background:#fff0d8;
-}
-
-.sensory-grid{
+.cards{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
-    gap:22px;
+    gap:24px;
 }
 
-.sensory-card{
-    padding:32px 22px;
-
+.card{
+    padding:32px 25px;
     background:white;
-
-    border-radius:30px;
-
+    border-radius:28px;
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
     text-align:center;
-
-    box-shadow:0 10px 30px rgba(70,60,90,.09);
+    transition:.25s;
 }
 
-.sensory-icon{
-    font-size:45px;
+.card:hover{
+    transform:translateY(-6px);
 }
 
-.sensory-card h3{
+.card-icon{
+    font-size:46px;
+}
+
+.card h3{
+    margin:15px 0 10px;
     color:#725ed6;
-
     font-size:22px;
 }
 
-.sensory-card p{
+.card p{
+    color:#615a69;
     line-height:1.7;
-
-    margin-bottom:0;
 }
 
 
-/* =========================
-   UWAGA
-========================= */
+/* KOLOROWA SEKCJA */
 
-.warning{
-    max-width:850px;
-
-    margin:45px auto 0;
-
-    padding:35px 30px;
-
-    background:#6544a8;
-
-    color:white;
-
-    border-radius:30px;
-
-    text-align:center;
-
-    box-shadow:0 12px 30px rgba(70,50,100,.15);
+.activities{
+    background:#fff1b5;
 }
 
-.warning-icon{
-    font-size:43px;
+.activities-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 25px;
 }
 
-.warning h2{
-    margin:10px 0;
-
-    color:#ffe75a;
-
-    font-size:28px;
+.activity-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
-.warning p{
-    margin:0;
-
-    line-height:1.7;
-
+.activity{
+    padding:28px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
     font-size:17px;
+    line-height:1.7;
+}
+
+.activity strong{
+    color:#ef1591;
 }
 
 
-/* =========================
-   WIĘCEJ ZAJĘĆ
-========================= */
+/* SENSORYKA */
 
-.more{
+.sensory{
+    max-width:1050px;
+    margin:auto;
+    padding:50px;
+
+    background:linear-gradient(135deg,#e4f9ff,#ffe5f3);
+
+    border-radius:35px;
+    box-shadow:0 10px 35px rgba(80,60,100,.09);
+}
+
+.sensory h2{
+    margin:0 0 20px;
+    text-align:center;
+    color:#ef1591;
+    font-size:35px;
+}
+
+.sensory p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.sensory strong{
+    color:#6956c8;
+}
+
+
+/* LOKALIZACJE */
+
+.locations{
+    background:#f7f0ff;
+}
+
+.location-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:85px 25px;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.location-card{
+    padding:32px 25px;
+    background:white;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
     text-align:center;
 }
 
-.more-box{
-    padding:50px 30px;
-
-    background:linear-gradient(135deg,#e7f9ff,#ffe6f4);
-
-    border-radius:38px;
-
-    box-shadow:0 10px 35px rgba(70,60,90,.09);
-}
-
-.more-icons{
+.location-icon{
     font-size:45px;
 }
 
-.more-box h2{
-    margin:15px 0;
-
-    color:#ef1591;
-
-    font-size:36px;
+.location-card h3{
+    color:#725ed6;
+    font-size:24px;
 }
 
-.more-box p{
-    max-width:700px;
-
-    margin:0 auto;
-
-    line-height:1.8;
-
-    font-size:17px;
+.location-card p{
+    line-height:1.7;
 }
 
 
-/* =========================
-   KONTAKT
-========================= */
+/* SEO LINKS */
 
-.cta{
+.seo-links{
     max-width:1000px;
-
     margin:auto;
-
-    padding:60px 30px;
-
-    border-radius:38px;
-
+    padding:35px;
+    background:white;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(70,60,90,.08);
     text-align:center;
-
-    background:linear-gradient(135deg,#e5f9ff,#ffe5f4);
-
-    box-shadow:0 12px 35px rgba(70,50,100,.10);
 }
 
-.cta h2{
-    margin-top:0;
-
-    color:#ef1591;
-
-    font-size:40px;
+.seo-links p{
+    font-size:17px;
+    line-height:1.8;
 }
 
-.cta p{
-    max-width:700px;
+.seo-links a{
+    color:#6956c8;
+    font-weight:bold;
+}
 
-    margin:0 auto 25px;
 
+/* KONTAKT */
+
+.contact{
+    padding:55px 25px;
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+    border-radius:35px;
+    text-align:center;
+}
+
+.contact p{
     font-size:18px;
-
     line-height:1.7;
 }
 
 .phone{
-    margin:20px 0;
-
-    color:#725ed6;
-
-    font-size:32px;
-
+    margin:24px 0;
+    color:#ef1591;
+    font-size:30px;
     font-weight:bold;
 }
 
-.buttons{
-    display:flex;
 
-    justify-content:center;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-}
-
-
-/* =========================
-   STOPKA
-========================= */
+/* STOPKA */
 
 footer{
-    padding:45px 20px;
-
-    background:#5744aa;
-
+    padding:35px 20px;
+    background:#5b4bae;
     color:white;
-
     text-align:center;
-
-    line-height:1.7;
-}
-
-footer strong{
-    font-size:20px;
-}
-
-footer a{
-    color:white;
-
-    font-weight:bold;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:850px){
 
+    .links{
+        display:none;
+    }
+
     .hero h1{
-        font-size:45px;
+        font-size:38px;
     }
 
     .hero h2{
-        font-size:23px;
+        font-size:22px;
     }
 
-    .activity{
+    .hero-logo{
+        width:145px;
+        height:145px;
+    }
+
+    .quick-info{
+        margin-top:-35px;
+    }
+
+    .quick-grid,
+    .cards,
+    .activity-grid,
+    .location-grid{
         grid-template-columns:1fr;
     }
 
-    .sensory-grid{
-        grid-template-columns:1fr;
+    .quick-card + .quick-card{
+        border-left:0;
+        border-top:1px solid #eee7f1;
     }
 
     .section-title{
         font-size:34px;
     }
 
-}
-
-
-@media(max-width:550px){
-
-    .logo-text strong{
-        font-size:18px;
-    }
-
-    .back{
-        padding:10px 15px;
-
-        font-size:13px;
-    }
-
-    .hero{
-        min-height:450px;
-    }
-
-    .hero h1{
-        font-size:37px;
-    }
-
-    .activity-info{
-        padding:30px 22px;
-    }
-
-    .activity-info h2{
-        font-size:32px;
-    }
-
-    .activity-image{
-        padding:10px;
+    .intro-box,
+    .sensory{
+        padding:35px 25px;
     }
 
 }
@@ -637,9 +606,7 @@ footer a{
 <body>
 
 
-<!-- =========================
-     MENU
-========================= -->
+<!-- MENU -->
 
 <nav>
 
@@ -649,7 +616,7 @@ footer a{
 
         <img
             src="Logo-zuzu.jpg"
-            alt="Logo Akademii ZUZU"
+            alt="Akademia ZUZU – zajęcia dla dzieci Szczecin"
         >
 
         <div class="logo-text">
@@ -659,7 +626,7 @@ footer a{
             </strong>
 
             <span>
-                Zajęcia dodatkowe
+                Zajęcia dla dzieci · Szczecin
             </span>
 
         </div>
@@ -667,219 +634,383 @@ footer a{
     </div>
 
 
-    <a
-        href="index.html"
-        class="back"
-    >
-        ← Strona główna
-    </a>
+    <div class="links">
+
+        <a href="#zajecia">
+            Zajęcia
+        </a>
+
+        <a href="#rodzaje">
+            Co robimy?
+        </a>
+
+        <a href="#sensoryka">
+            Sensoryka
+        </a>
+
+        <a href="#lokalizacje">
+            Lokalizacje
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
+
+        <a
+            href="index.html"
+            class="home"
+        >
+            Strona główna
+        </a>
+
+    </div>
 
 </div>
 
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero">
 
-<div class="hero-inner">
+<div class="hero-content">
 
-    <div class="hero-icon">
-        🎨⭐🎵
-    </div>
+    <img
+        src="Logo-zuzu.jpg"
+        class="hero-logo"
+        alt="Logo Akademii ZUZU Szczecin"
+    >
 
     <h1>
-        Zajęcia dodatkowe
+        Zajęcia dla dzieci w Szczecinie
     </h1>
 
     <h2>
-        Małe talenty. Wielkie możliwości. ♡
+        Brudzimy rączki, ruszamy głową i odkrywamy świat 🌈
     </h2>
 
     <p>
-        ZUZU to nie tylko opieka.
-        To również miejsce pełne ruchu,
-        muzyki, kolorów, sensorycznych odkryć
-        i dziecięcej kreatywności.
+        W Akademii ZUZU zabawa
+        jest jednym z najlepszych sposobów poznawania świata.
+        Tworzymy zajęcia sensoryczne,
+        kreatywne,
+        ruchowe i rozwojowe
+        dostosowane do najmłodszych dzieci.
     </p>
 
+    <div class="buttons">
 
-    <a
-        href="#sensoplastyka"
-        class="button button-pink"
-    >
-        Zobacz zajęcia
-    </a>
+        <a
+            href="#rodzaje"
+            class="button button-white"
+        >
+            Zobacz, co robimy
+        </a>
+
+        <a
+            href="#kontakt"
+            class="button button-pink"
+        >
+            Zapytaj o zajęcia ♡
+        </a>
+
+    </div>
 
 </div>
 
 </header>
 
 
-<!-- =========================
-     SENSOPLASTYKA
-========================= -->
+<!-- QUICK -->
+
+<div class="quick-info">
+
+<div class="quick-grid">
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🎨
+        </div>
+
+        <strong>
+            Kreatywność
+        </strong>
+
+        <span>
+            Kolory,
+            faktury,
+            tworzenie
+            i dziecięca wyobraźnia.
+        </span>
+
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🌈
+        </div>
+
+        <strong>
+            Sensoryka
+        </strong>
+
+        <span>
+            Poznawanie świata
+            wszystkimi zmysłami.
+        </span>
+
+    </div>
+
+
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            🤸
+        </div>
+
+        <strong>
+            Ruch
+        </strong>
+
+        <span>
+            Aktywności dopasowane
+            do możliwości najmłodszych.
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- ZAJĘCIA -->
 
 <section
-    id="sensoplastyka"
+    id="zajecia"
     class="content"
 >
 
 <h2 class="section-title">
-    Sensoplastyka 🎨
+    Zajęcia dodatkowe dla najmłodszych w Szczecinie
 </h2>
 
 <p class="section-subtitle">
-    Glutki, ciapki, ugniatanie
-    i totalna sensoryczna rozpierducha! ♡
+    U nas zajęcia nie mają przypominać szkolnej ławki.
+    Dziecko poznaje,
+    doświadcza,
+    dotyka,
+    rusza się
+    i przede wszystkim dobrze się bawi.
 </p>
 
 
-<div class="activity">
+<div class="intro-box">
+
+    <strong>Zajęcia dla dzieci w Akademii ZUZU</strong>
+    tworzymy z myślą o naturalnej dziecięcej ciekawości.
+
+    <br><br>
+
+    Wykorzystujemy zabawę,
+    różne faktury,
+    kolory,
+    dźwięki,
+    ruch
+    oraz proste doświadczenia,
+    które zachęcają najmłodszych
+    do samodzielnego poznawania świata.
+
+    <br><br>
+
+    Zamiast oczekiwać jednego „prawidłowego” efektu,
+    dajemy dzieciom przestrzeń
+    na własne odkrywanie,
+    eksperymentowanie
+    i dziecięcą twórczość.
+
+</div>
+
+</section>
 
 
-    <div class="activity-image">
+<!-- RODZAJE -->
 
-        <img
-            src="sensoplastyka.jpg"
-            alt="Sensoplastyka w Akademii ZUZU"
-        >
+<div
+    id="rodzaje"
+    class="activities"
+>
+
+<div class="activities-inner">
+
+<h2 class="section-title">
+    Co robimy w ZUZU?
+</h2>
+
+<p class="section-subtitle">
+    Różnorodność jest częścią zabawy.
+</p>
+
+
+<div class="activity-grid">
+
+    <div class="activity">
+
+        🎨 <strong>Zajęcia kreatywne</strong><br>
+
+        Malowanie,
+        tworzenie,
+        poznawanie kolorów
+        i swobodne eksperymentowanie
+        z materiałami.
 
     </div>
 
 
-    <div class="activity-info">
+    <div class="activity">
 
-        <span class="activity-badge">
-            🎨 SENSOPLASTYKA W ZUZU
-        </span>
+        🌈 <strong>Zajęcia sensoryczne</strong><br>
 
-        <h2>
-            Brudzimy się szczęściem!
-        </h2>
+        Różne faktury,
+        temperatury,
+        struktury,
+        kolory i zapachy,
+        które angażują dziecięce zmysły.
 
-        <p>
-            Dotykamy, ugniatamy,
-            mieszamy, przesypujemy
-            i poznajemy świat
-            wszystkimi zmysłami.
-        </p>
+    </div>
 
 
-        <div class="details">
+    <div class="activity">
+
+        🤸 <strong>Zabawy ruchowe</strong><br>
+
+        Ruch,
+        proste aktywności
+        i zabawy wspierające
+        naturalną potrzebę aktywności.
+
+    </div>
 
 
-            <div class="detail">
+    <div class="activity">
 
-                <div class="detail-icon">
-                    📅
-                </div>
+        🎵 <strong>Muzyka i rytm</strong><br>
 
-                <div>
+        Dźwięki,
+        piosenki,
+        rytm
+        i wspólna zabawa przy muzyce.
 
-                    <strong>
-                        Kiedy?
-                    </strong>
-
-                    W każdy piątek
-
-                </div>
-
-            </div>
+    </div>
 
 
-            <div class="detail">
+    <div class="activity">
 
-                <div class="detail-icon">
-                    🕤
-                </div>
+        🧸 <strong>Zabawy rozwojowe</strong><br>
 
-                <div>
+        Aktywności dostosowane
+        do wieku
+        i możliwości najmłodszych dzieci.
 
-                    <strong>
-                        Godzina
-                    </strong>
-
-                    9:30
-
-                </div>
-
-            </div>
+    </div>
 
 
-            <div class="detail">
+    <div class="activity">
 
-                <div class="detail-icon">
-                    📍
-                </div>
+        ☁️ <strong>Swobodne odkrywanie</strong><br>
 
-                <div>
+        Dajemy dziecku czas,
+        aby próbowało,
+        sprawdzało
+        i poznawało świat
+        we własnym tempie.
 
-                    <strong>
-                        Gdzie?
-                    </strong>
+    </div>
 
-                    ZUZU<br>
-                    ul. Świętego Wojciecha 16/1<br>
-                    Szczecin
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
 
-            <div class="detail">
+<!-- KARTY -->
 
-                <div class="detail-icon">
-                    👶
-                </div>
+<section class="content">
 
-                <div>
+<h2 class="section-title">
+    Dlaczego warto?
+</h2>
 
-                    <strong>
-                        Dla kogo?
-                    </strong>
-
-                    Dzieci od 8. miesiąca życia
-
-                </div>
-
-            </div>
+<p class="section-subtitle">
+    Najmłodsze dzieci uczą się przede wszystkim
+    przez doświadczenie i zabawę.
+</p>
 
 
-            <div class="detail">
+<div class="cards">
 
-                <div class="detail-icon">
-                    💰
-                </div>
+    <div class="card">
 
-                <div>
-
-                    <strong>
-                        Wstęp
-                    </strong>
-
-                    35 zł
-
-                </div>
-
-            </div>
-
-
+        <div class="card-icon">
+            👋
         </div>
 
+        <h3>
+            Poznawanie zmysłami
+        </h3>
 
-        <a
-            href="https://wa.me/48798150723?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20zapisa%C4%87%20dziecko%20na%20Sensoplastyk%C4%99%20w%20Akademii%20ZUZU."
-            target="_blank"
-            class="button button-green"
-        >
-            💬 Zapisz dziecko
-        </a>
+        <p>
+            Dotyk,
+            wzrok,
+            ruch,
+            dźwięk
+            i różnorodne doświadczenia
+            pomagają poznawać otoczenie.
+        </p>
 
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            💡
+        </div>
+
+        <h3>
+            Ciekawość
+        </h3>
+
+        <p>
+            Zachęcamy dzieci
+            do sprawdzania,
+            próbowania
+            i samodzielnego odkrywania.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            💗
+        </div>
+
+        <h3>
+            Zabawa bez presji
+        </h3>
+
+        <p>
+            Nie chodzi o idealną pracę.
+            Najważniejsze jest doświadczenie
+            i radość dziecka.
+        </p>
 
     </div>
 
@@ -888,159 +1019,229 @@ footer a{
 </section>
 
 
-<!-- =========================
-     CO ROBIMY
-========================= -->
+<!-- SENSORYKA -->
 
-<section class="sensory-section">
+<section
+    id="sensoryka"
+    class="content"
+>
 
-<div class="content">
+<div class="sensory">
+
+    <h2>
+        Zajęcia sensoryczne w Szczecinie 🌈
+    </h2>
+
+    <p>
+        Sensoryka może wyglądać bardzo prosto:
+        miękka masa,
+        kolorowa pianka,
+        suche produkty,
+        woda,
+        naturalne materiały,
+        różne powierzchnie
+        albo zabawa dźwiękiem.
+    </p>
+
+    <p>
+        Dla małego dziecka
+        takie doświadczenia są sposobem
+        na poznawanie świata.
+    </p>
+
+    <p>
+        W Akademii ZUZU organizujemy
+        <strong>zajęcia sensoryczne dla najmłodszych w Szczecinie</strong>,
+        podczas których dziecko może
+        swobodnie doświadczać,
+        dotykać,
+        obserwować
+        i eksperymentować.
+    </p>
+
+    <p>
+        Informacje o aktualnych terminach
+        i zapisach możesz uzyskać
+        telefonicznie lub mailowo.
+    </p>
+
+    <div class="buttons">
+
+        <a
+            href="#kontakt"
+            class="button button-purple"
+        >
+            Zapytaj o najbliższe zajęcia
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- LOKALIZACJE -->
+
+<div
+    id="lokalizacje"
+    class="locations"
+>
+
+<div class="location-inner">
 
 <h2 class="section-title">
-    Małe ręce mają dużo roboty 😎
+    Akademia ZUZU w Szczecinie 📍
 </h2>
 
 <p class="section-subtitle">
-    Nie chodzi o stworzenie idealnego dzieła.
-    Chodzi o doświadczenie,
-    zabawę i poznawanie świata.
+    Poznaj nasze trzy placówki.
 </p>
 
 
-<div class="sensory-grid">
+<div class="location-grid">
 
+    <div class="location-card">
 
-    <div class="sensory-card">
-
-        <div class="sensory-icon">
-            👐
-        </div>
-
-        <h3>
-            Dotykamy
-        </h3>
-
-        <p>
-            Poznajemy różne
-            faktury, konsystencje
-            i materiały.
-        </p>
-
-    </div>
-
-
-    <div class="sensory-card">
-
-        <div class="sensory-icon">
-            🎨
-        </div>
-
-        <h3>
-            Mieszamy
-        </h3>
-
-        <p>
-            Kolory, masy,
-            składniki i wszystko,
-            co można bezpiecznie
-            połączyć.
-        </p>
-
-    </div>
-
-
-    <div class="sensory-card">
-
-        <div class="sensory-icon">
+        <div class="location-icon">
             🌈
         </div>
 
         <h3>
-            Odkrywamy
+            ZUZU Witkiewicza
         </h3>
 
         <p>
-            Dziecko eksperymentuje
-            i poznaje świat
-            w swoim własnym tempie.
+            Witkiewicza 58/U18<br>
+            71-125 Szczecin
         </p>
 
+        <a
+            href="witkiewicza.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
     </div>
 
 
-</div>
+    <div class="location-card">
 
+        <div class="location-icon">
+            🌸
+        </div>
 
-<div class="warning">
+        <h3>
+            ZUZU Pocztowa
+        </h3>
 
-    <div class="warning-icon">
-        👕🎨
+        <p>
+            Pocztowa 12/U1<br>
+            70-360 Szczecin
+        </p>
+
+        <a
+            href="pocztowa.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
     </div>
 
-    <h2>
-        Ubierzcie się... niewyjściowo!
-    </h2>
 
-    <p>
-        Istnieje spora szansa,
-        że po zajęciach Sensoplastyka
-        będzie nie tylko na stoliku,
-        ale również na dziecku...
-        i trochę na Was. 😂
-    </p>
+    <div class="location-card">
 
-</div>
+        <div class="location-icon">
+            🪄
+        </div>
 
-</div>
+        <h3>
+            ZUZU Wojciecha
+        </h3>
 
-</section>
+        <p>
+            Świętego Wojciecha 16/1<br>
+            70-435 Szczecin
+        </p>
 
+        <a
+            href="wojciecha.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
 
-<!-- =========================
-     WIĘCEJ ZAJĘĆ
-========================= -->
-
-<section class="content more">
-
-<div class="more-box">
-
-    <div class="more-icons">
-        🎵 🌈 ⭐ 🧸 🎨
     </div>
 
-    <h2>
-        A to dopiero początek!
-    </h2>
-
-    <p>
-        Oferta zajęć dodatkowych ZUZU
-        będzie się rozwijać.
-        W tym miejscu będziemy dodawać
-        kolejne zajęcia, wydarzenia
-        i ZUZU-owe przygody.
-    </p>
+</div>
 
 </div>
 
-</section>
+</div>
 
 
-<!-- =========================
-     KONTAKT
-========================= -->
+<!-- LINKOWANIE SEO -->
 
 <section class="content">
 
-<div class="cta">
+<div class="seo-links">
 
-    <h2>
-        Zapisujemy na Sensoplastykę? ♡
+    <h2 class="section-title">
+        Poznaj całą Akademię ZUZU
     </h2>
 
     <p>
-        Liczba miejsc jest ograniczona.
-        Napisz do nas na WhatsApp
-        lub zadzwoń i zarezerwuj miejsce.
+        Potrzebujesz regularnej opieki?
+        Sprawdź
+        <a href="opieka-stala.html">
+            stałą opiekę nad dzieckiem w Szczecinie
+        </a>.
+    </p>
+
+    <p>
+        Możesz również skorzystać z
+        <a href="opieka-na-godziny.html">
+            opieki na godziny
+        </a>
+        oraz
+        <a href="opieka-weekendowa.html">
+            opieki weekendowej nad dzieckiem
+        </a>.
+    </p>
+
+    <p>
+        Wróć na
+        <a href="index.html">
+            stronę główną Akademii ZUZU – żłobek Szczecin
+        </a>.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section
+    id="kontakt"
+    class="content"
+>
+
+<div class="contact">
+
+    <h2 class="section-title">
+        Zapytaj o zajęcia dla dzieci ♡
+    </h2>
+
+    <p>
+        Chcesz poznać najbliższe terminy
+        zajęć dodatkowych,
+        sensorycznych
+        lub innych aktywności Akademii ZUZU?
+        Zadzwoń albo napisz.
     </p>
 
 
@@ -1052,27 +1253,24 @@ footer a{
     <div class="buttons">
 
         <a
-            href="https://wa.me/48798150723?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82abym%20zapisa%C4%87%20dziecko%20na%20Sensoplastyk%C4%99%20w%20Akademii%20ZUZU."
-            target="_blank"
-            class="button button-green"
-        >
-            💬 WhatsApp
-        </a>
-
-
-        <a
             href="tel:+48798150723"
             class="button button-pink"
         >
-            ☎️ Zadzwoń
+            Zadzwoń
         </a>
 
-
         <a
-            href="index.html#oferta"
+            href="mailto:zuzu.szczecin@gmail.com"
             class="button button-purple"
         >
-            ⭐ Pozostała oferta
+            Napisz e-mail
+        </a>
+
+        <a
+            href="index.html#zapisy"
+            class="button button-white"
+        >
+            Zapytaj o zapis
         </a>
 
     </div>
@@ -1082,47 +1280,11 @@ footer a{
 </section>
 
 
-<!-- =========================
-     STOPKA
-========================= -->
+<!-- STOPKA -->
 
 <footer>
 
-    <strong>
-        ☁️ Akademia ZUZU
-    </strong>
-
-    <br>
-
-    Małe dzieci. Wielkie przygody. ⭐
-
-    <br><br>
-
-    <a href="opieka-stala.html">
-        Opieka stała
-    </a>
-
-    &nbsp; · &nbsp;
-
-    <a href="opieka-na-godziny.html">
-        Opieka na godziny
-    </a>
-
-    &nbsp; · &nbsp;
-
-    <a href="opieka-weekendowa.html">
-        Opieka weekendowa
-    </a>
-
-    <br><br>
-
-    <a href="index.html">
-        ← Wróć na stronę główną
-    </a>
-
-    <br><br>
-
-    © 2026 Akademia ZUZU
+    ☁️ Akademia ZUZU · zajęcia dla dzieci · Szczecin · © 2026
 
 </footer>
 
