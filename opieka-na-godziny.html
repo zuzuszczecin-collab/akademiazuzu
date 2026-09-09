@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -7,14 +6,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Opieka na godziny | Akademia ZUZU Szczecin</title>
+<title>Opieka na godziny Szczecin | Akademia ZUZU</title>
 
 <meta
     name="description"
-    content="Elastyczna opieka na godziny w Akademii ZUZU w Szczecinie. Pojedyncze godziny oraz karnety."
+    content="Opieka na godziny nad dzieckiem w Szczecinie – Akademia ZUZU. Elastyczna opieka dla najmłodszych, gdy potrzebujesz kilku godzin dla siebie, pracy lub załatwienia spraw."
 >
 
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link
+    rel="canonical"
+    href="https://akademiazuzu.pl/opieka-na-godziny.html"
+>
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+
+<meta
+    property="og:title"
+    content="Opieka na godziny Szczecin | Akademia ZUZU"
+>
+
+<meta
+    property="og:description"
+    content="Elastyczna opieka nad dzieckiem na godziny w Szczecinie. Akademia ZUZU – bezpieczna przestrzeń, zabawa i opieka dla najmłodszych."
+>
+
+<meta
+    property="og:url"
+    content="https://akademiazuzu.pl/opieka-na-godziny.html"
+>
+
+<meta
+    property="og:image"
+    content="https://akademiazuzu.pl/kafelek-opieka%20na%20godziny.png"
+>
+
+<meta
+    property="og:site_name"
+    content="Akademia ZUZU"
+>
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta
+    name="twitter:title"
+    content="Opieka na godziny Szczecin | Akademia ZUZU"
+>
+
+<meta
+    name="twitter:description"
+    content="Elastyczna opieka godzinowa nad dzieckiem w Akademii ZUZU w Szczecinie."
+>
+
+<meta
+    name="twitter:image"
+    content="https://akademiazuzu.pl/kafelek-opieka%20na%20godziny.png"
+>
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Opieka na godziny nad dzieckiem w Szczecinie",
+    "url": "https://akademiazuzu.pl/opieka-na-godziny.html",
+    "description": "Elastyczna opieka godzinowa nad dziećmi w Akademii ZUZU w Szczecinie.",
+    "provider": {
+        "@type": "ChildCare",
+        "name": "Akademia ZUZU",
+        "url": "https://akademiazuzu.pl/",
+        "telephone": "+48798150723",
+        "email": "zuzu.szczecin@gmail.com"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Szczecin"
+    }
+}
+</script>
+
+
 <style>
+
+/* =========================
+   PODSTAWY
+========================= */
 
 *{
     box-sizing:border-box;
@@ -29,15 +107,24 @@ body{
 }
 
 a{
-    text-decoration:none;
+    transition:.2s;
 }
+
+section{
+    scroll-margin-top:95px;
+}
+
+
+/* =========================
+   MENU
+========================= */
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
     background:rgba(255,255,255,.97);
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
+    box-shadow:0 4px 20px rgba(0,0,0,.07);
 }
 
 .menu{
@@ -45,6 +132,7 @@ nav{
     min-height:82px;
     margin:auto;
     padding:8px 25px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -71,7 +159,7 @@ nav{
 
 .logo-text strong{
     color:#ef1591;
-    font-size:23px;
+    font-size:24px;
 }
 
 .logo-text span{
@@ -79,58 +167,119 @@ nav{
     font-size:12px;
 }
 
-.back{
-    padding:12px 22px;
-    border-radius:30px;
-    background:#ef1591;
-    color:white;
+.links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.links a{
+    text-decoration:none;
+    color:#5d5667;
     font-weight:bold;
 }
 
+.links a:hover{
+    color:#ef1591;
+}
+
+.home{
+    padding:12px 20px;
+    border-radius:30px;
+
+    background:#ef1591;
+    color:white !important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    min-height:500px;
+    min-height:650px;
     padding:70px 25px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
 
     background:
-        radial-gradient(circle at 10% 20%, #ffeb70 0 24px, transparent 26px),
-        radial-gradient(circle at 90% 15%, #f79cda 0 60px, transparent 62px),
-        radial-gradient(circle at 15% 85%, #a986ff 0 65px, transparent 67px),
-        linear-gradient(135deg,#24116f,#5523a5,#1c0c61);
+        radial-gradient(circle at 12% 20%, #ffe976 0 28px, transparent 30px),
+        radial-gradient(circle at 90% 16%, #f7a7d8 0 65px, transparent 67px),
+        radial-gradient(circle at 14% 85%, #c8adff 0 65px, transparent 67px),
+        linear-gradient(135deg,#6ac9dd,#42bfd6);
 }
 
-.hero-inner{
-    max-width:850px;
+.hero-content{
+    max-width:900px;
+}
+
+.hero-logo{
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:35px;
+    border:5px solid white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
 }
 
 .hero h1{
-    margin:0;
+    margin:25px 0 12px;
+
     color:white;
-    font-size:64px;
-    text-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    font-size:52px;
+    line-height:1.08;
+
+    text-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .hero h2{
-    color:#ffe75a;
-    font-size:28px;
+    margin:15px 0;
+
+    color:#fff59a;
+
+    font-size:27px;
 }
 
 .hero p{
-    max-width:700px;
-    margin:18px auto 28px;
+    max-width:780px;
+    margin:20px auto 30px;
+
     color:white;
+
     font-size:19px;
     line-height:1.7;
 }
 
+
+/* =========================
+   PRZYCISKI
+========================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
 .button{
     display:inline-block;
-    padding:16px 28px;
-    border-radius:35px;
+
+    padding:15px 28px;
+
+    border-radius:30px;
+
+    text-decoration:none;
     font-weight:bold;
+
     transition:.2s;
 }
 
@@ -141,160 +290,458 @@ nav{
 .button-pink{
     background:#ef1591;
     color:white;
-}
 
-.button-green{
-    background:#25D366;
-    color:white;
+    box-shadow:0 10px 25px rgba(239,21,145,.25);
 }
 
 .button-white{
     background:white;
-    color:#5e4cc4;
+    color:#6655c7;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
+.button-purple{
+    background:#6956c8;
+    color:white;
+
+    box-shadow:0 10px 25px rgba(105,86,200,.22);
+}
+
+
+/* =========================
+   SZYBKIE INFO
+========================= */
+
+.quick-info{
+    max-width:1100px;
+
+    margin:-55px auto 0;
+    padding:0 25px;
+
+    position:relative;
+    z-index:5;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 45px rgba(70,60,90,.15);
+
+    overflow:hidden;
+}
+
+.quick-card{
+    padding:30px 20px;
+    text-align:center;
+}
+
+.quick-card + .quick-card{
+    border-left:1px solid #eee7f1;
+}
+
+.quick-icon{
+    font-size:35px;
+}
+
+.quick-card strong{
+    display:block;
+    margin:10px 0 7px;
+
+    color:#725ed6;
+
+    font-size:19px;
+}
+
+.quick-card span{
+    color:#696171;
+    line-height:1.6;
+}
+
+
+/* =========================
+   SEKCJE
+========================= */
+
 .content{
-    max-width:1150px;
+    max-width:1200px;
+
     margin:auto;
-    padding:80px 25px;
+
+    padding:85px 25px;
 }
 
 .section-title{
     margin:0 0 15px;
+
     text-align:center;
+
     color:#e84d9b;
+
     font-size:42px;
 }
 
 .section-subtitle{
-    max-width:750px;
-    margin:0 auto 40px;
+    max-width:820px;
+
+    margin:0 auto 45px;
+
     text-align:center;
+
     color:#706979;
+
     font-size:18px;
     line-height:1.7;
 }
 
-.offer-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-    align-items:start;
-}
 
-.offer-card{
+/* =========================
+   INTRO
+========================= */
+
+.intro-box{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:45px;
+
     background:white;
-    padding:20px;
+
     border-radius:35px;
-    box-shadow:0 12px 35px rgba(70,50,100,.12);
+
+    box-shadow:0 10px 35px rgba(80,60,100,.08);
+
+    text-align:center;
+
+    font-size:18px;
+    line-height:1.85;
 }
 
-.offer-card img{
+
+/* =========================
+   GRAFIKA
+========================= */
+
+.main-image{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.main-image img{
     width:100%;
-    display:block;
-    border-radius:25px;
+    max-height:650px;
+
+    object-fit:contain;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 40px rgba(70,60,90,.15);
 }
 
-.offer-card h3{
-    margin:20px 0 5px;
-    text-align:center;
-    color:#725ed6;
-    font-size:26px;
-}
 
-.offer-card p{
-    margin:0;
-    text-align:center;
-    color:#665f70;
-    line-height:1.7;
-}
+/* =========================
+   KARTY
+========================= */
 
-.info{
-    background:#f6f0ff;
-}
-
-.info-grid{
+.cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+
+    gap:24px;
 }
 
-.info-card{
-    padding:32px 22px;
+.card{
+    padding:32px 25px;
+
     background:white;
-    border-radius:30px;
+
+    border-radius:28px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+
     text-align:center;
-    box-shadow:0 10px 30px rgba(70,60,90,.09);
+
+    transition:.25s;
 }
 
-.info-icon{
-    font-size:44px;
+.card:hover{
+    transform:translateY(-6px);
 }
 
-.info-card h3{
+.card-icon{
+    font-size:46px;
+}
+
+.card h3{
+    margin:15px 0 10px;
+
     color:#725ed6;
+
     font-size:22px;
 }
 
-.info-card p{
+.card p{
+    color:#615a69;
+
     line-height:1.7;
 }
 
-.cta{
-    max-width:1000px;
+
+/* =========================
+   DLA KOGO
+========================= */
+
+.forwho{
+    background:#fff1b5;
+}
+
+.forwho-inner{
+    max-width:1200px;
+
     margin:auto;
-    padding:60px 30px;
-    border-radius:38px;
-    text-align:center;
-    background:linear-gradient(135deg,#e5f9ff,#ffe5f4);
-    box-shadow:0 12px 35px rgba(70,50,100,.10);
+
+    padding:85px 25px;
 }
 
-.cta h2{
-    margin-top:0;
+.check-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.check{
+    padding:25px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    font-size:17px;
+    line-height:1.7;
+}
+
+.check strong{
     color:#ef1591;
-    font-size:40px;
 }
 
-.cta p{
-    max-width:700px;
-    margin:0 auto 25px;
+
+/* =========================
+   JAK TO DZIAŁA
+========================= */
+
+.how{
+    max-width:1050px;
+    margin:auto;
+
+    padding:50px;
+
+    background:linear-gradient(135deg,#e4f9ff,#ffe5f3);
+
+    border-radius:35px;
+
+    box-shadow:0 10px 35px rgba(80,60,100,.09);
+}
+
+.how h2{
+    margin:0 0 25px;
+
+    text-align:center;
+
+    color:#ef1591;
+
+    font-size:35px;
+}
+
+.how p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.how strong{
+    color:#6956c8;
+}
+
+
+/* =========================
+   LOKALIZACJE
+========================= */
+
+.locations{
+    background:#f7f0ff;
+}
+
+.location-inner{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:85px 25px;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+}
+
+.location-card{
+    padding:32px 25px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.10);
+
+    text-align:center;
+}
+
+.location-icon{
+    font-size:45px;
+}
+
+.location-card h3{
+    color:#725ed6;
+
+    font-size:24px;
+}
+
+.location-card p{
+    line-height:1.7;
+}
+
+
+/* =========================
+   SEO LINKS
+========================= */
+
+.seo-links{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:35px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(70,60,90,.08);
+
+    text-align:center;
+}
+
+.seo-links p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.seo-links a{
+    color:#6956c8;
+    font-weight:bold;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact{
+    padding:55px 25px;
+
+    background:linear-gradient(135deg,#fce2f0,#e4f7ff);
+
+    border-radius:35px;
+
+    text-align:center;
+}
+
+.contact p{
     font-size:18px;
     line-height:1.7;
 }
 
 .phone{
-    margin:20px 0;
-    color:#725ed6;
-    font-size:32px;
+    margin:24px 0;
+
+    color:#ef1591;
+
+    font-size:30px;
     font-weight:bold;
 }
+
+
+/* =========================
+   STOPKA
+========================= */
 
 footer{
-    padding:45px 20px;
-    background:#5744aa;
+    padding:35px 20px;
+
+    background:#5b4bae;
     color:white;
+
     text-align:center;
-    line-height:1.7;
 }
 
-footer a{
-    color:white;
-    font-weight:bold;
-}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
 
+    .links{
+        display:none;
+    }
+
     .hero h1{
-        font-size:46px;
+        font-size:38px;
     }
 
-    .offer-grid{
+    .hero h2{
+        font-size:22px;
+    }
+
+    .hero-logo{
+        width:145px;
+        height:145px;
+    }
+
+    .quick-info{
+        margin-top:-35px;
+    }
+
+    .quick-grid,
+    .cards,
+    .location-grid,
+    .check-grid{
         grid-template-columns:1fr;
     }
 
-    .info-grid{
-        grid-template-columns:1fr;
+    .quick-card + .quick-card{
+        border-left:0;
+        border-top:1px solid #eee7f1;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+    .intro-box,
+    .how{
+        padding:35px 25px;
     }
 
 }
@@ -307,6 +754,10 @@ footer a{
 <body>
 
 
+<!-- =========================
+     MENU
+========================= -->
+
 <nav>
 
 <div class="menu">
@@ -315,232 +766,628 @@ footer a{
 
         <img
             src="Logo-zuzu.jpg"
-            alt="Logo Akademii ZUZU"
+            alt="Akademia ZUZU – opieka na godziny Szczecin"
         >
 
         <div class="logo-text">
-            <strong>AKADEMIA ZUZU</strong>
-            <span>Opieka na godziny</span>
+
+            <strong>
+                AKADEMIA ZUZU
+            </strong>
+
+            <span>
+                Opieka na godziny · Szczecin
+            </span>
+
         </div>
 
     </div>
 
-    <a
-        href="index.html"
-        class="back"
-    >
-        ← Strona główna
-    </a>
+
+    <div class="links">
+
+        <a href="#opieka">
+            Opieka godzinowa
+        </a>
+
+        <a href="#dla-kogo">
+            Dla kogo?
+        </a>
+
+        <a href="#jak-dziala">
+            Jak to działa?
+        </a>
+
+        <a href="#lokalizacje">
+            Lokalizacje
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
+
+        <a
+            href="index.html"
+            class="home"
+        >
+            Strona główna
+        </a>
+
+    </div>
 
 </div>
 
 </nav>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
 
-<div class="hero-inner">
+<div class="hero-content">
+
+    <img
+        src="Logo-zuzu.jpg"
+        class="hero-logo"
+        alt="Logo Akademii ZUZU Szczecin"
+    >
 
     <h1>
-        Opieka na godziny ⏰
+        Opieka na godziny nad dzieckiem w Szczecinie
     </h1>
 
     <h2>
-        Tyle opieki, ile naprawdę potrzebujesz
+        Kilka godzin dla Ciebie. Dobra opieka dla dziecka. ☁️
     </h2>
 
     <p>
-        Zakupy, lekarz, spotkanie,
-        praca albo po prostu kilka godzin dla siebie.
-        W ZUZU możesz skorzystać z opieki
-        bez stałego miesięcznego zobowiązania.
+        Potrzebujesz czasu na pracę,
+        wizytę, zakupy,
+        spotkanie albo po prostu chwilę dla siebie?
+        Akademia ZUZU oferuje elastyczną
+        opiekę godzinową nad najmłodszymi w Szczecinie.
     </p>
 
-    <a
-        href="https://wa.me/48798150723"
-        target="_blank"
-        class="button button-pink"
-    >
-        Zapytaj o wolne miejsce ♡
-    </a>
+    <div class="buttons">
+
+        <a
+            href="#jak-dziala"
+            class="button button-white"
+        >
+            Jak to działa?
+        </a>
+
+        <a
+            href="#kontakt"
+            class="button button-pink"
+        >
+            Zapytaj o dostępność ♡
+        </a>
+
+    </div>
 
 </div>
 
 </header>
 
 
-<section class="content">
+<!-- =========================
+     SZYBKIE INFORMACJE
+========================= -->
 
-<h2 class="section-title">
-    Wybierz opcję dla siebie ⭐
-</h2>
+<div class="quick-info">
 
-<p class="section-subtitle">
-    Możesz zapłacić za jednorazową opiekę
-    albo wybrać karnet, jeśli wiesz,
-    że ZUZU przyda Ci się częściej.
-</p>
+<div class="quick-grid">
 
+    <div class="quick-card">
 
-<div class="offer-grid">
-
-
-    <div class="offer-card">
-
-        <img
-            src="opiekanagodziny.jpg"
-            alt="Cennik opieki na godziny Akademia ZUZU"
-        >
-
-        <h3>
-            Opieka jednorazowa
-        </h3>
-
-        <p>
-            Wybierz liczbę godzin
-            i korzystaj wtedy,
-            kiedy tego potrzebujesz.
-        </p>
-
-    </div>
-
-
-    <div class="offer-card">
-
-        <img
-            src="karnet.jpg"
-            alt="Karnety Akademia ZUZU"
-        >
-
-        <h3>
-            Karnety ZUZU
-        </h3>
-
-        <p>
-            Więcej godzin,
-            większa wygoda
-            i bez stałego miesięcznego zobowiązania.
-        </p>
-
-    </div>
-
-
-</div>
-
-</section>
-
-
-<section class="info">
-
-<div class="content">
-
-<h2 class="section-title">
-    Prosto i elastycznie 🌈
-</h2>
-
-<div class="info-grid">
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
+        <div class="quick-icon">
             ⏰
         </div>
 
-        <h3>
-            Wybierasz czas
-        </h3>
+        <strong>
+            Elastycznie
+        </strong>
 
-        <p>
-            Kilka godzin albo większy pakiet.
-            Ty decydujesz,
-            czego potrzebujesz.
-        </p>
-
-    </div>
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            📅
-        </div>
-
-        <h3>
-            Rezerwujesz termin
-        </h3>
-
-        <p>
-            Opieka jest realizowana
-            w zależności od dostępności miejsc
-            w danym terminie.
-        </p>
+        <span>
+            Opieka wtedy,
+            kiedy jej potrzebujesz.
+        </span>
 
     </div>
 
 
-    <div class="info-card">
+    <div class="quick-card">
 
-        <div class="info-icon">
+        <div class="quick-icon">
             🧸
         </div>
 
-        <h3>
-            Dziecko zostaje z ZUZU
-        </h3>
+        <strong>
+            Bezpieczna przestrzeń
+        </strong>
 
-        <p>
-            Bezpieczna opieka,
-            zabawa, zajęcia
-            i dziecięce przygody.
-        </p>
+        <span>
+            Zabawa,
+            opieka
+            i dziecięce aktywności.
+        </span>
 
     </div>
 
 
+    <div class="quick-card">
+
+        <div class="quick-icon">
+            📍
+        </div>
+
+        <strong>
+            Szczecin
+        </strong>
+
+        <span>
+            Akademia ZUZU
+            w kilku lokalizacjach.
+        </span>
+
+    </div>
+
 </div>
+
+</div>
+
+
+<!-- =========================
+     OPIEKA
+========================= -->
+
+<section
+    id="opieka"
+    class="content"
+>
+
+<h2 class="section-title">
+    Opieka godzinowa nad dzieckiem w Akademii ZUZU ♡
+</h2>
+
+<p class="section-subtitle">
+    Rozwiązanie dla rodziców,
+    którzy potrzebują opieki
+    na kilka godzin,
+    bez konieczności korzystania
+    z pełnego pobytu każdego dnia.
+</p>
+
+
+<div class="intro-box">
+
+    <strong>Opieka na godziny w Szczecinie</strong>
+    to elastyczna forma opieki nad dzieckiem,
+    kiedy potrzebujesz wsparcia
+    tylko przez określony czas.
+
+    <br><br>
+
+    Może przydać się,
+    gdy masz spotkanie,
+    wizytę u lekarza,
+    pracujesz kilka godzin,
+    załatwiasz sprawy
+    albo po prostu potrzebujesz chwili dla siebie.
+
+    <br><br>
+
+    W tym czasie dziecko
+    może bawić się,
+    uczestniczyć w codziennych aktywnościach ZUZU,
+    poznawać inne dzieci
+    i spędzić czas
+    w przyjaznej przestrzeni.
 
 </div>
 
 </section>
 
 
+<!-- =========================
+     GRAFIKA
+========================= -->
+
 <section class="content">
 
-<div class="cta">
+<div class="main-image">
+
+    <img
+        src="kafelek-opieka na godziny.png"
+        alt="Opieka na godziny Szczecin – Akademia ZUZU"
+        loading="lazy"
+    >
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KORZYŚCI
+========================= -->
+
+<section class="content">
+
+<h2 class="section-title">
+    Dlaczego opieka na godziny?
+</h2>
+
+<p class="section-subtitle">
+    Bo nie każda rodzina potrzebuje
+    codziennego, pełnego pobytu.
+</p>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <div class="card-icon">
+            ⏱️
+        </div>
+
+        <h3>
+            Tylko tyle, ile potrzebujesz
+        </h3>
+
+        <p>
+            Opieka godzinowa pozwala
+            dopasować czas pobytu dziecka
+            do potrzeb rodziny.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🌈
+        </div>
+
+        <h3>
+            Zabawa i aktywności
+        </h3>
+
+        <p>
+            Dziecko spędza czas
+            na zabawie,
+            ruchu,
+            sensoryce
+            i dziecięcych aktywnościach.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            💗
+        </div>
+
+        <h3>
+            Wsparcie dla rodzica
+        </h3>
+
+        <p>
+            Kilka godzin opieki
+            może dać Ci czas
+            na pracę,
+            obowiązki
+            albo odpoczynek.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     DLA KOGO
+========================= -->
+
+<div
+    id="dla-kogo"
+    class="forwho"
+>
+
+<div class="forwho-inner">
+
+<h2 class="section-title">
+    Kiedy opieka na godziny może się przydać?
+</h2>
+
+<p class="section-subtitle">
+    W wielu zwyczajnych,
+    codziennych sytuacjach.
+</p>
+
+
+<div class="check-grid">
+
+    <div class="check">
+        💼 <strong>Praca lub spotkanie</strong><br>
+        gdy potrzebujesz kilku godzin
+        spokojnego czasu.
+    </div>
+
+    <div class="check">
+        🩺 <strong>Wizyta lub załatwianie spraw</strong><br>
+        kiedy trudno zabrać dziecko ze sobą.
+    </div>
+
+    <div class="check">
+        🛍️ <strong>Zakupy i obowiązki</strong><br>
+        kiedy chcesz zrobić je szybciej
+        i spokojniej.
+    </div>
+
+    <div class="check">
+        ☕ <strong>Chwila dla siebie</strong><br>
+        bo rodzic też czasem
+        potrzebuje odpoczynku.
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     JAK DZIAŁA
+========================= -->
+
+<section
+    id="jak-dziala"
+    class="content"
+>
+
+<div class="how">
 
     <h2>
-        Potrzebujesz kilku godzin? ♡
+        Jak działa opieka na godziny?
     </h2>
 
     <p>
-        Napisz do nas,
-        podaj dzień, godzinę
-        i wiek dziecka,
-        a sprawdzimy dostępność.
+        <strong>1. Skontaktuj się z nami</strong>
+        i zapytaj o dostępność
+        w wybranym terminie.
     </p>
+
+    <p>
+        <strong>2. Ustalamy godzinę przyjścia i odbioru</strong>
+        oraz szczegóły pobytu dziecka.
+    </p>
+
+    <p>
+        <strong>3. Dziecko spędza czas w ZUZU</strong>
+        podczas zabawy
+        i codziennych aktywności.
+    </p>
+
+    <p>
+        <strong>4. Ty wykorzystujesz ten czas po swojemu.</strong>
+        Praca, obowiązki,
+        spotkanie albo zwyczajnie odpoczynek.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     LOKALIZACJE
+========================= -->
+
+<div
+    id="lokalizacje"
+    class="locations"
+>
+
+<div class="location-inner">
+
+<h2 class="section-title">
+    Akademia ZUZU w Szczecinie 📍
+</h2>
+
+<p class="section-subtitle">
+    Sprawdź nasze placówki
+    i zapytaj o możliwość
+    opieki godzinowej
+    w interesującym Cię terminie.
+</p>
+
+
+<div class="location-grid">
+
+    <div class="location-card">
+
+        <div class="location-icon">
+            🌈
+        </div>
+
+        <h3>
+            ZUZU Witkiewicza
+        </h3>
+
+        <p>
+            Witkiewicza 58/U18<br>
+            71-125 Szczecin
+        </p>
+
+        <a
+            href="witkiewicza.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
+    </div>
+
+
+    <div class="location-card">
+
+        <div class="location-icon">
+            🌸
+        </div>
+
+        <h3>
+            ZUZU Pocztowa
+        </h3>
+
+        <p>
+            Pocztowa 12/U1<br>
+            70-360 Szczecin
+        </p>
+
+        <a
+            href="pocztowa.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
+    </div>
+
+
+    <div class="location-card">
+
+        <div class="location-icon">
+            🪄
+        </div>
+
+        <h3>
+            ZUZU Wojciecha
+        </h3>
+
+        <p>
+            Świętego Wojciecha 16/1<br>
+            70-435 Szczecin
+        </p>
+
+        <a
+            href="wojciecha.html"
+            class="button button-purple"
+        >
+            Zobacz placówkę
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     LINKOWANIE
+========================= -->
+
+<section class="content">
+
+<div class="seo-links">
+
+    <h2 class="section-title">
+        Zobacz także inne formy opieki
+    </h2>
+
+    <p>
+        Potrzebujesz regularnej opieki?
+        Sprawdź
+        <a href="opieka-stala.html">
+            opiekę stałą nad dzieckiem w Szczecinie
+        </a>.
+    </p>
+
+    <p>
+        Akademia ZUZU oferuje również
+        <a href="opieka-weekendowa.html">
+            opiekę weekendową
+        </a>
+        oraz
+        <a href="zajecia-dodatkowe.html">
+            zajęcia dodatkowe dla dzieci
+        </a>.
+    </p>
+
+    <p>
+        Wróć na
+        <a href="index.html">
+            stronę główną Akademii ZUZU – żłobek Szczecin
+        </a>.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KONTAKT
+========================= -->
+
+<section
+    id="kontakt"
+    class="content"
+>
+
+<div class="contact">
+
+    <h2 class="section-title">
+        Potrzebujesz opieki na kilka godzin? ♡
+    </h2>
+
+    <p>
+        Zadzwoń lub napisz
+        i zapytaj o dostępność
+        opieki godzinowej
+        w Akademii ZUZU w Szczecinie.
+    </p>
+
 
     <div class="phone">
         📞 798 150 723
     </div>
 
-    <div>
 
-        <a
-            href="https://wa.me/48798150723"
-            target="_blank"
-            class="button button-green"
-        >
-            💬 Napisz na WhatsApp
-        </a>
-
-        &nbsp;
+    <div class="buttons">
 
         <a
             href="tel:+48798150723"
             class="button button-pink"
         >
-            ☎️ Zadzwoń
+            Zadzwoń
+        </a>
+
+        <a
+            href="mailto:zuzu.szczecin@gmail.com"
+            class="button button-purple"
+        >
+            Napisz e-mail
+        </a>
+
+        <a
+            href="index.html#zapisy"
+            class="button button-white"
+        >
+            Zapytaj o termin
         </a>
 
     </div>
@@ -550,25 +1397,13 @@ footer a{
 </section>
 
 
+<!-- =========================
+     STOPKA
+========================= -->
+
 <footer>
 
-    <strong>
-        ☁️ Akademia ZUZU
-    </strong>
-
-    <br>
-
-    Opieka stała · Opieka na godziny · Opieka weekendowa · Zajęcia dodatkowe
-
-    <br><br>
-
-    <a href="index.html">
-        ← Wróć na stronę główną
-    </a>
-
-    <br><br>
-
-    © 2026 Akademia ZUZU
+    ☁️ Akademia ZUZU · opieka na godziny · Szczecin · © 2026
 
 </footer>
 
